@@ -1,0 +1,257 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+DUC_1 的时钟频率流水线报告
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdClockRatePipelining'); else local_onload();}} catch(err) {};">
+<script>
+<!--
+function hdlTableShrink(o,tagNameStr)
+{
+var temp = document.getElementsByName(tagNameStr);
+if (temp[0].style.display == "")
+{
+	temp[0].style.display = "none";
+	o.innerHTML = '<span style="font-family:monospace">[+]</span>';
+}
+else
+{
+	temp[0].style.display = "";
+	o.innerHTML = '<span style="font-family:monospace">[-]</span>';
+}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableCollapseAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[+]</span>';
+	}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableExpandAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[-]</span>';
+	}
+}
+// -->
+</script>
+<font SIZE="+2" COLOR="#000066">
+DUC_1 的时钟频率流水线报告
+</font>
+<br /><br /><br /><a name="概要">
+<font size="+1" color="#000066">
+<b class="midprod">
+概要
+</b>
+
+</font>
+
+</a>
+<br /><br />由于障碍，时钟频率流水线不成功。<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:configset.internal.open('DUC_1','ClockRatePipelining')">ClockRatePipelining</a>
+</td>
+<td align="center" valign="top" style="border-style: none">
+on
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:configset.internal.open('DUC_1','ClockRatePipelineOutputPorts')">ClockRatePipelineOutputPorts</a>
+</td>
+<td align="center" valign="top" style="border-style: none">
+off
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:configset.internal.open('DUC_1','BalanceClockRateOutputPorts')">BalanceClockRateOutputPorts</a>
+</td>
+<td align="center" valign="top" style="border-style: none">
+off
+</td>
+
+</tr>
+
+</table>
+<br />通过运行以下脚本可以诊断时钟频率流水线障碍: <a href="matlab:run('hdl_prj\hdlsrc\DUC_1\highlightClockRatePipelining.m')">
+hdl_prj\hdlsrc\DUC_1\highlightClockRatePipelining.m
+</a>
+<br /><br /><br /><a name="速率信息">
+<font size="+1" color="#000066">
+<b class="midprod">
+速率信息
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+原始模型基本速率
+</td>
+<td align="center" valign="top" style="border-style: none">
+6144 kHz
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:configset.internal.open('DUC_1','Oversampling')">过采样因子</a>
+</td>
+<td align="center" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+
+</table>
+<br /><br /><br /><a name="输出延迟">
+<font size="+1" color="#000066">
+<b class="midprod">
+输出延迟
+</b>
+
+</font>
+
+</a>
+<br /><br /><a href="D:\Desktop\Mul_Freq_DUC\2024-Multi-frequency-DUC\matlab\hdl_prj\hdlsrc\DUC_1\html\DUC_1_delay_balancing.html">
+有关路径延迟的更多详细信息，请参阅 "延迟平衡" 节。
+</a>
+<br /><br /><br /><a name="详细报告">
+<font size="+1" color="#000066">
+<b class="midprod">
+详细报告
+</b>
+
+</font>
+
+</a>
+<br /><br />模型中被视为时钟频率流水线障碍的模块列表。<br /><p><hr /></p><h5>
+子系统的报告: <a href="matlab:coder.internal.code2model('DUC_1:165')" name="code2model" class="code2model">
+DUC_module
+</a>
+
+</h5>
+<table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC_1:163')" name="code2model" class="code2model">
+us
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+时钟频率流水线的障碍
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>

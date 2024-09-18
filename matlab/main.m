@@ -1,7 +1,8 @@
 clc;close all;
 %% 
 fs_base=48e3;           % Sampling rate at input DUC
-fs_duc=6144e3;          % Sampling rate at output DUC 
+upsample_L=128;
+fs_duc=fs_base*upsample_L;          % Sampling rate at output DUC 
 Fc=5e6;                 % Carrier Frequency
 Fpass=20e3;             % AM baseband width
 Fstop=30e3;             % Stopband
@@ -9,6 +10,12 @@ Ap=0.1;                 % Passband ripple
 Ast=60;                 % Stopband attenuation
 T = 1;                  % 持续时间
 t = 0:1/fs_base:T-1/fs_base;      % 时间向量
+outputframe=1;
+N1_cycle = 128;
+N2_cycle = 64;
+N3_cycle = 32;
+N4_cycle = 16;
+
 
 %% 48k signal gen
 noise = bandpass(randn(size(t)), [1 10000], fs_base);
@@ -17,11 +24,21 @@ f0=600e3; % Desired output freq
 deltaf=0.5; % Frequency resolution
 SFDR=90; % Spurious free dynamic range (dB)
 
-N=ceil(log2(fs_duc/deltaf));
+Nnco=ceil(log2(fs_duc/deltaf));
 Q=ceil((SFDR-12)/6);
-phInc=ceil((f0*2^N)/fs_duc);
-2^N
-ditherBits=N-Q;
+phInc=ceil((f0*2^Nnco)/fs_duc);
+ditherBits=Nnco-Q;
+%% NCO_base gen
+fb0=600; % Desired output freq
+fb1=1000;
+deltaf=0.5; % Frequency resolution
+SFDR=90; % Spurious free dynamic range (dB)
+
+Nnco_base=ceil(log2(fs_base/deltaf));
+Q_base=ceil((SFDR-12)/6);
+phInc_b0=ceil((fb0*2^Nnco_base)/fs_base);
+phInc_b1=ceil((fb1*2^Nnco_base)/fs_base);
+ditherBits_base=Nnco_base-Q_base;
 %% First Lowpass Fir Interpolator
 
 lowpassParams.FsIn=fs_base;
@@ -100,7 +117,7 @@ N = 31;                                                             % 32 tap fil
 
 cicParams.InterpolationFactor = 16;  % CIC interpolation factor
 cicParams.DifferentialDelay = 1;    % CIC interpolator differential delayb   
-cicParams.NumSections = 3;          % CIC interpolator number of integrator and comb sections
+cicParams.NumSections = 4;          % CIC interpolator number of integrator and comb sections
 
 compSpec = fdesign.interpolator(compParams.InterpolationFactor,'ciccomp', ...
            cicParams.DifferentialDelay, ...
@@ -149,7 +166,7 @@ ducPlots.cicInter = fvtool(lowpassFilt,hbFilt,compFilt,cicFilt,ducFilterChain, .
                        'Fs',[fs_base*2,fs_base*4,fs_base*8,fs_base*128,fs_base*128]);
 
 legend(ducPlots.cicInter, ...
-       'First Halfband Interpolator', ...
+       'First Lowpass Interpolator', ...
        'Second Halfband Interpolator', ...
        'CIC Compensation Interpolator', ...
        'CIC Interpolator',...
