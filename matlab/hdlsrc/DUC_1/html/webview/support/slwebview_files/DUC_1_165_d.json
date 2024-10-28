@@ -629,6 +629,144 @@
   }
  },
  {
+  "sid":"DUC_1:195",
+  "inspector":{
+   "params":[
+    "DelayLengthSource",
+    "InitialConditionSource",
+    "DelayLength",
+    "InitialCondition",
+    "InputProcessing",
+    "UseCircularBuffer",
+    "ShowEnablePort",
+    "ExternalReset",
+    "SampleTime",
+    "StateName",
+    "StateMustResolveToSignalObject",
+    "Description",
+    "CodeGenStateStorageTypeQualifier",
+    "DelayLengthUpperLimit",
+    "DiagnosticForDelayLength",
+    "PreventDirectFeedthrough",
+    "RemoveDelayLengthCheckInGeneratedCode",
+    "StateSignalObject",
+    "StateStorageClass"
+   ],
+   "values":[
+    "Dialog",
+    "Dialog",
+    "1",
+    "0.0",
+    "Elements as channels (sample based)",
+    "off",
+    "off",
+    "None",
+    "-1",
+    "",
+    "off",
+    "",
+    "",
+    "100",
+    "None",
+    "off",
+    "off",
+    [
+    ],
+    "Auto"
+   ],
+   "tabs":[
+    "主要",
+    "状态属性",
+    "文档",
+    "-其他"
+   ],
+   "tabs_idx":[
+    0,
+    9,
+    11,
+    12
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":{
+   "blocktype":"Delay",
+   "masktype":""
+  }
+ },
+ {
+  "sid":"DUC_1:199",
+  "inspector":{
+   "params":[
+    "DelayLengthSource",
+    "InitialConditionSource",
+    "DelayLength",
+    "InitialCondition",
+    "InputProcessing",
+    "UseCircularBuffer",
+    "ShowEnablePort",
+    "ExternalReset",
+    "SampleTime",
+    "StateName",
+    "StateMustResolveToSignalObject",
+    "Description",
+    "CodeGenStateStorageTypeQualifier",
+    "DelayLengthUpperLimit",
+    "DiagnosticForDelayLength",
+    "PreventDirectFeedthrough",
+    "RemoveDelayLengthCheckInGeneratedCode",
+    "StateSignalObject",
+    "StateStorageClass"
+   ],
+   "values":[
+    "Dialog",
+    "Dialog",
+    "1",
+    "0.0",
+    "Elements as channels (sample based)",
+    "off",
+    "off",
+    "None",
+    "-1",
+    "",
+    "off",
+    "",
+    "",
+    "100",
+    "None",
+    "off",
+    "off",
+    [
+    ],
+    "Auto"
+   ],
+   "tabs":[
+    "主要",
+    "状态属性",
+    "文档",
+    "-其他"
+   ],
+   "tabs_idx":[
+    0,
+    9,
+    11,
+    12
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":{
+   "blocktype":"Delay",
+   "masktype":""
+  }
+ },
+ {
   "sid":"DUC_1:161",
   "inspector":{
    "params":[
@@ -1006,10 +1144,10 @@
     "Property",
     "lowpassFilt.Numerator",
     "[]",
-    "Direct form systolic",
-    "Minimum number of cycles between valid input samples",
+    "Partly serial systolic",
+    "Maximum number of multipliers",
     "2",
-    "2",
+    "3",
     "Floor",
     "off",
     "Inherit: Same word length as input",
@@ -1436,7 +1574,7 @@
    "values":[
     "1",
     "off",
-    "[849.000000,846.000000,800.000000,500.000000,]",
+    "[368.000000,182.000000,800.000000,500.000000,]",
     "Time",
     "Power",
     "Spectrum",
@@ -1462,7 +1600,7 @@
     "off",
     "",
     "",
-    "[-70.06853229,-0.80530379]",
+    "[-67.20448024,-2.96045691]",
     "on",
     "off",
     "[]",
@@ -1486,10 +1624,10 @@
     "10000",
     "on",
     "60",
-    "10000",
+    "6144000",
     "1",
-    "-5000",
-    "5000",
+    "-3072000",
+    "3072000",
     "1e-3",
     "Auto",
     "0.1",
@@ -1594,7 +1732,7 @@
    "values":[
     "1",
     "off",
-    "[1655.000000,831.000000,800.000000,519.000000,]",
+    "[368.000000,173.000000,800.000000,519.000000,]",
     "Time",
     "Power",
     "Spectrum",
@@ -1620,7 +1758,7 @@
     "off",
     "",
     "",
-    "[-74.52238305,6.37470933]",
+    "[-68.72958093,4.2771572]",
     "on",
     "off",
     "[]",
@@ -1644,10 +1782,10 @@
     "10000",
     "on",
     "60",
-    "10000",
+    "6144000",
     "1",
-    "-5000",
-    "5000",
+    "-3072000",
+    "3072000",
     "1e-3",
     "Auto",
     "0.1",
@@ -1752,7 +1890,7 @@
    "values":[
     "1",
     "off",
-    "[28.000000,314.000000,800.000000,500.000000,]",
+    "[368.000000,182.000000,800.000000,500.000000,]",
     "Time",
     "Power",
     "Spectrum",
@@ -1778,7 +1916,7 @@
     "off",
     "",
     "",
-    "[-70.6501464,12.63666623]",
+    "[-70.11628299,11.42870347]",
     "on",
     "off",
     "[]",
@@ -1840,7 +1978,7 @@
   }
  },
  {
-  "sid":"DUC_1:164",
+  "sid":"DUC_1:207",
   "inspector":{
    "params":[
     "NumInputPorts",
@@ -1910,7 +2048,7 @@
    "values":[
     "1",
     "on",
-    "[845.000000,324.000000,800.000000,500.000000,]",
+    "[368.000000,182.000000,800.000000,500.000000,]",
     "Time",
     "Power",
     "Spectrum",
@@ -1936,7 +2074,323 @@
     "off",
     "",
     "",
-    "[6.221220956886657,108.18826857593432]",
+    "[-0.98678851,110.79709645]",
+    "on",
+    "off",
+    "[]",
+    "",
+    "Vertical",
+    "100",
+    "0",
+    "[-80,20]",
+    "jet",
+    "hann",
+    "1024",
+    "Auto",
+    "0.9",
+    "[-5000,5000]",
+    "Auto",
+    "1",
+    "Auto",
+    "dBm",
+    "0",
+    "9.76",
+    "10000",
+    "on",
+    "60",
+    "6144000",
+    "1",
+    "-3072000",
+    "3072000",
+    "1e-3",
+    "Auto",
+    "0.1",
+    "Auto",
+    "9.76",
+    "Hann",
+    "1024"
+   ],
+   "tabs":[
+    "主要",
+    "高级",
+    "可视化",
+    "文档",
+    "-其他"
+   ],
+   "tabs_idx":[
+    0,
+    12,
+    22,
+    32,
+    33
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":{
+   "blocktype":"SpectrumAnalyzer",
+   "masktype":""
+  }
+ },
+ {
+  "sid":"DUC_1:189",
+  "inspector":{
+   "params":[
+    "NumInputPorts",
+    "OpenAtSimulationStart",
+    "WindowPosition",
+    "InputDomain",
+    "SpectrumType",
+    "ViewType",
+    "Method",
+    "SampleRateSource",
+    "PlotAsTwoSidedSpectrum",
+    "FrequencyScale",
+    "PlotType",
+    "AxesScaling",
+    "FrequencyResolutionMethod",
+    "RBWSource",
+    "WindowInvariantSamplesPerUpdate",
+    "FilterSharpness",
+    "FrequencySpan",
+    "AveragingMethod",
+    "VBWSource",
+    "SpectrumUnits",
+    "ReferenceLoad",
+    "FrequencyOffset",
+    "MaximizeAxes",
+    "PlotNormalTrace",
+    "PlotMaxHoldTrace",
+    "PlotMinHoldTrace",
+    "Title",
+    "YLabel",
+    "YLimits",
+    "ShowGrid",
+    "ShowLegend",
+    "ChannelNames",
+    "Description",
+    "AxesLayout",
+    "AxesScalingNumUpdates",
+    "CenterFrequency",
+    "ColorLimits",
+    "Colormap",
+    "CustomWindow",
+    "FFTLength",
+    "FFTLengthSource",
+    "ForgettingFactor",
+    "FrequencyVector",
+    "FrequencyVectorSource",
+    "FullScale",
+    "FullScaleSource",
+    "InputUnits",
+    "OverlapPercent",
+    "RBW",
+    "SampleRate",
+    "ShowColorbar",
+    "SidelobeAttenuation",
+    "Span",
+    "SpectrogramChannel",
+    "StartFrequency",
+    "StopFrequency",
+    "TimeResolution",
+    "TimeResolutionSource",
+    "TimeSpan",
+    "TimeSpanSource",
+    "VBW",
+    "Window",
+    "WindowLength"
+   ],
+   "values":[
+    "1",
+    "off",
+    "[368.000000,182.000000,800.000000,500.000000,]",
+    "Time",
+    "Power",
+    "Spectrum",
+    "Filter bank",
+    "Inherited",
+    "on",
+    "Linear",
+    "Line",
+    "Auto",
+    "RBW",
+    "Auto",
+    "on",
+    "0.3",
+    "Full",
+    "VBW",
+    "Auto",
+    "dBm",
+    "1",
+    "0",
+    "Auto",
+    "on",
+    "off",
+    "off",
+    "",
+    "",
+    "[-66.74735872,-9.86753031]",
+    "on",
+    "off",
+    "[]",
+    "",
+    "Vertical",
+    "100",
+    "0",
+    "[-80,20]",
+    "jet",
+    "hann",
+    "1024",
+    "Auto",
+    "0.9",
+    "[-5000,5000]",
+    "Auto",
+    "1",
+    "Auto",
+    "dBm",
+    "0",
+    "9.76",
+    "10000",
+    "on",
+    "60",
+    "6144000",
+    "1",
+    "-3072000",
+    "3072000",
+    "1e-3",
+    "Auto",
+    "0.1",
+    "Auto",
+    "9.76",
+    "Hann",
+    "1024"
+   ],
+   "tabs":[
+    "主要",
+    "高级",
+    "可视化",
+    "文档",
+    "-其他"
+   ],
+   "tabs_idx":[
+    0,
+    12,
+    22,
+    32,
+    33
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":{
+   "blocktype":"SpectrumAnalyzer",
+   "masktype":""
+  }
+ },
+ {
+  "sid":"DUC_1:205",
+  "inspector":{
+   "params":[
+    "NumInputPorts",
+    "OpenAtSimulationStart",
+    "WindowPosition",
+    "InputDomain",
+    "SpectrumType",
+    "ViewType",
+    "Method",
+    "SampleRateSource",
+    "PlotAsTwoSidedSpectrum",
+    "FrequencyScale",
+    "PlotType",
+    "AxesScaling",
+    "FrequencyResolutionMethod",
+    "RBWSource",
+    "WindowInvariantSamplesPerUpdate",
+    "FilterSharpness",
+    "FrequencySpan",
+    "AveragingMethod",
+    "VBWSource",
+    "SpectrumUnits",
+    "ReferenceLoad",
+    "FrequencyOffset",
+    "MaximizeAxes",
+    "PlotNormalTrace",
+    "PlotMaxHoldTrace",
+    "PlotMinHoldTrace",
+    "Title",
+    "YLabel",
+    "YLimits",
+    "ShowGrid",
+    "ShowLegend",
+    "ChannelNames",
+    "Description",
+    "AxesLayout",
+    "AxesScalingNumUpdates",
+    "CenterFrequency",
+    "ColorLimits",
+    "Colormap",
+    "CustomWindow",
+    "FFTLength",
+    "FFTLengthSource",
+    "ForgettingFactor",
+    "FrequencyVector",
+    "FrequencyVectorSource",
+    "FullScale",
+    "FullScaleSource",
+    "InputUnits",
+    "OverlapPercent",
+    "RBW",
+    "SampleRate",
+    "ShowColorbar",
+    "SidelobeAttenuation",
+    "Span",
+    "SpectrogramChannel",
+    "StartFrequency",
+    "StopFrequency",
+    "TimeResolution",
+    "TimeResolutionSource",
+    "TimeSpan",
+    "TimeSpanSource",
+    "VBW",
+    "Window",
+    "WindowLength"
+   ],
+   "values":[
+    "1",
+    "on",
+    "[368.000000,182.000000,800.000000,500.000000,]",
+    "Time",
+    "Power",
+    "Spectrum",
+    "Filter bank",
+    "Inherited",
+    "on",
+    "Linear",
+    "Line",
+    "Auto",
+    "RBW",
+    "Auto",
+    "on",
+    "0.3",
+    "Full",
+    "VBW",
+    "Auto",
+    "dBm",
+    "1",
+    "0",
+    "Auto",
+    "on",
+    "off",
+    "off",
+    "",
+    "",
+    "[-0.98678851,110.79709645]",
     "on",
     "off",
     "[]",
@@ -2179,52 +2633,6 @@
     "off",
     "off",
     "off",
-    "off",
-    "Simulink",
-    "Auto",
-    "",
-    ""
-   ],
-   "tabs":[
-    "参数属性",
-    "记录和可访问性",
-    "代码生成",
-    "文档"
-   ],
-   "tabs_idx":[
-    0,
-    3,
-    5,
-    7
-   ]
-  },
-  "viewer":{
-   "jshandler":"webview/handlers/ElementHandler"
-  },
-  "obj_viewer":[
-  ],
-  "finder":[
-  ]
- },
- {
-  "sid":"DUC_1:163#out:1;line",
-  "inspector":{
-   "params":[
-    "SignalNameFromLabel",
-    "MustResolveToSignal",
-    "ShowPropagatedSignal",
-    "DataLogging",
-    "TestPoint",
-    "SignalObjectPackage",
-    "StorageClass",
-    "Description",
-    "documentLink"
-   ],
-   "values":[
-    "",
-    "off",
-    "off",
-    "on",
     "off",
     "Simulink",
     "Auto",
@@ -2530,52 +2938,6 @@
  },
  {
   "sid":"DUC_1:161#out:1;line",
-  "inspector":{
-   "params":[
-    "SignalNameFromLabel",
-    "MustResolveToSignal",
-    "ShowPropagatedSignal",
-    "DataLogging",
-    "TestPoint",
-    "SignalObjectPackage",
-    "StorageClass",
-    "Description",
-    "documentLink"
-   ],
-   "values":[
-    "",
-    "off",
-    "off",
-    "off",
-    "off",
-    "Simulink",
-    "Auto",
-    "",
-    ""
-   ],
-   "tabs":[
-    "参数属性",
-    "记录和可访问性",
-    "代码生成",
-    "文档"
-   ],
-   "tabs_idx":[
-    0,
-    3,
-    5,
-    7
-   ]
-  },
-  "viewer":{
-   "jshandler":"webview/handlers/ElementHandler"
-  },
-  "obj_viewer":[
-  ],
-  "finder":[
-  ]
- },
- {
-  "sid":"DUC_1:137#out:1;line",
   "inspector":{
    "params":[
     "SignalNameFromLabel",
@@ -3236,7 +3598,7 @@
     "",
     "off",
     "off",
-    "off",
+    "on",
     "off",
     "Simulink",
     "Auto",
@@ -3467,6 +3829,190 @@
     "off",
     "off",
     "off",
+    "off",
+    "Simulink",
+    "Auto",
+    "",
+    ""
+   ],
+   "tabs":[
+    "参数属性",
+    "记录和可访问性",
+    "代码生成",
+    "文档"
+   ],
+   "tabs_idx":[
+    0,
+    3,
+    5,
+    7
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ },
+ {
+  "sid":"DUC_1:195#out:1;line",
+  "inspector":{
+   "params":[
+    "SignalNameFromLabel",
+    "MustResolveToSignal",
+    "ShowPropagatedSignal",
+    "DataLogging",
+    "TestPoint",
+    "SignalObjectPackage",
+    "StorageClass",
+    "Description",
+    "documentLink"
+   ],
+   "values":[
+    "",
+    "off",
+    "off",
+    "off",
+    "off",
+    "Simulink",
+    "Auto",
+    "",
+    ""
+   ],
+   "tabs":[
+    "参数属性",
+    "记录和可访问性",
+    "代码生成",
+    "文档"
+   ],
+   "tabs_idx":[
+    0,
+    3,
+    5,
+    7
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ },
+ {
+  "sid":"DUC_1:137#out:1;line",
+  "inspector":{
+   "params":[
+    "SignalNameFromLabel",
+    "MustResolveToSignal",
+    "ShowPropagatedSignal",
+    "DataLogging",
+    "TestPoint",
+    "SignalObjectPackage",
+    "StorageClass",
+    "Description",
+    "documentLink"
+   ],
+   "values":[
+    "",
+    "off",
+    "off",
+    "on",
+    "off",
+    "Simulink",
+    "Auto",
+    "",
+    ""
+   ],
+   "tabs":[
+    "参数属性",
+    "记录和可访问性",
+    "代码生成",
+    "文档"
+   ],
+   "tabs_idx":[
+    0,
+    3,
+    5,
+    7
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ },
+ {
+  "sid":"DUC_1:199#out:1;line",
+  "inspector":{
+   "params":[
+    "SignalNameFromLabel",
+    "MustResolveToSignal",
+    "ShowPropagatedSignal",
+    "DataLogging",
+    "TestPoint",
+    "SignalObjectPackage",
+    "StorageClass",
+    "Description",
+    "documentLink"
+   ],
+   "values":[
+    "",
+    "off",
+    "off",
+    "off",
+    "off",
+    "Simulink",
+    "Auto",
+    "",
+    ""
+   ],
+   "tabs":[
+    "参数属性",
+    "记录和可访问性",
+    "代码生成",
+    "文档"
+   ],
+   "tabs_idx":[
+    0,
+    3,
+    5,
+    7
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ },
+ {
+  "sid":"DUC_1:163#out:1;line",
+  "inspector":{
+   "params":[
+    "SignalNameFromLabel",
+    "MustResolveToSignal",
+    "ShowPropagatedSignal",
+    "DataLogging",
+    "TestPoint",
+    "SignalObjectPackage",
+    "StorageClass",
+    "Description",
+    "documentLink"
+   ],
+   "values":[
+    "",
+    "off",
+    "off",
+    "on",
     "off",
     "Simulink",
     "Auto",

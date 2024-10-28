@@ -1,38 +1,37 @@
 clc;close all;
-%% 
-fs_base=48e3;           % Sampling rate at input DUC
-upsample_L=128;
-fs_duc=fs_base*upsample_L;          % Sampling rate at output DUC 
-Fc=5e6;                 % Carrier Frequency
-Fpass=20e3;             % AM baseband width
-Fstop=30e3;             % Stopband
-Ap=0.1;                 % Passband ripple
-Ast=60;                 % Stopband attenuation
-T = 1;                  % 持续时间
-t = 0:1/fs_base:T-1/fs_base;      % 时间向量
+%% base data gen
+fs_base=48e3;                   % Sampling rate at input DUC
+upsample_L=128;    
+fs_duc=fs_base*upsample_L;      % Sampling rate at output DUC
+Fc=5e6;                         % Carrier Frequency
+Fpass=20e3;                     % AM baseband width
+Fstop=30e3;                     % Stopband
+Ap=0.1;                         % Passband ripple
+Ast=60;                         % Stopband attenuation
+T = 1;                          % 持续时间
+t = 0:1/fs_base:T-1/fs_base;    % 时间向量
 outputframe=1;
 N1_cycle = 128;
 N2_cycle = 64;
 N3_cycle = 32;
 N4_cycle = 16;
 
-
 %% 48k signal gen
 noise = bandpass(randn(size(t)), [1 10000], fs_base);
 %% NCO gen
-f0=600e3; % Desired output freq
-deltaf=0.5; % Frequency resolution
-SFDR=90; % Spurious free dynamic range (dB)
+f0=600e3;       % Desired output freq
+deltaf=0.5;     % Frequency resolution
+SFDR=90;        % Spurious free dynamic range (dB)
 
 Nnco=ceil(log2(fs_duc/deltaf));
 Q=ceil((SFDR-12)/6);
 phInc=ceil((f0*2^Nnco)/fs_duc);
 ditherBits=Nnco-Q;
-%% NCO_base gen
-fb0=600; % Desired output freq
+% NCO_base gen
+fb0=600;        % Desired output freq
 fb1=1000;
-deltaf=0.5; % Frequency resolution
-SFDR=90; % Spurious free dynamic range (dB)
+deltaf=0.5;     % Frequency resolution
+SFDR=90;        % Spurious free dynamic range (dB)
 
 Nnco_base=ceil(log2(fs_base/deltaf));
 Q_base=ceil((SFDR-12)/6);
@@ -49,14 +48,10 @@ lowpassSpec = fdesign.interpolator(lowpassParams.InterpolationFactor, ...
     'lowpass','Fp,Fst,Ap,Ast',Fpass,Fstop,Ap,Ast,lowpassParams.FsOut);
 lowpassFilt = design(lowpassSpec,'SystemObject',true)
 
-%%
 % Display the magnitude response of the lowpass filter without
 % gain correction.
-
 ducPlots.lowpass = fvtool(lowpassFilt,'Fs',fs_base*2,'Legend','off');
-%%
-% *Second Halfband Interpolator*
-%
+%% *Second Halfband Interpolator*
 % The halfband filter provides efficient interpolation by two. Halfband 
 % filters are efficient for hardware because approximately half of their 
 % coefficients are equal to zero, and those multipliers are excluded from
@@ -78,7 +73,7 @@ ducPlots.lowpass = fvtool(lowpassFilt,'Fs',fs_base*2,'Legend','off');
 hbFilt = design(hbSpec,'SystemObject',true)
 
 
-%%
+
 % Visualize the magnitude response of the halfband interpolation.
 
 ducFilterChain = dsp.FilterCascade(lowpassFilt,hbFilt);
@@ -91,8 +86,8 @@ legend(ducPlots.hbFilt, ...
        'Lowpass+Halfband');
 
 
-%%
-% *CIC Compensation Interpolator*
+%% *CIC Compensation Interpolator*
+% 
 %
 % Because the magnitude response of the last CIC filter has a significant 
 % _droop_ within the passband region, the example uses an FIR-based droop 
@@ -128,7 +123,7 @@ compSpec = fdesign.interpolator(compParams.InterpolationFactor,'ciccomp', ...
            compParams.FsOut);
 compFilt = design(compSpec,'SystemObject',true)
 
-%%
+
 % Plot the response of the CIC compensation interpolator.
 
 ducFilterChain = dsp.FilterCascade(lowpassFilt,hbFilt,compFilt);
@@ -141,8 +136,8 @@ legend(ducPlots.cicComp, ...
        'CIC Comp Interpolator', ...
        'Lowpass+Halfband+CIC Comp');
 
-%%
-% *CIC Interpolator*
+%% *CIC Interpolator*
+%
 %
 % The last filter stage is implemented as a CIC interpolator because of this
 % type of filter's ability to efficiently implement a large decimation factor.
@@ -156,7 +151,7 @@ cicParams.FsOut = cicParams.FsIn*cicParams.InterpolationFactor;
 cicFilt = dsp.CICInterpolator(cicParams.InterpolationFactor, ...
           cicParams.DifferentialDelay,cicParams.NumSections) 
 
-%%
+
 % Visualize the magnitude response of the CIC interpolation.
 % CIC filters use fixed-point arithmetic internally, so |fvtool|
 % plots both the quantized and unquantized responses.

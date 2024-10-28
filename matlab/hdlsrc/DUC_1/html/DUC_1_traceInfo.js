@@ -1,83 +1,96 @@
 function RTW_Sid2UrlHash() {
 	this.urlHashMap = new Array();
 	/* <S1>/1+m*sin(2*pi*fm*t) */
-	this.urlHashMap["DUC_1:169"] = "DUC_AM.v:118,119";
+	this.urlHashMap["DUC_1:209"] = "DUC_AM.v:117,118";
 	/* <S1>/Constant */
-	this.urlHashMap["DUC_1:167"] = "DUC_AM.v:104";
+	this.urlHashMap["DUC_1:167"] = "DUC_AM.v:103";
 	/* <S1>/Constant1 */
-	this.urlHashMap["DUC_1:170"] = "DUC_AM.v:117";
+	this.urlHashMap["DUC_1:170"] = "DUC_AM.v:116";
 	/* <S1>/Constant2 */
-	this.urlHashMap["DUC_1:174"] = "DUC_AM.v:131";
+	this.urlHashMap["DUC_1:174"] = "DUC_AM.v:130";
 	/* <S1>/DUC_module */
-	this.urlHashMap["DUC_1:165"] = "DUC_AM.v:85,86,87,88,89,90,91,92";
+	this.urlHashMap["DUC_1:165"] = "DUC_AM.v:84,85,86,87,88,89,90,91";
 	/* <S1>/Delay */
-	this.urlHashMap["DUC_1:185"] = "DUC_AM.v:93,94,95,96,97,98,99,100,101,102,103";
+	this.urlHashMap["DUC_1:185"] = "DUC_AM.v:92,93,94,95,96,97,98,99,100,101,102";
 	/* <S1>/Delay1 */
-	this.urlHashMap["DUC_1:186"] = "DUC_AM.v:105,106,107,108,109,110,111,112,113,114,115";
+	this.urlHashMap["DUC_1:186"] = "DUC_AM.v:104,105,106,107,108,109,110,111,112,113,114";
 	/* <S1>/Delay2 */
-	this.urlHashMap["DUC_1:187"] = "DUC_AM.v:120,121,122,123,124,125,126,127,128,129,130";
+	this.urlHashMap["DUC_1:187"] = "DUC_AM.v:119,120,121,122,123,124,125,126,127,128,129";
 	/* <S1>/Delay3 */
-	this.urlHashMap["DUC_1:188"] = "DUC_AM.v:138,139,140,141,142,143,144,145,146,147,148";
+	this.urlHashMap["DUC_1:188"] = "DUC_AM.v:137,138,139,140,141,142,143,144,145,146,147";
 	/* <S1>/Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t) */
-	this.urlHashMap["DUC_1:171"] = "DUC_AM.v:149,150";
+	this.urlHashMap["DUC_1:210"] = "DUC_AM.v:148";
 	/* <S1>/NCO */
-	this.urlHashMap["DUC_1:173"] = "DUC_AM.v:132,133,134,135,136,137";
+	this.urlHashMap["DUC_1:173"] = "DUC_AM.v:131,132,133,134,135,136";
+	/* <S1>/Spectrum
+Analyzer */
+	this.urlHashMap["DUC_1:201"] = "msg=rtwMsg_notTraceable&block=DUC_1:201";
+	/* <S1>/Spectrum
+Analyzer1 */
+	this.urlHashMap["DUC_1:202"] = "msg=rtwMsg_notTraceable&block=DUC_1:202";
+	/* <S1>/Spectrum
+Analyzer2 */
+	this.urlHashMap["DUC_1:203"] = "msg=rtwMsg_notTraceable&block=DUC_1:203";
 	/* <S1>/m*sin(2*pi*fm*t) */
-	this.urlHashMap["DUC_1:168"] = "DUC_AM.v:116";
+	this.urlHashMap["DUC_1:208"] = "DUC_AM.v:115";
 	/* <S2>/CIC
 Interpolation */
-	this.urlHashMap["DUC_1:163"] = "CIC_Interpolation.v:75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,132,133,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201&DUC_module.v:330,331,332,333,334,335,336,337,338";
+	this.urlHashMap["DUC_1:163"] = "CIC_Interpolation.v:75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,132,133,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201&DUC_module.v:356,357,358,359,360,361,362,363,364";
 	/* <S2>/CIC Compensation */
-	this.urlHashMap["DUC_1:152"] = "DUC_module.v:277,278,279,280,281,282,283,284";
+	this.urlHashMap["DUC_1:152"] = "DUC_module.v:303,304,305,306,307,308,309,310";
 	/* <S2>/Constant */
-	this.urlHashMap["DUC_1:133"] = "DUC_module.v:124";
+	this.urlHashMap["DUC_1:133"] = "DUC_module.v:127";
 	/* <S2>/Constant1 */
-	this.urlHashMap["DUC_1:136"] = "DUC_module.v:156";
+	this.urlHashMap["DUC_1:136"] = "DUC_module.v:182";
 	/* <S2>/Constant2 */
-	this.urlHashMap["DUC_1:145"] = "DUC_module.v:212";
+	this.urlHashMap["DUC_1:145"] = "DUC_module.v:238";
 	/* <S2>/Constant3 */
-	this.urlHashMap["DUC_1:150"] = "DUC_module.v:275";
+	this.urlHashMap["DUC_1:150"] = "DUC_module.v:301";
 	/* <S2>/Counter
 Limited */
-	this.urlHashMap["DUC_1:132"] = "DUC_module.v:103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123";
+	this.urlHashMap["DUC_1:132"] = "DUC_module.v:106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126";
 	/* <S2>/Delay */
-	this.urlHashMap["DUC_1:181"] = "DUC_module.v:166,167,168,169,170,171,172,173,174,175,176";
+	this.urlHashMap["DUC_1:181"] = "DUC_module.v:192,193,194,195,196,197,198,199,200,201,202";
 	/* <S2>/Delay1 */
-	this.urlHashMap["DUC_1:182"] = "DUC_module.v:182,183,184,185,186,187,188,189,190,191,192";
+	this.urlHashMap["DUC_1:182"] = "DUC_module.v:208,209,210,211,212,213,214,215,216,217,218";
 	/* <S2>/Delay2 */
-	this.urlHashMap["DUC_1:183"] = "DUC_module.v:233,234,235,236,237,238,239,240,241,242,243";
+	this.urlHashMap["DUC_1:183"] = "DUC_module.v:259,260,261,262,263,264,265,266,267,268,269";
 	/* <S2>/Delay3 */
-	this.urlHashMap["DUC_1:184"] = "DUC_module.v:222,223,224,225,226,227,228,229,230,231,232";
+	this.urlHashMap["DUC_1:184"] = "DUC_module.v:248,249,250,251,252,253,254,255,256,257,258";
+	/* <S2>/Delay4 */
+	this.urlHashMap["DUC_1:195"] = "DUC_module.v:136,137,138,139,140,141,142,143,144,145,146";
+	/* <S2>/Delay6 */
+	this.urlHashMap["DUC_1:199"] = "DUC_module.v:152,153,154,155,156,157,158,159,160,161,162";
 	/* <S2>/Downsample */
-	this.urlHashMap["DUC_1:161"] = "DUC_module.v:316,317,318,319,320,321,322,323,324,325,326,328,329";
+	this.urlHashMap["DUC_1:161"] = "DUC_module.v:342,343,344,345,346,347,348,349,350,351,352,354,355";
 	/* <S2>/Gain */
-	this.urlHashMap["DUC_1:160"] = "DUC_module.v:246";
+	this.urlHashMap["DUC_1:160"] = "DUC_module.v:272";
 	/* <S2>/HDL Counter */
-	this.urlHashMap["DUC_1:138"] = "DUC_module.v:132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155";
+	this.urlHashMap["DUC_1:138"] = "DUC_module.v:147,148,149,150,151,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181";
 	/* <S2>/HDL Counter1 */
-	this.urlHashMap["DUC_1:147"] = "DUC_module.v:177,178,179,180,181,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211";
+	this.urlHashMap["DUC_1:147"] = "DUC_module.v:203,204,205,206,207,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237";
 	/* <S2>/HDL Counter2 */
-	this.urlHashMap["DUC_1:151"] = "DUC_module.v:251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274";
+	this.urlHashMap["DUC_1:151"] = "DUC_module.v:277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300";
 	/* <S2>/Halfband */
-	this.urlHashMap["DUC_1:146"] = "DUC_module.v:214,215,216,217,218,219,220,221";
+	this.urlHashMap["DUC_1:146"] = "DUC_module.v:240,241,242,243,244,245,246,247";
 	/* <S2>/Lowpass */
-	this.urlHashMap["DUC_1:139"] = "DUC_module.v:158,159,160,161,162,163,164,165";
+	this.urlHashMap["DUC_1:139"] = "DUC_module.v:184,185,186,187,188,189,190,191";
 	/* <S2>/NCO */
-	this.urlHashMap["DUC_1:176"] = "DUC_module.v:126,127,128,129,130,131";
+	this.urlHashMap["DUC_1:176"] = "DUC_module.v:129,130,131,132,133,134,135";
 	/* <S2>/Relational
 Operator */
-	this.urlHashMap["DUC_1:134"] = "DUC_module.v:125";
+	this.urlHashMap["DUC_1:134"] = "DUC_module.v:128";
 	/* <S2>/Relational
 Operator1 */
-	this.urlHashMap["DUC_1:137"] = "DUC_module.v:157";
+	this.urlHashMap["DUC_1:137"] = "DUC_module.v:183";
 	/* <S2>/Relational
 Operator2 */
-	this.urlHashMap["DUC_1:148"] = "DUC_module.v:213";
+	this.urlHashMap["DUC_1:148"] = "DUC_module.v:239";
 	/* <S2>/Relational
 Operator3 */
-	this.urlHashMap["DUC_1:153"] = "DUC_module.v:276";
+	this.urlHashMap["DUC_1:153"] = "DUC_module.v:302";
 	/* <S2>/Sample&Hold */
-	this.urlHashMap["DUC_1:156"] = "DUC_module.v:288,289,290,291,292,293,294,295,296,297,298";
+	this.urlHashMap["DUC_1:156"] = "DUC_module.v:314,315,316,317,318,319,320,321,322,323,324";
 	/* <S2>/Spectrum
 Analyzer1 */
 	this.urlHashMap["DUC_1:142"] = "msg=rtwMsg_notTraceable&block=DUC_1:142";
@@ -89,9 +102,15 @@ Analyzer3 */
 	this.urlHashMap["DUC_1:154"] = "msg=rtwMsg_notTraceable&block=DUC_1:154";
 	/* <S2>/Spectrum
 Analyzer4 */
-	this.urlHashMap["DUC_1:164"] = "msg=rtwMsg_notTraceable&block=DUC_1:164";
+	this.urlHashMap["DUC_1:207"] = "msg=rtwMsg_notTraceable&block=DUC_1:207";
+	/* <S2>/Spectrum
+Analyzer5 */
+	this.urlHashMap["DUC_1:189"] = "msg=rtwMsg_notTraceable&block=DUC_1:189";
+	/* <S2>/Spectrum
+Analyzer6 */
+	this.urlHashMap["DUC_1:205"] = "msg=rtwMsg_notTraceable&block=DUC_1:205";
 	/* <S2>/Switch */
-	this.urlHashMap["DUC_1:159"] = "DUC_module.v:249,250";
+	this.urlHashMap["DUC_1:159"] = "DUC_module.v:275,276";
 	/* <S3>/Data Type
 Propagation */
 	this.urlHashMap["DUC_1:132:1"] = "msg=rtwMsg_notTraceable&block=DUC_1:132:1";
@@ -328,8 +347,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap = new Array();
 	this.rtwnameHashMap["<Root>"] = {sid: "DUC_1"};
 	this.sidHashMap["DUC_1"] = {rtwname: "<Root>"};
-	this.rtwnameHashMap["<S1>/1+m*sin(2*pi*fm*t)"] = {sid: "DUC_1:169"};
-	this.sidHashMap["DUC_1:169"] = {rtwname: "<S1>/1+m*sin(2*pi*fm*t)"};
+	this.rtwnameHashMap["<S1>/1+m*sin(2*pi*fm*t)"] = {sid: "DUC_1:209"};
+	this.sidHashMap["DUC_1:209"] = {rtwname: "<S1>/1+m*sin(2*pi*fm*t)"};
 	this.rtwnameHashMap["<S1>/Constant"] = {sid: "DUC_1:167"};
 	this.sidHashMap["DUC_1:167"] = {rtwname: "<S1>/Constant"};
 	this.rtwnameHashMap["<S1>/Constant1"] = {sid: "DUC_1:170"};
@@ -346,14 +365,20 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["DUC_1:187"] = {rtwname: "<S1>/Delay2"};
 	this.rtwnameHashMap["<S1>/Delay3"] = {sid: "DUC_1:188"};
 	this.sidHashMap["DUC_1:188"] = {rtwname: "<S1>/Delay3"};
-	this.rtwnameHashMap["<S1>/Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t)"] = {sid: "DUC_1:171"};
-	this.sidHashMap["DUC_1:171"] = {rtwname: "<S1>/Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t)"};
+	this.rtwnameHashMap["<S1>/Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t)"] = {sid: "DUC_1:210"};
+	this.sidHashMap["DUC_1:210"] = {rtwname: "<S1>/Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t)"};
 	this.rtwnameHashMap["<S1>/NCO"] = {sid: "DUC_1:173"};
 	this.sidHashMap["DUC_1:173"] = {rtwname: "<S1>/NCO"};
+	this.rtwnameHashMap["<S1>/Spectrum Analyzer"] = {sid: "DUC_1:201"};
+	this.sidHashMap["DUC_1:201"] = {rtwname: "<S1>/Spectrum Analyzer"};
+	this.rtwnameHashMap["<S1>/Spectrum Analyzer1"] = {sid: "DUC_1:202"};
+	this.sidHashMap["DUC_1:202"] = {rtwname: "<S1>/Spectrum Analyzer1"};
+	this.rtwnameHashMap["<S1>/Spectrum Analyzer2"] = {sid: "DUC_1:203"};
+	this.sidHashMap["DUC_1:203"] = {rtwname: "<S1>/Spectrum Analyzer2"};
 	this.rtwnameHashMap["<S1>/Terminator"] = {sid: "DUC_1:177"};
 	this.sidHashMap["DUC_1:177"] = {rtwname: "<S1>/Terminator"};
-	this.rtwnameHashMap["<S1>/m*sin(2*pi*fm*t)"] = {sid: "DUC_1:168"};
-	this.sidHashMap["DUC_1:168"] = {rtwname: "<S1>/m*sin(2*pi*fm*t)"};
+	this.rtwnameHashMap["<S1>/m*sin(2*pi*fm*t)"] = {sid: "DUC_1:208"};
+	this.sidHashMap["DUC_1:208"] = {rtwname: "<S1>/m*sin(2*pi*fm*t)"};
 	this.rtwnameHashMap["<S1>/AM_Out"] = {sid: "DUC_1:180"};
 	this.sidHashMap["DUC_1:180"] = {rtwname: "<S1>/AM_Out"};
 	this.rtwnameHashMap["<S2>/CIC Interpolation"] = {sid: "DUC_1:163"};
@@ -378,6 +403,10 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["DUC_1:183"] = {rtwname: "<S2>/Delay2"};
 	this.rtwnameHashMap["<S2>/Delay3"] = {sid: "DUC_1:184"};
 	this.sidHashMap["DUC_1:184"] = {rtwname: "<S2>/Delay3"};
+	this.rtwnameHashMap["<S2>/Delay4"] = {sid: "DUC_1:195"};
+	this.sidHashMap["DUC_1:195"] = {rtwname: "<S2>/Delay4"};
+	this.rtwnameHashMap["<S2>/Delay6"] = {sid: "DUC_1:199"};
+	this.sidHashMap["DUC_1:199"] = {rtwname: "<S2>/Delay6"};
 	this.rtwnameHashMap["<S2>/Downsample"] = {sid: "DUC_1:161"};
 	this.sidHashMap["DUC_1:161"] = {rtwname: "<S2>/Downsample"};
 	this.rtwnameHashMap["<S2>/Gain"] = {sid: "DUC_1:160"};
@@ -410,8 +439,12 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["DUC_1:149"] = {rtwname: "<S2>/Spectrum Analyzer2"};
 	this.rtwnameHashMap["<S2>/Spectrum Analyzer3"] = {sid: "DUC_1:154"};
 	this.sidHashMap["DUC_1:154"] = {rtwname: "<S2>/Spectrum Analyzer3"};
-	this.rtwnameHashMap["<S2>/Spectrum Analyzer4"] = {sid: "DUC_1:164"};
-	this.sidHashMap["DUC_1:164"] = {rtwname: "<S2>/Spectrum Analyzer4"};
+	this.rtwnameHashMap["<S2>/Spectrum Analyzer4"] = {sid: "DUC_1:207"};
+	this.sidHashMap["DUC_1:207"] = {rtwname: "<S2>/Spectrum Analyzer4"};
+	this.rtwnameHashMap["<S2>/Spectrum Analyzer5"] = {sid: "DUC_1:189"};
+	this.sidHashMap["DUC_1:189"] = {rtwname: "<S2>/Spectrum Analyzer5"};
+	this.rtwnameHashMap["<S2>/Spectrum Analyzer6"] = {sid: "DUC_1:205"};
+	this.sidHashMap["DUC_1:205"] = {rtwname: "<S2>/Spectrum Analyzer6"};
 	this.rtwnameHashMap["<S2>/Switch"] = {sid: "DUC_1:159"};
 	this.sidHashMap["DUC_1:159"] = {rtwname: "<S2>/Switch"};
 	this.rtwnameHashMap["<S2>/Terminator"] = {sid: "DUC_1:178"};

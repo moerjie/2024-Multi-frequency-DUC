@@ -12,10 +12,13 @@ vlog  FilterTapSystolicWvldInC0.v
 vlog  subFilter_block.v
 vlog  Filter_block.v
 vlog  Halfband.v
-vlog  FilterCoef_block1.v
-vlog  FilterTapSystolicPreAddWvlIn_block1.v
-vlog  subFilter_block1.v
-vlog  Filter_block1.v
+vlog  FirRdyLogic.v
+vlog  SimpleDualPortRAM_generic.v
+vlog  Addressable_Delay_Line.v
+vlog  Addressable_Delay_Line_block.v
+vlog  Addressable_Delay_Line_block1.v
+vlog  Addressable_Delay_Line_block2.v
+vlog  FilterTapSystolicPreAdd.v
 vlog  Lowpass.v
 vlog  DitherGen.v
 vlog  Lookup_Table.v

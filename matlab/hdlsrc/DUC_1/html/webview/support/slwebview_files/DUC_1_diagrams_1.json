@@ -29,17 +29,17 @@
   "children":[
    3
   ],
-  "name":"DUC&AM",
-  "fullname":"DUC_1/DUC&AM",
-  "label":"DUC&AM",
+  "name":"DUC_AM",
+  "fullname":"DUC_1/DUC_AM",
+  "label":"DUC_AM",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
   "svg":"support/slwebview_files/DUC_1_179_d.svg",
   "thumbnail":"support/slwebview_files/DUC_1_179_d.png",
   "elements":[
    {
-    "sid":"DUC_1:169",
-    "rsid":"DUC_1:169",
+    "sid":"DUC_1:209",
+    "rsid":"DUC_1:209",
     "name":"1+m*sin(2*pi*fm*t)",
     "label":"1+m*sin(2*pi*fm*t)",
     "className":"Simulink.Sum",
@@ -110,8 +110,8 @@
     "icon":"BlockIcon_icon"
    },
    {
-    "sid":"DUC_1:171",
-    "rsid":"DUC_1:171",
+    "sid":"DUC_1:210",
+    "rsid":"DUC_1:210",
     "name":"Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t)",
     "label":"Ec*(1+m*sin(2*pi*fm*t))*sin(2*pi*fc*t)",
     "className":"Simulink.Product",
@@ -126,6 +126,30 @@
     "icon":"BlockIcon_icon"
    },
    {
+    "sid":"DUC_1:201",
+    "rsid":"DUC_1:201",
+    "name":"Spectrum\nAnalyzer",
+    "label":"Spectrum Analyzer",
+    "className":"Simulink.SpectrumAnalyzer",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"DUC_1:202",
+    "rsid":"DUC_1:202",
+    "name":"Spectrum\nAnalyzer1",
+    "label":"Spectrum Analyzer1",
+    "className":"Simulink.SpectrumAnalyzer",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"DUC_1:203",
+    "rsid":"DUC_1:203",
+    "name":"Spectrum\nAnalyzer2",
+    "label":"Spectrum Analyzer2",
+    "className":"Simulink.SpectrumAnalyzer",
+    "icon":"BlockIcon_icon"
+   },
+   {
     "sid":"DUC_1:177",
     "rsid":"DUC_1:177",
     "name":"Terminator",
@@ -134,8 +158,8 @@
     "icon":"BlockIcon_icon"
    },
    {
-    "sid":"DUC_1:168",
-    "rsid":"DUC_1:168",
+    "sid":"DUC_1:208",
+    "rsid":"DUC_1:208",
     "name":"m*sin(2*pi*fm*t)",
     "label":"m*sin(2*pi*fm*t)",
     "className":"Simulink.Product",
@@ -148,14 +172,6 @@
     "label":"AM_Out",
     "className":"Simulink.Outport",
     "icon":"BlockIcon_icon"
-   },
-   {
-    "sid":"DUC_1:174#out:1;line",
-    "rsid":"DUC_1:174#out:1;line",
-    "name":"",
-    "label":"",
-    "className":"Simulink.Line",
-    "icon":"LineIcon_icon"
    },
    {
     "sid":"DUC_1:173#out:1;line",
@@ -190,16 +206,16 @@
     "icon":"LineIcon_icon"
    },
    {
-    "sid":"DUC_1:169#out:1;line",
-    "rsid":"DUC_1:169#out:1;line",
+    "sid":"DUC_1:209#out:1;line",
+    "rsid":"DUC_1:209#out:1;line",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
     "icon":"LineIcon_icon"
    },
    {
-    "sid":"DUC_1:168#out:1;line",
-    "rsid":"DUC_1:168#out:1;line",
+    "sid":"DUC_1:208#out:1;line",
+    "rsid":"DUC_1:208#out:1;line",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
@@ -214,8 +230,8 @@
     "icon":"LineIcon_icon"
    },
    {
-    "sid":"DUC_1:171#out:1;line",
-    "rsid":"DUC_1:171#out:1;line",
+    "sid":"DUC_1:210#out:1;line",
+    "rsid":"DUC_1:210#out:1;line",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
@@ -252,6 +268,14 @@
     "label":"",
     "className":"Simulink.Line",
     "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"DUC_1:174#out:1;line",
+    "rsid":"DUC_1:174#out:1;line",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
    }
   ],
   "sysViewURL":"support/slwebview_files/DUC_1_179_d.json",
@@ -270,7 +294,7 @@
    21
   ],
   "name":"DUC_module",
-  "fullname":"DUC_1/DUC&AM/DUC_module",
+  "fullname":"DUC_1/DUC_AM/DUC_module",
   "label":"DUC_module",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -362,6 +386,22 @@
     "rsid":"DUC_1:184",
     "name":"Delay3",
     "label":"Delay3",
+    "className":"Simulink.Delay",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"DUC_1:195",
+    "rsid":"DUC_1:195",
+    "name":"Delay4",
+    "label":"Delay4",
+    "className":"Simulink.Delay",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"DUC_1:199",
+    "rsid":"DUC_1:199",
+    "name":"Delay6",
+    "label":"Delay6",
     "className":"Simulink.Delay",
     "icon":"BlockIcon_icon"
    },
@@ -494,10 +534,26 @@
     "icon":"BlockIcon_icon"
    },
    {
-    "sid":"DUC_1:164",
-    "rsid":"DUC_1:164",
+    "sid":"DUC_1:207",
+    "rsid":"DUC_1:207",
     "name":"Spectrum\nAnalyzer4",
     "label":"Spectrum Analyzer4",
+    "className":"Simulink.SpectrumAnalyzer",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"DUC_1:189",
+    "rsid":"DUC_1:189",
+    "name":"Spectrum\nAnalyzer5",
+    "label":"Spectrum Analyzer5",
+    "className":"Simulink.SpectrumAnalyzer",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"DUC_1:205",
+    "rsid":"DUC_1:205",
+    "name":"Spectrum\nAnalyzer6",
+    "label":"Spectrum Analyzer6",
     "className":"Simulink.SpectrumAnalyzer",
     "icon":"BlockIcon_icon"
    },
@@ -528,14 +584,6 @@
    {
     "sid":"DUC_1:132#out:1;line",
     "rsid":"DUC_1:132#out:1;line",
-    "name":"",
-    "label":"",
-    "className":"Simulink.Line",
-    "icon":"LineIcon_icon"
-   },
-   {
-    "sid":"DUC_1:163#out:1;line",
-    "rsid":"DUC_1:163#out:1;line",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
@@ -592,14 +640,6 @@
    {
     "sid":"DUC_1:161#out:1;line",
     "rsid":"DUC_1:161#out:1;line",
-    "name":"",
-    "label":"",
-    "className":"Simulink.Line",
-    "icon":"LineIcon_icon"
-   },
-   {
-    "sid":"DUC_1:137#out:1;line",
-    "rsid":"DUC_1:137#out:1;line",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
@@ -756,6 +796,38 @@
     "label":"",
     "className":"Simulink.Line",
     "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"DUC_1:195#out:1;line",
+    "rsid":"DUC_1:195#out:1;line",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"DUC_1:137#out:1;line",
+    "rsid":"DUC_1:137#out:1;line",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"DUC_1:199#out:1;line",
+    "rsid":"DUC_1:199#out:1;line",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"DUC_1:163#out:1;line",
+    "rsid":"DUC_1:163#out:1;line",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
    }
   ],
   "sysViewURL":"support/slwebview_files/DUC_1_165_d.json",
@@ -772,7 +844,7 @@
    6
   ],
   "name":"Counter\nLimited",
-  "fullname":"DUC_1/DUC&AM/DUC_module/Counter Limited",
+  "fullname":"DUC_1/DUC_AM/DUC_module/Counter Limited",
   "label":"Counter Limited",
   "className":"Counter Limited",
   "icon":"BlockIcon_icon",
@@ -872,7 +944,7 @@
   "children":[
   ],
   "name":"Increment\nReal World",
-  "fullname":"DUC_1/DUC&AM/DUC_module/Counter Limited/Increment Real World",
+  "fullname":"DUC_1/DUC_AM/DUC_module/Counter Limited/Increment Real World",
   "label":"Increment Real World",
   "className":"Real World Value Increment",
   "icon":"BlockIcon_icon",
@@ -956,7 +1028,7 @@
   "children":[
   ],
   "name":"Wrap To Zero",
-  "fullname":"DUC_1/DUC&AM/DUC_module/Counter Limited/Wrap To Zero",
+  "fullname":"DUC_1/DUC_AM/DUC_module/Counter Limited/Wrap To Zero",
   "label":"Wrap To Zero",
   "className":"Wrap To Zero",
   "icon":"BlockIcon_icon",
@@ -1052,7 +1124,7 @@
    13
   ],
   "name":"HDL Counter",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter",
   "label":"HDL Counter",
   "className":"HDL Counter",
   "icon":"BlockIcon_icon",
@@ -1505,7 +1577,7 @@
    9
   ],
   "name":"Add_wrap",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter/Add_wrap",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter/Add_wrap",
   "label":"Add_wrap",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -1653,7 +1725,7 @@
   "children":[
   ],
   "name":"Compare\nTo Constant",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter/Add_wrap/Compare To Constant",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter/Add_wrap/Compare To Constant",
   "label":"Compare To Constant",
   "className":"Compare To Constant",
   "icon":"BlockIcon_icon",
@@ -1729,7 +1801,7 @@
   "children":[
   ],
   "name":"Dir_logic",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter/Dir_logic",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter/Dir_logic",
   "label":"Dir_logic",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -1806,7 +1878,7 @@
    12
   ],
   "name":"Sub_wrap",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter/Sub_wrap",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter/Sub_wrap",
   "label":"Sub_wrap",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -1954,7 +2026,7 @@
   "children":[
   ],
   "name":"Compare\nTo Constant",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter/Sub_wrap/Compare To Constant",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter/Sub_wrap/Compare To Constant",
   "label":"Compare To Constant",
   "className":"Compare To Constant",
   "icon":"BlockIcon_icon",
@@ -2030,7 +2102,7 @@
   "children":[
   ],
   "name":"count_hit_subsystem",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter/count_hit_subsystem",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter/count_hit_subsystem",
   "label":"count_hit_subsystem",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -2270,7 +2342,7 @@
    20
   ],
   "name":"HDL Counter1",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1",
   "label":"HDL Counter1",
   "className":"HDL Counter",
   "icon":"BlockIcon_icon",
@@ -2723,7 +2795,7 @@
    16
   ],
   "name":"Add_wrap",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1/Add_wrap",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1/Add_wrap",
   "label":"Add_wrap",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -2871,7 +2943,7 @@
   "children":[
   ],
   "name":"Compare\nTo Constant",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1/Add_wrap/Compare To Constant",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1/Add_wrap/Compare To Constant",
   "label":"Compare To Constant",
   "className":"Compare To Constant",
   "icon":"BlockIcon_icon",
@@ -2947,7 +3019,7 @@
   "children":[
   ],
   "name":"Dir_logic",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1/Dir_logic",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1/Dir_logic",
   "label":"Dir_logic",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -3024,7 +3096,7 @@
    19
   ],
   "name":"Sub_wrap",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1/Sub_wrap",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1/Sub_wrap",
   "label":"Sub_wrap",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -3172,7 +3244,7 @@
   "children":[
   ],
   "name":"Compare\nTo Constant",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1/Sub_wrap/Compare To Constant",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1/Sub_wrap/Compare To Constant",
   "label":"Compare To Constant",
   "className":"Compare To Constant",
   "icon":"BlockIcon_icon",
@@ -3248,7 +3320,7 @@
   "children":[
   ],
   "name":"count_hit_subsystem",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter1/count_hit_subsystem",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter1/count_hit_subsystem",
   "label":"count_hit_subsystem",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -3488,7 +3560,7 @@
    27
   ],
   "name":"HDL Counter2",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2",
   "label":"HDL Counter2",
   "className":"HDL Counter",
   "icon":"BlockIcon_icon",
@@ -3941,7 +4013,7 @@
    23
   ],
   "name":"Add_wrap",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2/Add_wrap",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2/Add_wrap",
   "label":"Add_wrap",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -4089,7 +4161,7 @@
   "children":[
   ],
   "name":"Compare\nTo Constant",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2/Add_wrap/Compare To Constant",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2/Add_wrap/Compare To Constant",
   "label":"Compare To Constant",
   "className":"Compare To Constant",
   "icon":"BlockIcon_icon",
@@ -4165,7 +4237,7 @@
   "children":[
   ],
   "name":"Dir_logic",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2/Dir_logic",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2/Dir_logic",
   "label":"Dir_logic",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -4242,7 +4314,7 @@
    26
   ],
   "name":"Sub_wrap",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2/Sub_wrap",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2/Sub_wrap",
   "label":"Sub_wrap",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",
@@ -4390,7 +4462,7 @@
   "children":[
   ],
   "name":"Compare\nTo Constant",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2/Sub_wrap/Compare To Constant",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2/Sub_wrap/Compare To Constant",
   "label":"Compare To Constant",
   "className":"Compare To Constant",
   "icon":"BlockIcon_icon",
@@ -4466,7 +4538,7 @@
   "children":[
   ],
   "name":"count_hit_subsystem",
-  "fullname":"DUC_1/DUC&AM/DUC_module/HDL Counter2/count_hit_subsystem",
+  "fullname":"DUC_1/DUC_AM/DUC_module/HDL Counter2/count_hit_subsystem",
   "label":"count_hit_subsystem",
   "className":"Simulink.SubSystem",
   "icon":"SubSystemIcon_icon",

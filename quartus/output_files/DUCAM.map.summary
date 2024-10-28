@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 04 21:56:54 2024
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : DUCAM
+Top-level Entity Name : DUCAM
+Family : Cyclone IV E
+Total logic elements : 6,978
+    Total combinational functions : 4,553
+    Dedicated logic registers : 4,766
+Total registers : 4766
+Total pins : 67
+Total virtual pins : 0
+Total memory bits : 261,328
+Embedded Multiplier 9-bit elements : 46
+Total PLLs : 1

@@ -79,8 +79,7 @@
   ],
   "finder":{
    "blocktype":"Inport",
-   "masktype":"",
-   "referenceblock":"hdlsllib/Sources/HDL Counter/rst"
+   "masktype":""
   }
  },
  {

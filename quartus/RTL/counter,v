@@ -1,0 +1,41 @@
+`timescale 1ns / 1ps
+//****************************************VSCODE PLUG-IN**********************************//
+//----------------------------------------------------------------------------------------
+// IDE :                   VSCODE     
+// VSCODE plug-in version: Verilog-Hdl-Format-2.8.20240817
+// VSCODE plug-in author : Jiang Percy
+//----------------------------------------------------------------------------------------
+//****************************************Copyright (c)***********************************//
+// Copyright(C)            Please Write Company name
+// All rights reserved     
+// File name:              
+// Last modified Date:     2024/10/07 21:30:40
+// Last Version:           V1.0
+// Descriptions:           
+//----------------------------------------------------------------------------------------
+// Created by:             Please Write You Name 
+// Created date:           2024/10/07 21:30:40
+// mail      :             Please Write mail 
+// Version:                V1.0
+// TEXT NAME:              counter,v
+// PATH:                   D:\Desktop\Mul_Freq_DUC\2024-Multi-frequency-DUC\quartus\RTL\counter,v
+// Descriptions:           
+//                         
+//----------------------------------------------------------------------------------------
+//****************************************************************************************//
+
+module counter8(
+    input clk,
+    input rst_n,
+    output cnt_val
+);
+
+reg [3:0] cntR;
+
+always @(posedge clk or rst_n) begin
+    if(!rst_n) begin
+        cntR=0;
+        end
+end
+
+endmodule

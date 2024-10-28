@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 816 504 984 520)
+	(rect 656 504 824 520)
 	(text "INPUT" (rect 125 0 150 11)(font "Arial" (font_size 6)))
 	(text "reset" (rect 5 0 28 12)(font "Arial" ))
 	(pt 168 8)
@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 816 488 984 504)
+	(rect 656 432 824 448)
 	(text "INPUT" (rect 125 0 150 11)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 23 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -84,7 +84,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 976 464 1176 576)
+	(rect 968 464 1168 576)
 	(text "DUC_AM" (rect 5 0 47 12)(font "Arial" ))
 	(text "inst" (rect 8 96 24 108)(font "Arial" ))
 	(port
@@ -150,27 +150,35 @@ applicable agreement for further details.
 	(pt 928 592)
 )
 (connector
-	(pt 984 496)
-	(pt 976 496)
-)
-(connector
-	(pt 1184 496)
-	(pt 1176 496)
-)
-(connector
-	(pt 984 512)
-	(pt 976 512)
-)
-(connector
-	(pt 1184 512)
-	(pt 1176 512)
-	(bus)
+	(pt 824 440)
+	(pt 904 440)
 )
 (connector
 	(pt 928 528)
-	(pt 976 528)
+	(pt 968 528)
 )
 (connector
 	(pt 928 592)
 	(pt 928 528)
+)
+(connector
+	(pt 1184 496)
+	(pt 1168 496)
+)
+(connector
+	(pt 1184 512)
+	(pt 1168 512)
+	(bus)
+)
+(connector
+	(pt 824 512)
+	(pt 968 512)
+)
+(connector
+	(pt 904 496)
+	(pt 968 496)
+)
+(connector
+	(pt 904 440)
+	(pt 904 496)
 )
