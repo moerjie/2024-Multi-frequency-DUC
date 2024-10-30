@@ -1,0 +1,6 @@
+DUC_1/AM_Modulator/NCO/DitherGen --> DitherGen
+DUC_1/AM_Modulator/NCO/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
+DUC_1/AM_Modulator/NCO/WaveformGen/LookUpTableGen --> LookUpTableGen
+DUC_1/AM_Modulator/NCO/WaveformGen --> WaveformGen
+DUC_1/AM_Modulator/NCO --> NCO
+DUC_1/AM_Modulator --> AM_Modulator

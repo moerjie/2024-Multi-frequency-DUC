@@ -146,7 +146,7 @@ DUC_1 的时钟频率流水线报告
 </font>
 
 </a>
-<br /><br />由于障碍，时钟频率流水线不成功。<br /><br /><table width="100%" border="1">
+<br /><br />时钟频率流水线找不到运行的机会。请确保存在优化请求并指定了过采样以提供更高的时钟频率来优化延迟。过采样可以<a href="matlab:configset.internal.open('DUC_1','TreatRatesAsHardwareRates')">根据速率推断</a>，也可以<a href="matlab:configset.internal.open('DUC_1','Oversampling')">手动指定</a>。<br /><br /><table width="100%" border="1">
 <tr style="background-color: #eeeeff">
 <td align="left" valign="top" style="border-style: none">
 <a href="matlab:configset.internal.open('DUC_1','ClockRatePipelining')">ClockRatePipelining</a>
@@ -176,9 +176,6 @@ off
 </tr>
 
 </table>
-<br />通过运行以下脚本可以诊断时钟频率流水线障碍: <a href="matlab:run('hdl_prj\hdlsrc\DUC_1\highlightClockRatePipelining.m')">
-hdl_prj\hdlsrc\DUC_1\highlightClockRatePipelining.m
-</a>
 <br /><br /><br /><a name="速率信息">
 <font size="+1" color="#000066">
 <b class="midprod">
@@ -221,37 +218,7 @@ hdl_prj\hdlsrc\DUC_1\highlightClockRatePipelining.m
 <br /><br /><a href="D:\Desktop\Mul_Freq_DUC\2024-Multi-frequency-DUC\matlab\hdl_prj\hdlsrc\DUC_1\html\DUC_1_delay_balancing.html">
 有关路径延迟的更多详细信息，请参阅 "延迟平衡" 节。
 </a>
-<br /><br /><br /><a name="详细报告">
-<font size="+1" color="#000066">
-<b class="midprod">
-详细报告
-</b>
-
-</font>
-
-</a>
-<br /><br />模型中被视为时钟频率流水线障碍的模块列表。<br /><p><hr /></p><h5>
-子系统的报告: <a href="matlab:coder.internal.code2model('DUC_1:165')" name="code2model" class="code2model">
-DUC_module
-</a>
-
-</h5>
-<table width="100%" border="1">
-<tr style="background-color: #eeeeff">
-<td align="left" valign="top" style="border-style: none">
-<a href="matlab:coder.internal.code2model('DUC_1:163')" name="code2model" class="code2model">
-us
-</a>
-
-</td>
-<td align="left" valign="top" style="border-style: none">
-时钟频率流水线的障碍
-</td>
-
-</tr>
-
-</table>
-
+<br />
 </body>
 
 </html>
