@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -256 424 -88 440)
 	(text "INPUT" (rect 125 0 150 11)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 23 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 56 592 224 608)
 	(text "INPUT" (rect 125 0 150 11)(font "Arial" (font_size 6)))
-	(text "key[0]" (rect 5 0 34 12)(font "Arial" ))
+	(text "key[0]" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -200,13 +200,34 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 255 88)(pt 207 88))
 	)
 )
-(connector
-	(pt 256 432)
-	(pt 336 432)
-)
-(connector
-	(pt 360 440)
-	(pt 336 440)
+(symbol
+	(rect 1176 400 1400 480)
+	(text "DAC_interface" (rect 5 0 72 12)(font "Arial" ))
+	(text "inst4" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLKIN" (rect 0 0 28 12)(font "Arial" ))
+		(text "CLKIN" (rect 21 27 49 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DATIN[13..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "DATIN[13..0]" (rect 21 43 81 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "DAT2DAC[13..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "DAT2DAC[13..0]" (rect 139 27 215 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 64))
+	)
 )
 (connector
 	(pt 256 448)
@@ -276,24 +297,39 @@ https://fpgasoftware.intel.com/eula.
 	(pt 680 600)
 )
 (connector
+	(text "modulated_data_out[15..0]" (rect 992 432 1121 449)(font "Intel Clear" ))
+	(pt 992 448)
+	(pt 1016 448)
+	(bus)
+)
+(connector
+	(text "modulated_data_out[15..2]" (rect 1136 432 1265 449)(font "Intel Clear" ))
+	(pt 1176 448)
+	(pt 1136 448)
+	(bus)
+)
+(connector
 	(pt 712 432)
 	(pt 680 432)
 )
 (connector
-	(pt 680 384)
-	(pt 680 432)
+	(text "clk_6M" (rect 266 416 301 433)(font "Intel Clear" ))
+	(pt 304 432)
+	(pt 256 432)
 )
 (connector
-	(pt 680 384)
-	(pt 336 384)
-)
-(connector
-	(pt 336 384)
-	(pt 336 432)
-)
-(connector
-	(pt 336 432)
+	(text "clk_6M" (rect 346 424 381 441)(font "Intel Clear" ))
+	(pt 360 440)
 	(pt 336 440)
 )
+(connector
+	(text "clk_6M" (rect 664 410 681 445)(font "Intel Clear" )(vertical))
+	(pt 680 432)
+	(pt 680 376)
+)
+(connector
+	(text "clk_6M" (rect 1146 416 1181 433)(font "Intel Clear" ))
+	(pt 1176 432)
+	(pt 1136 432)
+)
 (junction (pt 304 600))
-(junction (pt 336 432))

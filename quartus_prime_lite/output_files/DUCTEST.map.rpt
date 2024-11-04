@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUCTEST
-Mon Oct 28 22:03:12 2024
+Wed Oct 30 22:04:21 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,25 +10,35 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line:delayLine0_1|SimpleDualPortRAM_generic:simpleDualPortRam_generic_1_1
-  6. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line:delayLine1_1|SimpleDualPortRAM_generic:simpleDualPortRam_generic_1_1
-  7. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block:delayLine2_1|SimpleDualPortRAM_generic:simpleDualPortRam_1
-  8. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block1:delayLine3_1|SimpleDualPortRAM_generic:simpleDualPortRam_1
-  9. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block2:delayLine4_1|SimpleDualPortRAM_generic:simpleDualPortRam_2
- 10. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block2:delayLine5_1|SimpleDualPortRAM_generic:simpleDualPortRam_2
- 11. Parameter Settings for User Entity Instance: pll:inst2|altpll:altpll_component
- 12. Port Connectivity Checks: "AM_Modulator:inst1|NCO:NCO_1_1"
- 13. Port Connectivity Checks: "DUC_module:inst|CIC_COMP_system:CIC_COMP_system_1_1|CIC_Compensation:CIC_Compensation_1_1|Filter:FilterBank_1|subFilter:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn:FilterTap_16_1"
- 14. Port Connectivity Checks: "DUC_module:inst|CIC_COMP_system:CIC_COMP_system_1_1|CIC_Compensation:CIC_Compensation_1_1|Filter:FilterBank_1|subFilter:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn:FilterTap_1_1"
- 15. Port Connectivity Checks: "DUC_module:inst|CIC_COMP_system:CIC_COMP_system_1_1|CIC_Compensation:CIC_Compensation_1_1|Filter:FilterBank_1"
- 16. Port Connectivity Checks: "DUC_module:inst|HB_system:HB_system_1_1|Halfband:Halfband_1_1|Filter_block:FilterBank_1|subFilter_block:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn_block:FilterTap_10_1"
- 17. Port Connectivity Checks: "DUC_module:inst|HB_system:HB_system_1_1|Halfband:Halfband_1_1|Filter_block:FilterBank_1|subFilter_block:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn_block:FilterTap_1_1"
- 18. Port Connectivity Checks: "DUC_module:inst|HB_system:HB_system_1_1|Halfband:Halfband_1_1|Filter_block:FilterBank_1"
- 19. Port Connectivity Checks: "DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FilterTapSystolicPreAdd:filterTap0_1"
- 20. Port Connectivity Checks: "DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block2:delayLine5_1"
- 21. Port Connectivity Checks: "DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1"
- 22. Port Connectivity Checks: "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1"
- 23. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DUCTEST|DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line:delayLine0_1|SimpleDualPortRAM_generic:simpleDualPortRam_generic_1_1
+ 14. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line:delayLine1_1|SimpleDualPortRAM_generic:simpleDualPortRam_generic_1_1
+ 15. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block:delayLine2_1|SimpleDualPortRAM_generic:simpleDualPortRam_1
+ 16. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block1:delayLine3_1|SimpleDualPortRAM_generic:simpleDualPortRam_1
+ 17. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block2:delayLine4_1|SimpleDualPortRAM_generic:simpleDualPortRam_2
+ 18. Parameter Settings for User Entity Instance: DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block2:delayLine5_1|SimpleDualPortRAM_generic:simpleDualPortRam_2
+ 19. Parameter Settings for User Entity Instance: pll:inst2|altpll:altpll_component
+ 20. altpll Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "AM_Modulator:inst1|NCO:NCO_1_1"
+ 22. Port Connectivity Checks: "DUC_module:inst|CIC_COMP_system:CIC_COMP_system_1_1|CIC_Compensation:CIC_Compensation_1_1|Filter:FilterBank_1|subFilter:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn:FilterTap_16_1"
+ 23. Port Connectivity Checks: "DUC_module:inst|CIC_COMP_system:CIC_COMP_system_1_1|CIC_Compensation:CIC_Compensation_1_1|Filter:FilterBank_1|subFilter:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn:FilterTap_1_1"
+ 24. Port Connectivity Checks: "DUC_module:inst|CIC_COMP_system:CIC_COMP_system_1_1|CIC_Compensation:CIC_Compensation_1_1|Filter:FilterBank_1"
+ 25. Port Connectivity Checks: "DUC_module:inst|HB_system:HB_system_1_1|Halfband:Halfband_1_1|Filter_block:FilterBank_1|subFilter_block:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn_block:FilterTap_10_1"
+ 26. Port Connectivity Checks: "DUC_module:inst|HB_system:HB_system_1_1|Halfband:Halfband_1_1|Filter_block:FilterBank_1|subFilter_block:subFilter_1_re_1|FilterTapSystolicPreAddWvlIn_block:FilterTap_1_1"
+ 27. Port Connectivity Checks: "DUC_module:inst|HB_system:HB_system_1_1|Halfband:Halfband_1_1|Filter_block:FilterBank_1"
+ 28. Port Connectivity Checks: "DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FilterTapSystolicPreAdd:filterTap0_1"
+ 29. Port Connectivity Checks: "DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|Addressable_Delay_Line_block2:delayLine5_1"
+ 30. Port Connectivity Checks: "DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -55,20 +65,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 28 22:03:11 2024              ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 30 22:04:21 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; DUCTEST                                        ;
 ; Top-level Entity Name              ; DUCTEST                                        ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 0                                              ;
+;     Total combinational functions  ; 0                                              ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 2                                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -172,6 +182,198 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                         ;
++---------------------------------------------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                    ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                                      ; Library ;
++---------------------------------------------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; ../matlab/hdl_prj/hdlsrc/DUC_1/WaveformGen.v                        ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/WaveformGen.v                        ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/subFilter_block.v                    ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/subFilter_block.v                    ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/subFilter.v                          ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/subFilter.v                          ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/SimpleDualPortRAM_generic.v          ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/SimpleDualPortRAM_generic.v          ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/NCO_system.v                         ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO_system.v                         ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/NCO.v                                ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO.v                                ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/LP_system.v                          ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/LP_system.v                          ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Lowpass.v                            ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Lowpass.v                            ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/LookUpTableGen.v                     ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/LookUpTableGen.v                     ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Lookup_Table.v                       ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Lookup_Table.v                       ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/HB_system.v                          ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/HB_system.v                          ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Halfband.v                           ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Halfband.v                           ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FirRdyLogic.v                        ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FirRdyLogic.v                        ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicWvldInC0.v          ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicWvldInC0.v          ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicPreAddWvlIn_block.v ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicPreAddWvlIn_block.v ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicPreAddWvlIn.v       ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicPreAddWvlIn.v       ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicPreAdd.v            ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FilterTapSystolicPreAdd.v            ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FilterCoef_block.v                   ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FilterCoef_block.v                   ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/FilterCoef.v                         ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/FilterCoef.v                         ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Filter_block.v                       ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Filter_block.v                       ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Filter.v                             ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Filter.v                             ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/DUC_module_tc.v                      ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/DUC_module_tc.v                      ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/DUC_module.v                         ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/DUC_module.v                         ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/DitherGen.v                          ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/DitherGen.v                          ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/CIC_Interpolation.v                  ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/CIC_Interpolation.v                  ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/CIC_Compensation.v                   ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/CIC_Compensation.v                   ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/CIC_COMP_system.v                    ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/CIC_COMP_system.v                    ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/AM_Modulator.v                       ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/AM_Modulator.v                       ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block2.v      ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block2.v      ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block1.v      ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block1.v      ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block.v       ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block.v       ;         ;
+; ../matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line.v             ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line.v             ;         ;
+; rtl/DAC_module.v                                                    ; yes             ; User Verilog HDL File                    ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/rtl/DAC_module.v                              ;         ;
+; ductest.bdf                                                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/ductest.bdf                                   ;         ;
+; pll.v                                                               ; yes             ; Auto-Found Wizard-Generated File         ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/pll.v                                         ;         ;
+; altpll.tdf                                                          ; yes             ; Megafunction                             ; f:/fpga/altera/primelite/quartus/libraries/megafunctions/altpll.tdf                                               ;         ;
+; aglobal231.inc                                                      ; yes             ; Megafunction                             ; f:/fpga/altera/primelite/quartus/libraries/megafunctions/aglobal231.inc                                           ;         ;
+; stratix_pll.inc                                                     ; yes             ; Megafunction                             ; f:/fpga/altera/primelite/quartus/libraries/megafunctions/stratix_pll.inc                                          ;         ;
+; stratixii_pll.inc                                                   ; yes             ; Megafunction                             ; f:/fpga/altera/primelite/quartus/libraries/megafunctions/stratixii_pll.inc                                        ;         ;
+; cycloneii_pll.inc                                                   ; yes             ; Megafunction                             ; f:/fpga/altera/primelite/quartus/libraries/megafunctions/cycloneii_pll.inc                                        ;         ;
+; db/pll_altpll.v                                                     ; yes             ; Auto-Generated Megafunction              ; D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/db/pll_altpll.v                               ;         ;
++---------------------------------------------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+;                                             ;        ;
+; Total combinational functions               ; 0      ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 0      ;
+;     -- 3 input functions                    ; 0      ;
+;     -- <=2 input functions                  ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 0      ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+;     -- Dedicated logic registers            ; 0      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 2      ;
+;                                             ;        ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; key[0] ;
+; Maximum fan-out                             ; 1      ;
+; Total fan-out                               ; 2      ;
+; Average fan-out                             ; 0.50   ;
++---------------------------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |DUCTEST                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |DUCTEST            ; DUCTEST     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DUCTEST|DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state ;
++------------------+------------------+------------------+------------------+------------------+--------------------------------+
+; Name             ; firRdy_state.011 ; firRdy_state.010 ; firRdy_state.001 ; firRdy_state.000 ; firRdy_state.100               ;
++------------------+------------------+------------------+------------------+------------------+--------------------------------+
+; firRdy_state.000 ; 0                ; 0                ; 0                ; 0                ; 0                              ;
+; firRdy_state.001 ; 0                ; 0                ; 1                ; 1                ; 0                              ;
+; firRdy_state.010 ; 0                ; 1                ; 0                ; 1                ; 0                              ;
+; firRdy_state.011 ; 1                ; 0                ; 0                ; 1                ; 0                              ;
+; firRdy_state.100 ; 0                ; 0                ; 0                ; 1                ; 1                              ;
++------------------+------------------+------------------+------------------+------------------+--------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                              ;
++------------------------------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                                              ; Reason for Removal ;
++------------------------------------------------------------------------------------------------------------+--------------------+
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state~7     ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state~8     ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_count[0..2] ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[0..7]                                             ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_xdinVld     ; Lost fanout        ;
+; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|validOut_1                                           ; Lost fanout        ;
+; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[0..4]                                 ; Lost fanout        ;
+; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[0..7]                                       ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.100   ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.000   ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.001   ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.010   ; Lost fanout        ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.011   ; Lost fanout        ;
+; Total Number of Removed Registers = 33                                                                     ;                    ;
++------------------------------------------------------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+; Register name                                                                                           ; Reason for Removal ; Registers Removed due to This Register                                                                    ;
++---------------------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_count[2] ; Lost Fanouts       ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_count[1],  ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_count[0],  ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[0],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[1],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[2],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[3],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[4],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[5],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[6],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[7],                                              ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_xdinVld,   ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|validOut_1,                                         ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[4],                                  ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[3],                                  ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[2],                                  ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[1],                                  ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[0],                                  ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[1],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[0],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[2],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[3],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[4],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[5],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[6],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[7],                                        ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.100, ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.000  ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state~7  ; Lost Fanouts       ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.001, ;
+;                                                                                                         ;                    ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.011  ;
+; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state~8  ; Lost Fanouts       ; DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state.010  ;
++---------------------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DUCTEST|DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|outsel_reg_reg[0]                                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DUCTEST|DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_count[2] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DUCTEST|DUC_module:inst|NCO_system:NCO_system_1_1|Counter_Limited_out1[7]                                       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |DUCTEST|DUC_module:inst|LP_system:LP_system_1_1|HDL_Counter_out1[6]                                             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DUCTEST|DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -614,13 +816,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "AM_Modulator:inst1|NCO:NCO_1_1" ;
-+---------+-------+----------+-------------------------------+
-; Port    ; Type  ; Severity ; Details                       ;
-+---------+-------+----------+-------------------------------+
-; validIn ; Input ; Info     ; Stuck at VCC                  ;
-+---------+-------+----------+-------------------------------+
++-------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                      ;
++-------------------------------+-----------------------------------+
+; Name                          ; Value                             ;
++-------------------------------+-----------------------------------+
+; Number of entity instances    ; 1                                 ;
+; Entity Instance               ; pll:inst2|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                            ;
+;     -- PLL_TYPE               ; AUTO                              ;
+;     -- PRIMARY_CLOCK          ; INCLK0                            ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                             ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                 ;
+;     -- VCO_MULTIPLY_BY        ; 0                                 ;
+;     -- VCO_DIVIDE_BY          ; 0                                 ;
++-------------------------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AM_Modulator:inst1|NCO:NCO_1_1"                                                                              ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; validIn  ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; validOut ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -709,13 +929,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1"              ;
-+----------+---------+------------------+--------------------------------------------------------+
-; Port     ; Type    ; Severity         ; Details                                                ;
-+----------+---------+------------------+--------------------------------------------------------+
-; validOut ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
-+----------+---------+------------------+--------------------------------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -724,7 +956,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Oct 28 22:03:01 2024
+    Info: Processing started: Wed Oct 30 22:04:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DUCTEST -c DUCTEST
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -792,6 +1024,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file /deskto
     Info (12023): Found entity 1: Addressable_Delay_Line_block File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line_block.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file /desktop/mul_freq_duc/2024-multi-frequency-duc/matlab/hdl_prj/hdlsrc/duc_1/addressable_delay_line.v
     Info (12023): Found entity 1: Addressable_Delay_Line File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/Addressable_Delay_Line.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/dac_module.v
+    Info (12023): Found entity 1: DAC_interface File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/rtl/DAC_module.v Line: 3
 Warning (12125): Using design file ductest.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: DUCTEST
 Info (12127): Elaborating entity "DUCTEST" for the top level hierarchy
@@ -799,8 +1033,8 @@ Info (12128): Elaborating entity "DUC_module" for hierarchy "DUC_module:inst"
 Info (12128): Elaborating entity "DUC_module_tc" for hierarchy "DUC_module:inst|DUC_module_tc:DUC_module_tc" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/DUC_module.v Line: 85
 Info (12128): Elaborating entity "NCO_system" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/DUC_module.v Line: 92
 Info (12128): Elaborating entity "NCO" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO_system.v Line: 78
-Info (12128): Elaborating entity "DitherGen" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|DitherGen:dither_inst_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO.v Line: 124
-Info (12128): Elaborating entity "WaveformGen" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|WaveformGen:Wave_inst_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO.v Line: 152
+Info (12128): Elaborating entity "DitherGen" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|DitherGen:dither_inst_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO.v Line: 127
+Info (12128): Elaborating entity "WaveformGen" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|WaveformGen:Wave_inst_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO.v Line: 155
 Info (12128): Elaborating entity "LookUpTableGen" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|WaveformGen:Wave_inst_1|LookUpTableGen:SineWave_inst_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/WaveformGen.v Line: 134
 Info (12128): Elaborating entity "Lookup_Table" for hierarchy "DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|WaveformGen:Wave_inst_1|LookUpTableGen:SineWave_inst_1|Lookup_Table:Lookup_Table_1_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/LookUpTableGen.v Line: 60
 Info (12128): Elaborating entity "LP_system" for hierarchy "DUC_module:inst|LP_system:LP_system_1_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/DUC_module.v Line: 100
@@ -895,12 +1129,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
     Info (12023): Found entity 1: pll_altpll File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst2|altpll:altpll_component|pll_altpll:auto_generated" File: f:/fpga/altera/primelite/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "AM_Modulator" for hierarchy "AM_Modulator:inst1"
-Error (12002): Port "validOut" does not exist in macrofunction "NCO_1_1" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdl_prj/hdlsrc/DUC_1/NCO_system.v Line: 78
+Info (12128): Elaborating entity "DAC_interface" for hierarchy "DAC_interface:inst4"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "pll:inst2|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]" File: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/quartus_prime_lite/db/pll_altpll.v Line: 81
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 8 warnings
-    Error: Peak virtual memory: 4783 megabytes
-    Error: Processing ended: Mon Oct 28 22:03:12 2024
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:20
+Info (17049): 33 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "key[0]"
+    Warning (15610): No output dependent on input pin "CLK"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Wed Oct 30 22:04:21 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

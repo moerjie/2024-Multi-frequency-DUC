@@ -1,7 +1,7 @@
 {
  "version":3,
  "baseUrl":"support/slwebview_files",
- "homeHid":2,
+ "homeHid":3,
  "sections":[
   {
    "hid":1,
@@ -11,7 +11,35 @@
    "label":"DUC_1",
    "parent":0,
    "descendantIDs":[
-    2
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
    ],
    "descendantsURL":"support/slwebview_files/DUC_1_diagrams_1.json",
    "sysViewURL":"support/slwebview_files/DUC_1_p.json"

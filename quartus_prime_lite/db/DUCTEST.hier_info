@@ -102,6 +102,7 @@ sine[12] <= sine_1[12].DB_MAX_OUTPUT_PORT_TYPE
 sine[13] <= sine_1[13].DB_MAX_OUTPUT_PORT_TYPE
 sine[14] <= sine_1[14].DB_MAX_OUTPUT_PORT_TYPE
 sine[15] <= sine_1[15].DB_MAX_OUTPUT_PORT_TYPE
+validOut <= validOut_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DUCTEST|DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|DitherGen:dither_inst_1
@@ -145,17 +146,10 @@ reset => pn_reg.OUTPUTSELECT
 reset => pn_reg.OUTPUTSELECT
 enb => always0.IN0
 validIn => always0.IN1
-dither[0] <= pn_reg[10].DB_MAX_OUTPUT_PORT_TYPE
-dither[1] <= pn_reg[9].DB_MAX_OUTPUT_PORT_TYPE
-dither[2] <= pn_reg[8].DB_MAX_OUTPUT_PORT_TYPE
-dither[3] <= pn_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-dither[4] <= pn_reg[6].DB_MAX_OUTPUT_PORT_TYPE
-dither[5] <= pn_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-dither[6] <= pn_reg[4].DB_MAX_OUTPUT_PORT_TYPE
-dither[7] <= pn_reg[3].DB_MAX_OUTPUT_PORT_TYPE
-dither[8] <= pn_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-dither[9] <= pn_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-dither[10] <= pn_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dither[0] <= pn_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+dither[1] <= pn_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+dither[2] <= pn_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+dither[3] <= pn_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DUCTEST|DUC_module:inst|NCO_system:NCO_system_1_1|NCO:NCO_1_1|WaveformGen:Wave_inst_1
@@ -359,21 +353,21 @@ in1[9] => Equal1.IN1
 in1[10] => prelookup_idx_sat.DATAA
 in1[10] => Equal0.IN0
 in1[10] => Equal1.IN0
-out_rsvd[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-out_rsvd[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-out_rsvd[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-out_rsvd[3] <= <GND>
-out_rsvd[4] <= <GND>
-out_rsvd[5] <= <GND>
-out_rsvd[6] <= <GND>
-out_rsvd[7] <= <GND>
-out_rsvd[8] <= <GND>
-out_rsvd[9] <= <GND>
-out_rsvd[10] <= <GND>
-out_rsvd[11] <= <GND>
-out_rsvd[12] <= <GND>
-out_rsvd[13] <= <GND>
-out_rsvd[14] <= <GND>
+out_rsvd[0] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[1] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[2] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[3] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[4] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[5] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[6] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[7] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[8] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[9] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[10] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[11] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[12] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[13] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[14] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 out_rsvd[15] <= <GND>
 
 
@@ -23976,6 +23970,7 @@ sine[12] <= sine_1[12].DB_MAX_OUTPUT_PORT_TYPE
 sine[13] <= sine_1[13].DB_MAX_OUTPUT_PORT_TYPE
 sine[14] <= sine_1[14].DB_MAX_OUTPUT_PORT_TYPE
 sine[15] <= sine_1[15].DB_MAX_OUTPUT_PORT_TYPE
+validOut <= validOut_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DUCTEST|AM_Modulator:inst1|NCO:NCO_1_1|DitherGen:dither_inst_1
@@ -24019,17 +24014,10 @@ reset => pn_reg.OUTPUTSELECT
 reset => pn_reg.OUTPUTSELECT
 enb => always0.IN0
 validIn => always0.IN1
-dither[0] <= pn_reg[10].DB_MAX_OUTPUT_PORT_TYPE
-dither[1] <= pn_reg[9].DB_MAX_OUTPUT_PORT_TYPE
-dither[2] <= pn_reg[8].DB_MAX_OUTPUT_PORT_TYPE
-dither[3] <= pn_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-dither[4] <= pn_reg[6].DB_MAX_OUTPUT_PORT_TYPE
-dither[5] <= pn_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-dither[6] <= pn_reg[4].DB_MAX_OUTPUT_PORT_TYPE
-dither[7] <= pn_reg[3].DB_MAX_OUTPUT_PORT_TYPE
-dither[8] <= pn_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-dither[9] <= pn_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-dither[10] <= pn_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dither[0] <= pn_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+dither[1] <= pn_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+dither[2] <= pn_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+dither[3] <= pn_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DUCTEST|AM_Modulator:inst1|NCO:NCO_1_1|WaveformGen:Wave_inst_1
@@ -24233,21 +24221,80 @@ in1[9] => Equal1.IN1
 in1[10] => prelookup_idx_sat.DATAA
 in1[10] => Equal0.IN0
 in1[10] => Equal1.IN0
-out_rsvd[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-out_rsvd[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-out_rsvd[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-out_rsvd[3] <= <GND>
-out_rsvd[4] <= <GND>
-out_rsvd[5] <= <GND>
-out_rsvd[6] <= <GND>
-out_rsvd[7] <= <GND>
-out_rsvd[8] <= <GND>
-out_rsvd[9] <= <GND>
-out_rsvd[10] <= <GND>
-out_rsvd[11] <= <GND>
-out_rsvd[12] <= <GND>
-out_rsvd[13] <= <GND>
-out_rsvd[14] <= <GND>
+out_rsvd[0] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[1] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[2] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[3] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[4] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[5] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[6] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[7] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[8] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[9] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[10] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[11] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[12] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[13] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_rsvd[14] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 out_rsvd[15] <= <GND>
+
+
+|DUCTEST|DAC_interface:inst4
+CLKIN => DAT2DAC[0]~reg0.CLK
+CLKIN => DAT2DAC[1]~reg0.CLK
+CLKIN => DAT2DAC[2]~reg0.CLK
+CLKIN => DAT2DAC[3]~reg0.CLK
+CLKIN => DAT2DAC[4]~reg0.CLK
+CLKIN => DAT2DAC[5]~reg0.CLK
+CLKIN => DAT2DAC[6]~reg0.CLK
+CLKIN => DAT2DAC[7]~reg0.CLK
+CLKIN => DAT2DAC[8]~reg0.CLK
+CLKIN => DAT2DAC[9]~reg0.CLK
+CLKIN => DAT2DAC[10]~reg0.CLK
+CLKIN => DAT2DAC[11]~reg0.CLK
+CLKIN => DAT2DAC[12]~reg0.CLK
+CLKIN => DAT2DAC[13]~reg0.CLK
+CLKIN => datin_R1[0].CLK
+CLKIN => datin_R1[1].CLK
+CLKIN => datin_R1[2].CLK
+CLKIN => datin_R1[3].CLK
+CLKIN => datin_R1[4].CLK
+CLKIN => datin_R1[5].CLK
+CLKIN => datin_R1[6].CLK
+CLKIN => datin_R1[7].CLK
+CLKIN => datin_R1[8].CLK
+CLKIN => datin_R1[9].CLK
+CLKIN => datin_R1[10].CLK
+CLKIN => datin_R1[11].CLK
+CLKIN => datin_R1[12].CLK
+CLKIN => datin_R1[13].CLK
+DATIN[0] => datin_R1[0].DATAIN
+DATIN[1] => datin_R1[1].DATAIN
+DATIN[2] => datin_R1[2].DATAIN
+DATIN[3] => datin_R1[3].DATAIN
+DATIN[4] => datin_R1[4].DATAIN
+DATIN[5] => datin_R1[5].DATAIN
+DATIN[6] => datin_R1[6].DATAIN
+DATIN[7] => datin_R1[7].DATAIN
+DATIN[8] => datin_R1[8].DATAIN
+DATIN[9] => datin_R1[9].DATAIN
+DATIN[10] => datin_R1[10].DATAIN
+DATIN[11] => datin_R1[11].DATAIN
+DATIN[12] => datin_R1[12].DATAIN
+DATIN[13] => datin_R1[13].DATAIN
+DAT2DAC[0] <= DAT2DAC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[1] <= DAT2DAC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[2] <= DAT2DAC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[3] <= DAT2DAC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[4] <= DAT2DAC[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[5] <= DAT2DAC[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[6] <= DAT2DAC[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[7] <= DAT2DAC[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[8] <= DAT2DAC[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[9] <= DAT2DAC[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[10] <= DAT2DAC[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[11] <= DAT2DAC[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[12] <= DAT2DAC[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DAT2DAC[13] <= DAT2DAC[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
