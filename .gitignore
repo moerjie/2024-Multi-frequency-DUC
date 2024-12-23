@@ -12,3 +12,9 @@
 
 2024-Multi-frequency-DUC\db
 2024-Multi-frequency-DUC\test
+
+2024-Multi-frequency-DUC\quartus_prime_lite\db
+2024-Multi-frequency-DUC\quartus_prime_lite\greybox_tmp
+2024-Multi-frequency-DUC\quartus_prime_lite\incremental_db
+2024-Multi-frequency-DUC\quartus_prime_lite\*.bsf
+2024-Multi-frequency-DUC\quartus_prime_lite\simulation

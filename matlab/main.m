@@ -16,9 +16,9 @@ N2_cycle = 64;
 N3_cycle = 32;
 N4_cycle = 16;
 
-%% 48k signal gen
+% 48k signal gen
 noise = bandpass(randn(size(t)), [1 10000], fs_base);
-%% NCO gen
+% NCO gen
 f0=600e3;       % Desired output freq
 deltaf=0.5;     % Frequency resolution
 SFDR=90;        % Spurious free dynamic range (dB)
