@@ -1,8 +1,0 @@
-
-State Machine - |DUCTEST|DUC_module:inst|LP_system:LP_system_1_1|Lowpass:Lowpass_1_1|FirRdyLogic:firRdyLogic_1_1|firRdy_state
-Name firRdy_state.011 firRdy_state.010 firRdy_state.001 firRdy_state.000 firRdy_state.100 
-firRdy_state.000 0 0 0 0 0 
-firRdy_state.001 0 0 1 1 0 
-firRdy_state.010 0 1 0 1 0 
-firRdy_state.011 1 0 0 1 0 
-firRdy_state.100 0 0 0 1 1 

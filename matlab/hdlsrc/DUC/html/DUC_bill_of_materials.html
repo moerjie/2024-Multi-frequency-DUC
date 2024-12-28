@@ -1,0 +1,485 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+DUC 的高级资源利用率报告
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdBillOfMaterials'); else local_onload();}} catch(err) {};hdlTableShrink(this, 'Multiplier_1_1');hdlTableShrink(this, '加法器_1_1');hdlTableShrink(this, '寄存器_1_1');hdlTableShrink(this, '寄存器_1_2');hdlTableShrink(this, '寄存器_1_3');hdlTableShrink(this, 'Input_Port');hdlTableShrink(this, 'Output_Port');">
+<script>
+<!--
+function hdlTableShrink(o,tagNameStr)
+{
+var temp = document.getElementsByName(tagNameStr);
+if (temp[0].style.display == "")
+{
+	temp[0].style.display = "none";
+	o.innerHTML = '<span style="font-family:monospace">[+]</span>';
+}
+else
+{
+	temp[0].style.display = "";
+	o.innerHTML = '<span style="font-family:monospace">[-]</span>';
+}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableCollapseAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[+]</span>';
+	}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableExpandAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[-]</span>';
+	}
+}
+// -->
+</script>
+<font SIZE="+2" COLOR="#000066">
+DUC 的通用资源报告
+</font>
+<br /><br /><br /><a name="概要">
+<font size="+1" color="#000066">
+<b class="midprod">
+概要
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+乘法器
+</td>
+<td align="center" valign="top" style="border-style: none">
+2
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+加法器/减法器
+</td>
+<td align="center" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+寄存器
+</td>
+<td align="center" valign="top" style="border-style: none">
+33
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+1 位寄存器的总数
+</td>
+<td align="center" valign="top" style="border-style: none">
+366
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+RAM
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+多路复用器
+</td>
+<td align="center" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+I/O 位
+</td>
+<td align="center" valign="top" style="border-style: none">
+35
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+静态移位运算符
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+动态移位运算符
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+
+</table>
+<br /><br /><a name="详细报告">
+<font size="+1" color="#000066">
+<b class="midprod">
+详细报告
+</b>
+
+</font>
+
+</a>
+<br /><br /><p><hr /></p><h5>
+子系统的报告: <a href="matlab:coder.internal.code2model('DUC:192')" name="code2model" class="code2model">
+AM_module
+</a>
+
+</h5>
+<h5>
+乘法器(2)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplier_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16x16-bit Multiplier 							: 2
+</span>
+<span name="Multiplier_1_1" id="Multiplier_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:167')" name="code2model" class="code2model">
+Product
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:170')" name="code2model" class="code2model">
+Product1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+加法器/减法器(6)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, '加法器_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32x32-bit 加法器 							: 1
+</span>
+<span name="加法器_1_1" id="加法器_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:168')" name="code2model" class="code2model">
+Add1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span style="font-family:monospace">
+28x28-bit 加法器 							: 3
+</span>
+<br /><span style="font-family:monospace">
+13x13-bit 减法器 							: 1
+</span>
+<br /><span style="font-family:monospace">
+17-bit 减法器 							: 1
+</span>
+<br /><h5>
+寄存器(33)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, '寄存器_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit 寄存器 							: 10
+</span>
+<span name="寄存器_1_1" id="寄存器_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:164')" name="code2model" class="code2model">
+Delay2
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:21')" name="code2model" class="code2model">
+HwModeRegister
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:22')" name="code2model" class="code2model">
+HwModeRegister1
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:24')" name="code2model" class="code2model">
+HwModeRegister2
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:165')" name="code2model" class="code2model">
+Delay3
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:25')" name="code2model" class="code2model">
+HwModeRegister3
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, '寄存器_1_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit 寄存器 							: 2
+</span>
+<span name="寄存器_1_2" id="寄存器_1_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:20')" name="code2model" class="code2model">
+PipelineRegister
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:23')" name="code2model" class="code2model">
+PipelineRegister1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, '寄存器_1_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit 寄存器 							: 15
+</span>
+<span name="寄存器_1_3" id="寄存器_1_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_DUC:18')" name="code2model" class="code2model">
+delayMatch1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span style="font-family:monospace">
+28-bit 寄存器 							: 3
+</span>
+<br /><span style="font-family:monospace">
+19-bit 寄存器 							: 1
+</span>
+<br /><span style="font-family:monospace">
+13-bit 寄存器 							: 1
+</span>
+<br /><span style="font-family:monospace">
+11-bit 寄存器 							: 1
+</span>
+<br /><h5>
+多路复用器(6)
+</h5>
+<span style="font-family:monospace">
+2x28-bit 多路复用器 							: 1
+</span>
+<br /><span style="font-family:monospace">
+2x11-bit 多路复用器 							: 1
+</span>
+<br /><span style="font-family:monospace">
+3x11-bit 多路复用器 							: 1
+</span>
+<br /><span style="font-family:monospace">
+2x16-bit 多路复用器 							: 3
+</span>
+<br /><h5>
+I/O 位数(35)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Input_Port')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+Number of Input Bits: 19
+</span>
+<span name="Input_Port" id="Input_Port">
+<ul>
+<li>
+clk: 1 bit
+</li>
+<li>
+rst_n: 1 bit
+</li>
+<li>
+clk_enable: 1 bit
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:193')" name="code2model" class="code2model">
+Base_Signal_In
+</a>
+: 16 bits
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Output_Port')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+Number of Output Bits: 16
+</span>
+<span name="Output_Port" id="Output_Port">
+<ul>
+<li>
+ce_out: 1 bit
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:194')" name="code2model" class="code2model">
+AM_OUT
+</a>
+: 14 bits
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('DUC:195')" name="code2model" class="code2model">
+VLD
+</a>
+: 1 bit
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p>
+</body>
+
+</html>

@@ -1,15 +1,198 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
-Delay Balancing Report for DUC
+DUC 的延迟平衡报告
 </title>
 
 </head>
 <body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdDelayBalancing'); else local_onload();}} catch(err) {};">
 <font SIZE="+2" COLOR="#000066">
-Delay Balancing Report for DUC
+DUC 的延迟平衡报告
 </font>
-<br /><br /><br /><br /><br />
+<br /><br /><br /><a name="概要">
+<font size="+1" color="#000066">
+<b class="midprod">
+概要
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+端口
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+流水线延迟
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+相位延迟
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+DUC/AM_module/AM_OUT
+</td>
+<td align="left" valign="top" style="border-style: none">
+3
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+DUC/AM_module/VLD
+</td>
+<td align="left" valign="top" style="border-style: none">
+3
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+
+</table>
+<br /><br />设计延迟完全用于吸收由优化和模块实现引入的延迟。<br /><br /><a name="详细报告">
+<font size="+1" color="#000066">
+<b class="midprod">
+详细报告
+</b>
+
+</font>
+
+</a>
+<br /><br />引入延迟的模块表、吸收延迟的设计延迟以及延迟吸收阻碍模块。要防止特定延迟模块被用于吸收，请关闭模块属性 'AllowDelayDistribution'。<br /><h5>
+子系统的报告: <a href="matlab:coder.internal.code2model('DUC:192')" name="code2model" class="code2model">
+AM_module
+</a>
+
+</h5>
+<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+模块
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+采样时间
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+引入的延迟
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:167')" name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+8.3333e-09
+</td>
+<td align="left" valign="top" style="border-style: none">
+2
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:170')" name="code2model" class="code2model">
+Product1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+8.3333e-09
+</td>
+<td align="left" valign="top" style="border-style: none">
+2
+</td>
+
+</tr>
+
+</table>
+<br /><table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay 模块
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+采样时间
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+吸收的延迟
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+其余延迟
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+未吸收的延迟(总数/不可吸收)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:186')" name="code2model" class="code2model">
+Delay1_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+8.3333e-09
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+1/0
+</td>
+
+</tr>
+
+</table>
+<br /><br /><br /><br />
 </body>
 
 </html>

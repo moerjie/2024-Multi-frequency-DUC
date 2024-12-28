@@ -1,0 +1,6 @@
+DUC/AM_module/carrier/DitherGen --> DitherGen
+DUC/AM_module/carrier/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
+DUC/AM_module/carrier/WaveformGen/LookUpTableGen --> LookUpTableGen
+DUC/AM_module/carrier/WaveformGen --> WaveformGen
+DUC/AM_module/carrier --> carrier
+DUC/AM_module --> AM_module
