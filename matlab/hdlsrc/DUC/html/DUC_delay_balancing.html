@@ -42,22 +42,10 @@ DUC 的延迟平衡报告
 </tr>
 <tr style="background-color: #ffffff">
 <td align="left" valign="top" style="border-style: none">
-DUC/AM_module/AM_OUT
+DUC/DUC_module/DUC_Data_Out
 </td>
 <td align="left" valign="top" style="border-style: none">
-3
-</td>
-<td align="left" valign="top" style="border-style: none">
-0
-</td>
-
-</tr>
-<tr style="background-color: #eeeeff">
-<td align="left" valign="top" style="border-style: none">
-DUC/AM_module/VLD
-</td>
-<td align="left" valign="top" style="border-style: none">
-3
+1251
 </td>
 <td align="left" valign="top" style="border-style: none">
 0
@@ -66,7 +54,13 @@ DUC/AM_module/VLD
 </tr>
 
 </table>
-<br /><br />设计延迟完全用于吸收由优化和模块实现引入的延迟。<br /><br /><a name="详细报告">
+<br /><br />设计延迟可能无法完全用于吸收由优化和模块实现引入的延迟，因为 存在阻止延迟吸收的阻碍模块。请考虑将 <a href="matlab:configset.internal.open('DUC','PipelineDistributionPriority')">PipelineDistributionPriority</a> 更改为 '性能' 以允许跨越阻碍模块吸收延迟。请注意，如果模型有反馈环，这可能导致在初始化周期或整个仿真时间内的验证模型不匹配。<br /><br /><a href="matlab:run('hdlsrc\DUC\highlightDelayAbsorption.m')">
+突出显示延迟吸收阻碍模块和排除在吸收处的设计延迟
+</a>
+<br /><a href="matlab:run('hdlsrc\DUC\clearhighlighting.m')">
+清除突出显示
+</a>
+<br /><br /><a name="详细报告">
 <font size="+1" color="#000066">
 <b class="midprod">
 详细报告
@@ -76,8 +70,8 @@ DUC/AM_module/VLD
 
 </a>
 <br /><br />引入延迟的模块表、吸收延迟的设计延迟以及延迟吸收阻碍模块。要防止特定延迟模块被用于吸收，请关闭模块属性 'AllowDelayDistribution'。<br /><h5>
-子系统的报告: <a href="matlab:coder.internal.code2model('DUC:192')" name="code2model" class="code2model">
-AM_module
+子系统的报告: <a href="matlab:coder.internal.code2model('DUC:172')" name="code2model" class="code2model">
+DUC_module
 </a>
 
 </h5>
@@ -105,8 +99,38 @@ AM_module
 </tr>
 <tr style="background-color: #ffffff">
 <td align="left" valign="top" style="border-style: none">
-<a href="matlab:coder.internal.code2model('DUC:167')" name="code2model" class="code2model">
-Product
+<a href="matlab:coder.internal.code2model('DUC:134')" name="code2model" class="code2model">
+Downsample
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+5.2083e-06
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:153')" name="code2model" class="code2model">
+Gain
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+8.3333e-09
+</td>
+<td align="left" valign="top" style="border-style: none">
+2
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:154')" name="code2model" class="code2model">
+Gain1
 </a>
 
 </td>
@@ -120,8 +144,8 @@ Product
 </tr>
 <tr style="background-color: #eeeeff">
 <td align="left" valign="top" style="border-style: none">
-<a href="matlab:coder.internal.code2model('DUC:170')" name="code2model" class="code2model">
-Product1
+<a href="matlab:coder.internal.code2model('DUC:188')" name="code2model" class="code2model">
+Gain3
 </a>
 
 </td>
@@ -171,7 +195,217 @@ Delay 模块
 </tr>
 <tr style="background-color: #ffffff">
 <td align="left" valign="top" style="border-style: none">
-<a href="matlab:coder.internal.code2model('DUC:186')" name="code2model" class="code2model">
+<a href="matlab:coder.internal.code2model('DUC:142')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+2.0833e-07
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+49/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:142')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+2.0833e-07
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+49/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:142')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+2.0833e-07
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+49/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:142')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+2.0833e-07
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+49/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:142')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+2.0833e-07
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+49/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:138')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+5.2083e-06
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+1/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:138')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+5.2083e-06
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+1/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:138')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+5.2083e-06
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+1/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:138')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+5.2083e-06
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+1/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:138')" name="code2model" class="code2model">
+CS_Section_delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+5.2083e-06
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+1/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('DUC:191')" name="code2model" class="code2model">
 Delay1_absorbed
 </a>
 
@@ -186,7 +420,19 @@ Delay1_absorbed
 0
 </td>
 <td align="left" valign="top" style="border-style: none">
-1/0
+1249/0
+</td>
+
+</tr>
+
+</table>
+<br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+DUC/DUC_module/Halfband Filter 1
+</td>
+<td align="left" valign="top" style="border-style: none">
+由于此阻碍模块，无法吸收额外的 2 个延迟周期
 </td>
 
 </tr>

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Sun Jan  5 20:28:09 2025
+# Process ID: 14912
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/top_DUC_module_0_0_synth_1
+# Command line: vivado.exe -log top_DUC_module_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_DUC_module_0_0.tcl
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/top_DUC_module_0_0_synth_1/top_DUC_module_0_0.vds
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/top_DUC_module_0_0_synth_1\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+source top_DUC_module_0_0.tcl -notrace

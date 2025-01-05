@@ -47,3 +47,5 @@ phInc=ceil((f_carry*2^Nnco)/fs); % carrier frequency
 f_base_1=1000;f_base_2=500;
 phInc_base_1=ceil((f_base_1*2^Nnco*up_L)/fs);
 phInc_base_2=ceil((f_base_2*2^Nnco*up_L)/fs);
+
+phInc111=ceil((995e3*2^Nnco)/fs); % carrier frequency

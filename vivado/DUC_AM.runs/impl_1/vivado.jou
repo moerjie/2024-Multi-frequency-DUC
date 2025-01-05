@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Sun Jan  5 20:30:18 2025
+# Process ID: 8380
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/impl_1
+# Command line: vivado.exe -log top_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_wrapper.tcl -notrace
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/impl_1/top_wrapper.vdi
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/impl_1\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+source top_wrapper.tcl -notrace

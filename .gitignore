@@ -1,16 +1,21 @@
-2024-Multi-frequency-DUC\matlab\slprj
-2024-Multi-frequency-DUC\matlab\hdlsrc\DUC\html
-2024-Multi-frequency-DUC\matlab\hdl_prj
-2024-Multi-frequency-DUC\matlab\pic
-2024-Multi-frequency-DUC\matlab\codegen
-2024-Multi-frequency-DUC\matlab\.vs
+2024-Multi-frequency-DUC/matlab/slprj/
+2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/html
+2024-Multi-frequency-DUC/matlab/hdl_prj/
+2024-Multi-frequency-DUC/matlab/pic/
+2024-Multi-frequency-DUC/matlab/codegen/
+2024-Multi-frequency-DUC/matlab/.vs/
 
-2024-Multi-frequency-DUC\db
-2024-Multi-frequency-DUC\test
+2024-Multi-frequency-DUC/db/
+2024-Multi-frequency-DUC/test/
 
-2024-Multi-frequency-DUC\q_lite\incremental_db
-2024-Multi-frequency-DUC\q_lite\db
-2024-Multi-frequency-DUC\q_lite\simulation
-2024-Multi-frequency-DUC\q_lite\output_files
+2024-Multi-frequency-DUC/q_lite/incremental_db/
+2024-Multi-frequency-DUC/q_lite/db/
+2024-Multi-frequency-DUC/q_lite/simulation/
+2024-Multi-frequency-DUC/q_lite/output_files/
+2024-Multi-frequency-DUC/q_lite/greybox_tmp/
 
-2024-Multi-frequency-DUC\vivado\
+2024-Multi-frequency-DUC/vivado/DUC_AM.cache/
+2024-Multi-frequency-DUC/vivado/DUC_AM.hw/
+2024-Multi-frequency-DUC/vivado/DUC_AM.ip_user_files/
+2024-Multi-frequency-DUC/vivado/DUC_AM.sim/
+2024-Multi-frequency-DUC/vivado/DUC_AM.runs/

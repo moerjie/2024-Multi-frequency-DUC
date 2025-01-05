@@ -1,0 +1,18 @@
+open_system('DUC');
+open_system('gm_DUC');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_DUC/DUC_module/Halfband Filter 1', 'user1');
+annotate_port('gm_DUC/DUC_module/Halfband Filter 1', 0, 1, '模块延迟吸收: 2 个周期');
+hilite_system('DUC/DUC_module/Halfband Filter 1', 'user1');
+annotate_port('DUC/DUC_module/Halfband Filter 1', 0, 1, '模块延迟吸收: 2 个周期');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_DUC/DUC_module/Halfband Filter 1', 'user1');
+annotate_port('gm_DUC/DUC_module/Halfband Filter 1', 0, 1, '模块延迟吸收: 2 个周期');
+hilite_system('DUC/DUC_module/Halfband Filter 1', 'user1');
+annotate_port('DUC/DUC_module/Halfband Filter 1', 0, 1, '模块延迟吸收: 2 个周期');
