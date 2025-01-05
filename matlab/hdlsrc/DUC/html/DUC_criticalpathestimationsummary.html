@@ -135,7 +135,7 @@ function hdlTableExpandAll(o, numNtks, numComps)
 // -->
 </script>
 <font SIZE="+2" COLOR="#000066">
-DUC/AM_module 的关键路径报告
+DUC/DUC_module 的关键路径报告
 </font>
 <br /><br /><br /><a name="摘要节">
 <font size="+1" color="#000066">
@@ -146,11 +146,11 @@ DUC/AM_module 的关键路径报告
 </font>
 
 </a>
-<hr>关键路径延迟: 14.385 ns<br>关键路径开始: <a href="matlab:coder.internal.code2model('gm_DUC:13')" name="code2model" class="code2model">
-carrier
+<hr>关键路径延迟: 8.918 ns<br>关键路径开始: <a href="matlab:coder.internal.code2model('gm_DUC:177')" name="code2model" class="code2model">
+PipelineRegister3
 </a>
-<br>关键路径结束: <a href="matlab:coder.internal.code2model('gm_DUC:13')" name="code2model" class="code2model">
-carrier
+<br>关键路径结束: <a href="matlab:coder.internal.code2model('gm_DUC:33')" name="code2model" class="code2model">
+IS_Section_delay
 </a>
 <br>突出显示关键路径: <a href="matlab:run('hdlsrc\DUC\criticalPathEstimated')">hdlsrc\DUC\criticalPathEstimated.m</a><br>突出显示未表征模块: <a href="matlab:run('hdlsrc\DUC\highlightCriticalPathEstimationOffendingBlocks')">hdlsrc\DUC\highlightCriticalPathEstimationOffendingBlocks.m</a><br><br /><br /><a name="关键路径细节">
 <font size="+1" color="#000066">
@@ -194,14 +194,176 @@ ID
 1
 </td>
 <td width="25%" align="left" valign="top" style="border-style: none">
-14.3850
+0.5110
 </td>
 <td width="25%" align="left" valign="top" style="border-style: none">
-14.3850
+0.5110
 </td>
 <td width="25%" align="left" valign="top" style="border-style: none">
-<a href="matlab:coder.internal.code2model('gm_DUC:13')" name="code2model" class="code2model">
-carrier
+<a href="matlab:coder.internal.code2model('gm_DUC:177')" name="code2model" class="code2model">
+PipelineRegister3
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+2
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.7000
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.1890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:25')" name="code2model" class="code2model">
+CS_Section_sub_1
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+3
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+2.8890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.1890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:23')" name="code2model" class="code2model">
+CS_Section_sub_2
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+4
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+4.0780
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.1890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:21')" name="code2model" class="code2model">
+CS_Section_sub_3
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+5
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+5.2670
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.1890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:19')" name="code2model" class="code2model">
+CS_Section_sub_4
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+6
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+6.4560
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.1890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:17')" name="code2model" class="code2model">
+CS_Section_sub_5
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+7
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+7.1290
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+0.6730
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:15')" name="code2model" class="code2model">
+us
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+8
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+8.3180
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+1.1890
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:32')" name="code2model" class="code2model">
+IS_Section_add_1
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+9
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+8.6760
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+0.3580
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:34')" name="code2model" class="code2model">
+IS_Section_delay_enbsw
+</a>
+
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td width="25%" align="left" valign="top" style="border-style: none">
+10
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+8.9180
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+0.2420
+</td>
+<td width="25%" align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('gm_DUC:33')" name="code2model" class="code2model">
+IS_Section_delay
 </a>
 
 </td>

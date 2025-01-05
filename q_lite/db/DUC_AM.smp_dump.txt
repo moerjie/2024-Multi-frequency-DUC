@@ -1,0 +1,16 @@
+
+State Machine - |DUC_AM|DUC_module:inst|CIC_Comp_Filter_2:u_CIC_Comp_Filter_2|FirRdyLogic:u_firRdyLogic|firRdy_state
+Name firRdy_state.011 firRdy_state.010 firRdy_state.001 firRdy_state.000 firRdy_state.100 
+firRdy_state.000 0 0 0 0 0 
+firRdy_state.001 0 0 1 1 0 
+firRdy_state.010 0 1 0 1 0 
+firRdy_state.011 1 0 0 1 0 
+firRdy_state.100 0 0 0 1 1 
+
+State Machine - |DUC_AM|DUC_module:inst|Halfband_Filter_1:u_Halfband_Filter_1|FirRdyLogic_block:u_firRdyLogic|firRdy_state
+Name firRdy_state.011 firRdy_state.010 firRdy_state.001 firRdy_state.000 firRdy_state.100 
+firRdy_state.000 0 0 0 0 0 
+firRdy_state.001 0 0 1 1 0 
+firRdy_state.010 0 1 0 1 0 
+firRdy_state.011 1 0 0 1 0 
+firRdy_state.100 0 0 0 1 1 

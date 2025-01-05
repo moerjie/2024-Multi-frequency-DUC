@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DAC_DATA1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DATA1[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

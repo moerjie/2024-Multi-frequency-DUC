@@ -48,24 +48,32 @@
  <div class="page_container"><div class="content_frame">
 <h1>'DUC/DUC_module' 的 HDL 代码生成检查报告
 <a href="matlab:open_system('DUC/DUC_module');">打开模型 'DUC/DUC_module'</a><BR>
-生成时间: 2024-12-28 19:01:01</h1>
-<H2>'DUC' 的 HDL 检查已完成，出现 0 个错误、3 个警告和 4 条消息。</H2><BR>
+生成时间: 2025-01-02 14:33:24</h1>
+<H2>'DUC' 的 HDL 检查已完成，出现 0 个错误、4 个警告和 4 条消息。</H2><BR>
 <H3>下表描述报告了错误、警告或消息的模块。</H3><BR>
 <TABLE style="border: 2px solid; border-collapse: collapse;">
 <TR><TD style="border: 2px solid; border-collapse: collapse;"> <B>Simulink 模块和资源</B> </TD><TD style="border: 2px solid; border-collapse: collapse;"> <B>级别</B> </TD><TD style="border: 2px solid; border-collapse: collapse;"> <B>描述</B> </TD></TR><TR><TD style="border: 2px solid; border-collapse: collapse;">
-<a alt="HDLShared:hdlshared:cpefamilynotcharacterized" href="matlab:hilite(get_param(char([68 85 67]),'object'),'none');open_system(char([68 85 67]))">DUC</a>
+<div alt="hdlcoder:validate:AnnotationTextI18N">DUC/DUC_module/simulink仿真结果和vivado仿真结果不一样，预计是数制的问题
+</div>
 </TD>
 <TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
-<TD style="border: 2px solid; border-collapse: collapse">系列 cyclone iv e 未表征。使用默认值 SynthesisToolChipFamily=stratix v 进行关键路径估计。请考虑使用 'genhdltdb' 来表征此器件配置。<a href="matlab:helpview(fullfile(docroot, 'hdlcoder', 'helptargets.map'),'genhdltdb')">更多信息</a>。</TD>
+<TD style="border: 2px solid; border-collapse: collapse">模型 'DUC' 中的注释 'DUC/DUC_module/simulink仿真结果和vivado仿真结果不一样，预计是数制的问题
+' 包含一个或多个非 ASCII 字符。生成的 HDL 代码中的非 ASCII 字符可能会干扰下游的综合和 lint 等工具。要消除此警告，请将注释更新为完全 ASCII 文本。</TD>
 </TR>
 <TR><TD style="border: 2px solid; border-collapse: collapse;">
-<a alt="HDLShared:hdlshared:cpepartnotcharacterized" href="matlab:hilite(get_param(char([68 85 67]),'object'),'none');open_system(char([68 85 67]))">DUC</a>
+<a alt="hdlcoder:makehdl:genericspeednotcharacterized" href="matlab:hilite(get_param(char([100 115 112 109 108 116 105 52]),'object'),'none');open_system(char([68 85 67]))">DUC</a>
 </TD>
 <TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
-<TD style="border: 2px solid; border-collapse: collapse">未针对系列 stratix v 表征 SynthesisToolDeviceName EP4CE10F17C8。使用默认值 SynthesisToolDeviceName=5SGTMC7K3F40C2 进行关键路径估计。请考虑使用 'genhdltdb' 来表征此器件配置。<a href="matlab:helpview(fullfile(docroot, 'hdlcoder', 'helptargets.map'),'genhdltdb')">更多信息</a>。</TD>
+<TD style="border: 2px solid; border-collapse: collapse">未针对系列 Zynq 表征 SynthesisToolSpeedValue -1Q。对于 adaptive pipelining，使用默认值 SynthesisToolSpeedValue=1。</TD>
 </TR>
 <TR><TD style="border: 2px solid; border-collapse: collapse;">
-<a alt="HDLShared:hdlshared:cpeignoresmultirate" href="matlab:hilite(get_param(char([68 85 67]),'object'),'none');open_system(char([68 85 67]))">DUC</a>
+<a alt="HDLShared:hdlshared:cpespeednotcharacterized" href="matlab:hilite(get_param(char([100 115 112 109 108 116 105 52]),'object'),'none');open_system(char([68 85 67]))">DUC</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">未针对系列 zynq 表征 SynthesisToolSpeedValue -1Q。使用默认值 SynthesisToolSpeedValue=1 进行关键路径估计。请考虑使用 'genhdltdb' 来表征此器件配置。<a href="matlab:helpview(fullfile(docroot, 'hdlcoder', 'helptargets.map'),'genhdltdb')">更多信息</a>。</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="HDLShared:hdlshared:cpeignoresmultirate" href="matlab:hilite(get_param(char([100 115 112 109 108 116 105 52]),'object'),'none');open_system(char([68 85 67]))">DUC</a>
 </TD>
 <TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
 <TD style="border: 2px solid; border-collapse: collapse">该模型包含多种速率，这些速率或者是显式设计的，或者是通过优化引入的。关键路径估计在报告的时序估计中不考虑多种速率。</TD>
@@ -105,7 +113,7 @@
                                     <li class="footernav_patents"><a href="F:/ProgramFiles(x86)/matlab2024b/patents.txt">Patents</a></li>
                                     <li class="footernav_help"><a href="F:/ProgramFiles(x86)/matlab2024b/license_agreement.txt">Terms of Use</a></li>
                                 </ul>
-                                <div class="copyright">&copy; 1994-2024 The MathWorks, Inc.</div>
+                                <div class="copyright">&copy; 1994-2025 The MathWorks, Inc.</div>
                             </div>
                         </div>
                     </div>
