@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:module_ref:DUC_module:1.0
-// IP Revision: 1736079754
+// IP Revision: 1736130943
 
 `timescale 1ns/1ps
 

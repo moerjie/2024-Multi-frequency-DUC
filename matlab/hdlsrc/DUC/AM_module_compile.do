@@ -4,4 +4,14 @@ vlog  Lookup_Table.v
 vlog  LookUpTableGen.v
 vlog  WaveformGen.v
 vlog  carrier.v
+vlog  DitherGen_block.v
+vlog  Lookup_Table_block.v
+vlog  LookUpTableGen_block.v
+vlog  WaveformGen_block.v
+vlog  carrier1.v
+vlog  DitherGen_block1.v
+vlog  Lookup_Table_block1.v
+vlog  LookUpTableGen_block1.v
+vlog  WaveformGen_block1.v
+vlog  carrier2.v
 vlog  AM_module.v

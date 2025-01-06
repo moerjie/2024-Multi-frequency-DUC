@@ -4,8 +4,6 @@ fs=120e6; %采样率120M
 
 f_au=48e3; %音频采样率
 
-f_carry=1e6; %调幅信号载波范围为500~1600k
-
 up_L=fs/f_au; %上采样系数
 
 N1_cycle=fix(up_L/2); %两倍插值
@@ -42,15 +40,21 @@ Gain = 2500;
 GainCorr = dsp.FIRFilter('Numerator',1/Gain);
 
 %% NCO data gen
+f_carry_1=846e3; %调幅信号载波范围为500~1600k，频率间隔9KHz
+f_carry_2=900e3;
+f_carry_3=1053e3;
+
 deltaf=0.5;     % Frequency resolution
 SFDR=90;        % Spurious free dynamic range (dB)
 Nnco=ceil(log2(fs/deltaf)); % NCO Accumalator width
 Q=ceil((SFDR-12)/6); % Number of quantizer accumulator bits:
 ditherBits=Nnco-Q;
-phInc=ceil((f_carry*2^Nnco)/fs); % carrier frequency
+
+phInc_carry_1=ceil((f_carry_1*2^Nnco)/fs); % carrier frequency
+phInc_carry_2=ceil((f_carry_2*2^Nnco)/fs);
+phInc_carry_3=ceil((f_carry_3*2^Nnco)/fs);
 
 f_base_1=1000;f_base_2=500;
 phInc_base_1=ceil((f_base_1*2^Nnco*up_L)/fs);
 phInc_base_2=ceil((f_base_2*2^Nnco*up_L)/fs);
 
-phInc111=ceil((995e3*2^Nnco)/fs); % carrier frequency

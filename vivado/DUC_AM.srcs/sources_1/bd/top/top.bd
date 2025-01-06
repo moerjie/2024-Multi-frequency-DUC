@@ -108,7 +108,7 @@
     "components": {
       "DUC_module_0": {
         "vlnv": "xilinx.com:module_ref:DUC_module:1.0",
-        "ip_revision": "1736079754",
+        "ip_revision": "1736130943",
         "xci_name": "top_DUC_module_0_0",
         "xci_path": "ip\\top_DUC_module_0_0\\top_DUC_module_0_0.xci",
         "inst_hier_path": "DUC_module_0",
@@ -161,7 +161,7 @@
       },
       "AM_module_0": {
         "vlnv": "xilinx.com:module_ref:AM_module:1.0",
-        "ip_revision": "1736077898",
+        "ip_revision": "1736130942",
         "xci_name": "top_AM_module_0_0",
         "xci_path": "ip\\top_AM_module_0_0\\top_AM_module_0_0.xci",
         "inst_hier_path": "AM_module_0",
@@ -434,16 +434,16 @@
           "ila_0/clk",
           "util_vector_logic_0/Op1",
           "util_vector_logic_1/Op1",
-          "AM_module_0/clk",
           "DAC_Module_0/clk",
+          "AM_module_0/clk",
           "DUC_module_0/clk"
         ]
       },
       "clk_wiz_0_locked": {
         "ports": [
           "clk_wiz_0/locked",
-          "AM_module_0/rst_n",
           "DAC_Module_0/rst_n",
+          "AM_module_0/rst_n",
           "DUC_module_0/rst_n",
           "DUC_module_0/clk_enable"
         ]

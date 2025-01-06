@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:module_ref:AM_module:1.0
-// IP Revision: 1736077898
+// IP Revision: 1736130942
 
 `timescale 1ns/1ps
 

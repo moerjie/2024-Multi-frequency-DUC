@@ -14,7 +14,7 @@ ECHO 处于关闭状态。
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top_AM_module_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 479.848 ; gain = 184.160
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 478.055 ; gain = 182.359
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/FPGA/Vivado23/Vivado/2023.2/data/ip'.
@@ -25,9 +25,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24084
+INFO: [Synth 8-7075] Helper process launched with PID 43228
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1350.406 ; gain = 439.445
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1350.297 ; gain = 439.051
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_AM_module_0_0' [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_AM_module_0_0/synth/top_AM_module_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'AM_module' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_module.v:42]
@@ -41,84 +41,114 @@ INFO: [Synth 8-6155] done synthesizing module 'Lookup_Table' (0#1) [D:/Desktop/M
 INFO: [Synth 8-6155] done synthesizing module 'LookUpTableGen' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'WaveformGen' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'carrier' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier.v:24]
+INFO: [Synth 8-6157] synthesizing module 'carrier1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'DitherGen_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'DitherGen_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block.v:24]
+INFO: [Synth 8-6157] synthesizing module 'WaveformGen_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block.v:24]
+INFO: [Synth 8-6157] synthesizing module 'LookUpTableGen_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Lookup_Table_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Lookup_Table_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'LookUpTableGen_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'WaveformGen_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'carrier1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'carrier2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'DitherGen_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'DitherGen_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'WaveformGen_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'LookUpTableGen_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Lookup_Table_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Lookup_Table_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'LookUpTableGen_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'WaveformGen_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'carrier2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier2.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'AM_module' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_module.v:42]
 INFO: [Synth 8-6155] done synthesizing module 'top_AM_module_0_0' (0#1) [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_AM_module_0_0/synth/top_AM_module_0_0.v:53]
+WARNING: [Synth 8-7129] Port inc[31] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[31] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module carrier1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port inc[31] in module carrier is either unconnected or has no load
 WARNING: [Synth 8-7129] Port inc[30] in module carrier is either unconnected or has no load
 WARNING: [Synth 8-7129] Port inc[29] in module carrier is either unconnected or has no load
 WARNING: [Synth 8-7129] Port inc[28] in module carrier is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1468.906 ; gain = 557.945
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1485.977 ; gain = 574.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1468.906 ; gain = 557.945
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1485.977 ; gain = 574.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1468.906 ; gain = 557.945
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1485.977 ; gain = 574.730
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1468.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1485.977 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1499.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1532.441 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 系统找不到指定的路径。
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1501.344 ; gain = 1.469
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1534.719 ; gain = 2.277
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   28 Bit       Adders := 1     
-	   2 Input   16 Bit       Adders := 1     
-	   2 Input   11 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 4     
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 3     
 +---XORs : 
-	   4 Input      1 Bit         XORs := 15    
+	   4 Input      1 Bit         XORs := 45    
 +---Registers : 
-	               28 Bit    Registers := 2     
-	               19 Bit    Registers := 1     
-	               16 Bit    Registers := 7     
-	               13 Bit    Registers := 1     
-	               11 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
-	                3 Bit    Registers := 3     
+	               28 Bit    Registers := 6     
+	               19 Bit    Registers := 3     
+	               16 Bit    Registers := 17    
+	               13 Bit    Registers := 3     
+	               11 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 7     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input   28 Bit        Muxes := 2     
-	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   28 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 9     
 	   3 Input   16 Bit        Muxes := 1     
-	   3 Input   11 Bit        Muxes := 1     
-	   2 Input   11 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	   3 Input   11 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -135,34 +165,64 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP inst/Add1_out1, operation Mode is: (C:0x3fff8000)+(A''*B)'.
-DSP Report: register inst/Delay2_out1_reg is absorbed into DSP inst/Add1_out1.
-DSP Report: register inst/Delay2_out1_1_reg is absorbed into DSP inst/Add1_out1.
-DSP Report: register inst/Product_out1_1_reg is absorbed into DSP inst/Add1_out1.
-DSP Report: operator inst/Add1_out1 is absorbed into DSP inst/Add1_out1.
-DSP Report: operator inst/Product_out1 is absorbed into DSP inst/Add1_out1.
-DSP Report: Generating DSP inst/Product1_out1_1_reg, operation Mode is: (A2*B'')'.
-DSP Report: register inst/HwModeRegister3_reg_reg[0] is absorbed into DSP inst/Product1_out1_1_reg.
-DSP Report: register inst/HwModeRegister3_reg_reg[1] is absorbed into DSP inst/Product1_out1_1_reg.
-DSP Report: register inst/Delay1_out1_1_reg is absorbed into DSP inst/Product1_out1_1_reg.
-DSP Report: register inst/Product1_out1_1_reg is absorbed into DSP inst/Product1_out1_1_reg.
-DSP Report: operator inst/Product1_out1 is absorbed into DSP inst/Product1_out1_1_reg.
+DSP Report: Generating DSP Add1_out1, operation Mode is: (C:0x3fff8000)+(A''*B)'.
+DSP Report: register Delay2_out1_reg is absorbed into DSP Add1_out1.
+DSP Report: register Delay2_out1_1_reg is absorbed into DSP Add1_out1.
+DSP Report: register Product_out1_1_reg is absorbed into DSP Add1_out1.
+DSP Report: operator Add1_out1 is absorbed into DSP Add1_out1.
+DSP Report: operator Product_out1 is absorbed into DSP Add1_out1.
+DSP Report: Generating DSP Product2_out1_1_reg, operation Mode is: (A2*B'')'.
+DSP Report: register HwModeRegister5_reg_reg[0] is absorbed into DSP Product2_out1_1_reg.
+DSP Report: register HwModeRegister5_reg_reg[1] is absorbed into DSP Product2_out1_1_reg.
+DSP Report: register Delay1_out1_1_reg is absorbed into DSP Product2_out1_1_reg.
+DSP Report: register Product2_out1_1_reg is absorbed into DSP Product2_out1_1_reg.
+DSP Report: operator Product2_out1 is absorbed into DSP Product2_out1_1_reg.
+DSP Report: Generating DSP Product1_out1_1_reg, operation Mode is: (A2*B'')'.
+DSP Report: register HwModeRegister3_reg_reg[0] is absorbed into DSP Product1_out1_1_reg.
+DSP Report: register HwModeRegister3_reg_reg[1] is absorbed into DSP Product1_out1_1_reg.
+DSP Report: register Delay1_out1_1_reg is absorbed into DSP Product1_out1_1_reg.
+DSP Report: register Product1_out1_1_reg is absorbed into DSP Product1_out1_1_reg.
+DSP Report: operator Product1_out1 is absorbed into DSP Product1_out1_1_reg.
+DSP Report: Generating DSP Product3_out1_1_reg, operation Mode is: (A2*B'')'.
+DSP Report: register HwModeRegister7_reg_reg[0] is absorbed into DSP Product3_out1_1_reg.
+DSP Report: register HwModeRegister7_reg_reg[1] is absorbed into DSP Product3_out1_1_reg.
+DSP Report: register Delay1_out1_1_reg is absorbed into DSP Product3_out1_1_reg.
+DSP Report: register Product3_out1_1_reg is absorbed into DSP Product3_out1_1_reg.
+DSP Report: operator Product3_out1 is absorbed into DSP Product3_out1_1_reg.
+WARNING: [Synth 8-7129] Port inc[31] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module carrier2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[31] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module carrier1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[31] in module carrier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module carrier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module carrier is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module carrier is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
- Sort Area is  inst/Add1_out1_0 : 0 0 : 2096 2096 : Used 1 time 0
- Sort Area is  inst/Product1_out1_1_reg_2 : 0 0 : 2017 2017 : Used 1 time 0
+ Sort Area is  Add1_out1_0 : 0 0 : 2096 2096 : Used 1 time 0
+ Sort Area is  Product1_out1_1_reg_4 : 0 0 : 2017 2017 : Used 1 time 0
+ Sort Area is  Product2_out1_1_reg_5 : 0 0 : 2017 2017 : Used 1 time 0
+ Sort Area is  Product3_out1_1_reg_2 : 0 0 : 2017 2017 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+------------------+-----------------------------------------------------------+---------------+----------------+
-|Module Name       | RTL Object                                                | Depth x Width | Implemented As | 
-+------------------+-----------------------------------------------------------+---------------+----------------+
-|Lookup_Table      | Lookup_Table_2                                            | 2048x16       | LUT            | 
-|top_AM_module_0_0 | inst/u_carrier/u_Wave_inst/u_SineWave_inst/lutout_reg_reg | 2048x16       | Block RAM      | 
-+------------------+-----------------------------------------------------------+---------------+----------------+
++--------------------+--------------------------------------------+---------------+----------------+
+|Module Name         | RTL Object                                 | Depth x Width | Implemented As | 
++--------------------+--------------------------------------------+---------------+----------------+
+|Lookup_Table        | Lookup_Table_2                             | 2048x16       | LUT            | 
+|Lookup_Table_block  | Lookup_Table_1                             | 2048x16       | LUT            | 
+|Lookup_Table_block1 | Lookup_Table_1                             | 2048x16       | LUT            | 
+|carrier             | u_Wave_inst/u_SineWave_inst/lutout_reg_reg | 2048x16       | Block RAM      | 
+|carrier1            | u_Wave_inst/u_SineWave_inst/lutout_reg_reg | 2048x16       | Block RAM      | 
+|carrier2            | u_Wave_inst/u_SineWave_inst/lutout_reg_reg | 2048x16       | Block RAM      | 
++--------------------+--------------------------------------------+---------------+----------------+
 
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
@@ -170,6 +230,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |Module Name | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |AM_module   | (C:0x3fff8000)+(A''*B)' | 16     | 16     | 31     | -      | 32     | 2    | 0    | 0    | -    | -     | 1    | 0    | 
+|AM_module   | (A2*B'')'               | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|AM_module   | (A2*B'')'               | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 0    | 
 |AM_module   | (A2*B'')'               | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 0    | 
 +------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
@@ -181,19 +243,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1501.344 ; gain = 590.383
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -211,50 +273,52 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.328 ; gain = 611.367
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.328 ; gain = 611.367
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.328 ; gain = 611.367
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.328 ; gain = 611.367
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.336 ; gain = 611.375
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.336 ; gain = 611.375
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name       | RTL Name                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|top_AM_module_0_0 | inst/u_carrier/outsel_reg_reg_reg[4]                  | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|top_AM_module_0_0 | inst/u_carrier/u_Wave_inst/SelsignRegister_reg_reg[2] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|top_AM_module_0_0 | inst/delayMatch1_reg_reg[2]                           | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-+------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------------+--------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+--------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_AM_module_0_0 | inst/u_carrier/u_Wave_inst/SelsignRegister_reg_reg[2]  | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_AM_module_0_0 | inst/u_carrier1/u_Wave_inst/SelsignRegister_reg_reg[2] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_AM_module_0_0 | inst/u_carrier2/u_Wave_inst/SelsignRegister_reg_reg[2] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_AM_module_0_0 | inst/delayMatch3_reg_reg[2]                            | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_AM_module_0_0 | inst/u_carrier1/outsel_reg_reg_reg[4]                  | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------------+--------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -269,6 +333,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |AM_module   | (C+A''*B')' | 30     | 15     | 30     | -      | 32     | 2    | 1    | 1    | -    | -     | 0    | 1    | 
 |AM_module   | (A'*B'')'   | 30     | 18     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|AM_module   | (A'*B'')'   | 30     | 18     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|AM_module   | (A'*B'')'   | 30     | 18     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -282,43 +348,43 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |    18|
-|2     |DSP48E1  |     2|
-|4     |LUT1     |     8|
-|5     |LUT2     |    45|
-|6     |LUT3     |     2|
-|7     |LUT4     |    21|
-|8     |LUT5     |     6|
-|9     |LUT6     |    18|
-|10    |RAMB36E1 |     1|
-|11    |SRL16E   |     3|
-|12    |FDRE     |   157|
-|13    |FDSE     |     1|
+|1     |CARRY4   |    62|
+|2     |DSP48E1  |     4|
+|4     |LUT1     |    35|
+|5     |LUT2     |   157|
+|6     |LUT3     |    17|
+|7     |LUT4     |    63|
+|8     |LUT5     |    18|
+|9     |LUT6     |    54|
+|10    |RAMB36E1 |     2|
+|12    |SRL16E   |     5|
+|13    |FDRE     |   446|
+|14    |FDSE     |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1522.336 ; gain = 611.375
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1522.336 ; gain = 578.938
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1522.336 ; gain = 611.375
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1534.719 ; gain = 574.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.719 ; gain = 623.473
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1534.387 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1542.512 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1541.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1544.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 系统找不到指定的路径。
-Synth Design complete | Checksum: c91e1d7f
+Synth Design complete | Checksum: 33bc3861
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1541.086 ; gain = 1048.559
-INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1541.086 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1544.988 ; gain = 1053.062
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1544.988 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/top_AM_module_0_0_synth_1/top_AM_module_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_AM_module_0_0_utilization_synth.rpt -pb top_AM_module_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan  5 20:23:49 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  6 10:37:35 2025...

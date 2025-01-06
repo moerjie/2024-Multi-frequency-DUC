@@ -4,7 +4,7 @@
     "xci_name": "top_AM_module_0_0",
     "cell_name": "AM_module_0",
     "component_reference": "xilinx.com:module_ref:AM_module:1.0",
-    "ip_revision": "1736077898",
+    "ip_revision": "1736130942",
     "gen_directory": "../../../../../../DUC_AM.gen/sources_1/bd/top/ip/top_AM_module_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "1736077898" } ],
+        "IPREVISION": [ { "value": "1736130942" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../DUC_AM.gen/sources_1/bd/top/ip/top_AM_module_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

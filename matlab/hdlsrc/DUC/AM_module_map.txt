@@ -3,4 +3,14 @@ DUC/AM_module/carrier/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
 DUC/AM_module/carrier/WaveformGen/LookUpTableGen --> LookUpTableGen
 DUC/AM_module/carrier/WaveformGen --> WaveformGen
 DUC/AM_module/carrier --> carrier
+DUC/AM_module/carrier1/DitherGen --> DitherGen_block
+DUC/AM_module/carrier1/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block
+DUC/AM_module/carrier1/WaveformGen/LookUpTableGen --> LookUpTableGen_block
+DUC/AM_module/carrier1/WaveformGen --> WaveformGen_block
+DUC/AM_module/carrier1 --> carrier1
+DUC/AM_module/carrier2/DitherGen --> DitherGen_block1
+DUC/AM_module/carrier2/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block1
+DUC/AM_module/carrier2/WaveformGen/LookUpTableGen --> LookUpTableGen_block1
+DUC/AM_module/carrier2/WaveformGen --> WaveformGen_block1
+DUC/AM_module/carrier2 --> carrier2
 DUC/AM_module --> AM_module

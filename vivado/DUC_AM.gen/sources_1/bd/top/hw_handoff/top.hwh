@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan  5 20:25:52 2025" VIVADOVERSION="2023.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan  6 10:36:32 2025" VIVADOVERSION="2023.2.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="top" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -29,7 +29,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="1736077898" FULLNAME="/AM_module_0" HWVERSION="1.0" INSTANCE="AM_module_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AM_module" VLNV="xilinx.com:module_ref:AM_module:1.0">
+    <MODULE COREREVISION="1736130942" FULLNAME="/AM_module_0" HWVERSION="1.0" INSTANCE="AM_module_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AM_module" VLNV="xilinx.com:module_ref:AM_module:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="top_AM_module_0_0"/>
@@ -97,7 +97,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1736079754" FULLNAME="/DUC_module_0" HWVERSION="1.0" INSTANCE="DUC_module_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DUC_module" VLNV="xilinx.com:module_ref:DUC_module:1.0">
+    <MODULE COREREVISION="1736130943" FULLNAME="/DUC_module_0" HWVERSION="1.0" INSTANCE="DUC_module_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DUC_module" VLNV="xilinx.com:module_ref:DUC_module:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="top_DUC_module_0_0"/>
@@ -722,15 +722,15 @@
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
             <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
-            <CONNECTION INSTANCE="AM_module_0" PORT="clk"/>
             <CONNECTION INSTANCE="DAC_Module_0" PORT="clk"/>
+            <CONNECTION INSTANCE="AM_module_0" PORT="clk"/>
             <CONNECTION INSTANCE="DUC_module_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="AM_module_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="DAC_Module_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="AM_module_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="DUC_module_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="DUC_module_0" PORT="clk_enable"/>
           </CONNECTIONS>

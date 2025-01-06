@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:module_ref:DUC_module:1.0
-// IP Revision: 1736079754
+// IP Revision: 1736130943
 
 (* X_CORE_INFO = "DUC_module,Vivado 2023.2.2" *)
 (* CHECK_LICENSE_TYPE = "top_DUC_module_0_0,DUC_module,{}" *)
-(* CORE_GENERATION_INFO = "top_DUC_module_0_0,DUC_module,{x_ipProduct=Vivado 2023.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=DUC_module,x_ipVersion=1.0,x_ipCoreRevision=1736079754,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "top_DUC_module_0_0,DUC_module,{x_ipProduct=Vivado 2023.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=DUC_module,x_ipVersion=1.0,x_ipCoreRevision=1736130943,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_DUC_module_0_0 (
