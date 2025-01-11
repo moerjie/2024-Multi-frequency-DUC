@@ -1,0 +1,458 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1F5F827FDDE64DED",
+      "device": "xc7z020clg400-2",
+      "gen_directory": "../../../../DUC_AM.gen/sources_1/bd/top",
+      "name": "top",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "DAC_Module_0": "",
+      "DUC_module_0": "",
+      "AM_module_0": "",
+      "clk_wiz_0": "",
+      "ila_0": "",
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": ""
+    },
+    "ports": {
+      "da1_data": {
+        "direction": "O",
+        "left": "13",
+        "right": "0"
+      },
+      "da1_wrt": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/clk_wiz_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "120000000",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "180.0",
+            "value_src": "ip_prop"
+          },
+          "PortType": {
+            "value": "clk",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "da1_clk": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/clk_wiz_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "120000000",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "180.0",
+            "value_src": "ip_prop"
+          },
+          "PortType": {
+            "value": "clk",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "sys_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "DAC_Module_0": {
+        "vlnv": "xilinx.com:module_ref:DAC_Module:1.0",
+        "xci_name": "top_DAC_Module_0_0",
+        "xci_path": "ip\\top_DAC_Module_0_0\\top_DAC_Module_0_0.xci",
+        "inst_hier_path": "DAC_Module_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DAC_Module",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "120000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "dataIn": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "dataOut": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "DUC_module_0": {
+        "vlnv": "xilinx.com:module_ref:DUC_module:1.0",
+        "xci_name": "top_DUC_module_0_0",
+        "xci_path": "ip\\top_DUC_module_0_0\\top_DUC_module_0_0.xci",
+        "inst_hier_path": "DUC_module_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DUC_module",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "120000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "clk_enable": {
+            "direction": "I"
+          },
+          "ce_out": {
+            "direction": "O"
+          },
+          "DUC_Data_Out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "AM_module_0": {
+        "vlnv": "xilinx.com:module_ref:AM_module:1.0",
+        "xci_name": "top_AM_module_0_0",
+        "xci_path": "ip\\top_AM_module_0_0\\top_AM_module_0_0.xci",
+        "inst_hier_path": "AM_module_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "AM_module",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "120000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "clk_enable": {
+            "direction": "I"
+          },
+          "Base_Signal_In": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ce_out": {
+            "direction": "O"
+          },
+          "AM_OUT": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "VLD": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "top_clk_wiz_0_0",
+        "xci_path": "ip\\top_clk_wiz_0_0\\top_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "200.0"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "156.886"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "160.484"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "120"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "19.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "8.125"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "50"
+          },
+          "RESET_PORT": {
+            "value": "reset"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_HIGH"
+          },
+          "USE_RESET": {
+            "value": "false"
+          },
+          "USE_SAFE_CLOCK_STARTUP": {
+            "value": "false"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "top_ila_0_0",
+        "xci_path": "ip\\top_ila_0_0\\top_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "32768"
+          },
+          "C_INPUT_PIPE_STAGES": {
+            "value": "1"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "14"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "top_util_vector_logic_0_0",
+        "xci_path": "ip\\top_util_vector_logic_0_0\\top_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "top_util_vector_logic_0_1",
+        "xci_path": "ip\\top_util_vector_logic_0_1\\top_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "AM_module_0_AM_OUT": {
+        "ports": [
+          "AM_module_0/AM_OUT",
+          "DAC_Module_0/dataIn"
+        ]
+      },
+      "DAC_Module_0_dataOut": {
+        "ports": [
+          "DAC_Module_0/dataOut",
+          "da1_data",
+          "ila_0/probe0"
+        ]
+      },
+      "DUC_module_0_DUC_Data_Out": {
+        "ports": [
+          "DUC_module_0/DUC_Data_Out",
+          "AM_module_0/Base_Signal_In"
+        ]
+      },
+      "DUC_module_0_ce_out": {
+        "ports": [
+          "DUC_module_0/ce_out",
+          "AM_module_0/clk_enable"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "sys_clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "DAC_Module_0/clk",
+          "DUC_module_0/clk",
+          "AM_module_0/clk",
+          "ila_0/clk",
+          "util_vector_logic_0/Op1",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "DAC_Module_0/rst_n",
+          "DUC_module_0/rst_n",
+          "DUC_module_0/clk_enable",
+          "AM_module_0/rst_n"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "da1_wrt"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "da1_clk"
+        ]
+      }
+    }
+  }
+}

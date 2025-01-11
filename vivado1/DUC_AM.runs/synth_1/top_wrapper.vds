@@ -1,0 +1,309 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Mon Jan  6 10:40:14 2025
+# Process ID: 43764
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1
+# Command line: vivado.exe -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/top_wrapper.vds
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+source top_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 477.328 ; gain = 181.070
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/FPGA/Vivado23/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.srcs/utils_1/imports/synth_1/DUC_module.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.srcs/utils_1/imports/synth_1/DUC_module.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_wrapper -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 41508
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1375.668 ; gain = 440.688
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_wrapper' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'top' [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:13]
+INFO: [Synth 8-6157] synthesizing module 'top_AM_module_0_0' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_AM_module_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_AM_module_0_0' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_AM_module_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ce_out' of module 'top_AM_module_0_0' is unconnected for instance 'AM_module_0' [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:38]
+WARNING: [Synth 8-7071] port 'VLD' of module 'top_AM_module_0_0' is unconnected for instance 'AM_module_0' [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:38]
+WARNING: [Synth 8-7023] instance 'AM_module_0' of module 'top_AM_module_0_0' has 7 connections declared, but only 5 given [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:38]
+INFO: [Synth 8-6157] synthesizing module 'top_DAC_Module_0_0' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_DAC_Module_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_DAC_Module_0_0' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_DAC_Module_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_DUC_module_0_0' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_DUC_module_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_DUC_module_0_0' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_DUC_module_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_clk_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:59]
+INFO: [Synth 8-6157] synthesizing module 'top_ila_0_0' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_ila_0_0' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_util_vector_logic_0_0' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_util_vector_logic_0_0' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_util_vector_logic_0_1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_util_vector_logic_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_util_vector_logic_0_1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/.Xil/Vivado-43764-MOERJIE_PC/realtime/top_util_vector_logic_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'top_wrapper' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'DAC_Module_0'. This will prevent further optimization [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:44]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/synth/top.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1486.477 ; gain = 551.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1486.477 ; gain = 551.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1486.477 ; gain = 551.496
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1486.477 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_DUC_module_0_0/top_DUC_module_0_0/top_DUC_module_0_0_in_context.xdc] for cell 'top_i/DUC_module_0'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_DUC_module_0_0/top_DUC_module_0_0/top_DUC_module_0_0_in_context.xdc] for cell 'top_i/DUC_module_0'
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_AM_module_0_0/top_AM_module_0_0/top_AM_module_0_0_in_context.xdc] for cell 'top_i/AM_module_0'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_AM_module_0_0/top_AM_module_0_0/top_AM_module_0_0_in_context.xdc] for cell 'top_i/AM_module_0'
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_DAC_Module_0_0/top_DAC_Module_0_0/top_DAC_Module_0_0_in_context.xdc] for cell 'top_i/DAC_Module_0'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_DAC_Module_0_0/top_DAC_Module_0_0/top_DAC_Module_0_0_in_context.xdc] for cell 'top_i/DAC_Module_0'
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0/top_clk_wiz_0_0_in_context.xdc] for cell 'top_i/clk_wiz_0'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0/top_clk_wiz_0_0_in_context.xdc] for cell 'top_i/clk_wiz_0'
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_ila_0_0/top_ila_0_0/top_ila_0_0_in_context.xdc] for cell 'top_i/ila_0'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_ila_0_0/top_ila_0_0/top_ila_0_0_in_context.xdc] for cell 'top_i/ila_0'
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_util_vector_logic_0_0/top_util_vector_logic_0_0/top_util_vector_logic_0_0_in_context.xdc] for cell 'top_i/util_vector_logic_0'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_util_vector_logic_0_0/top_util_vector_logic_0_0/top_util_vector_logic_0_0_in_context.xdc] for cell 'top_i/util_vector_logic_0'
+Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_util_vector_logic_0_1/top_util_vector_logic_0_1/top_util_vector_logic_0_0_in_context.xdc] for cell 'top_i/util_vector_logic_1'
+Finished Parsing XDC File [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_util_vector_logic_0_1/top_util_vector_logic_0_1/top_util_vector_logic_0_0_in_context.xdc] for cell 'top_i/util_vector_logic_1'
+Parsing XDC File [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'da2_clk[0]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'da2_wrt[0]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'da2_clk[0]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'da2_wrt[0]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[13]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[12]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[11]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[10]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[9]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[8]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[7]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[6]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[5]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[4]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[3]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[2]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[1]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[0]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[13]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[12]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[11]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[10]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[9]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[8]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[7]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[6]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[5]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[4]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[3]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[2]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[1]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'da2_data[0]'. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc:62]
+Finished Parsing XDC File [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/ad9767.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1486.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1486.973 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0/top_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0/top_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/DUC_module_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/AM_module_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/DAC_Module_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/util_vector_logic_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/util_vector_logic_1. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sys_clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------+----------+
+|      |BlackBox name             |Instances |
++------+--------------------------+----------+
+|1     |top_AM_module_0_0         |         1|
+|2     |top_DAC_Module_0_0        |         1|
+|3     |top_DUC_module_0_0        |         1|
+|4     |top_clk_wiz_0_0           |         1|
+|5     |top_ila_0_0               |         1|
+|6     |top_util_vector_logic_0_0 |         1|
+|7     |top_util_vector_logic_0_1 |         1|
++------+--------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------+------+
+|      |Cell                    |Count |
++------+------------------------+------+
+|1     |top_AM_module_0         |     1|
+|2     |top_DAC_Module_0        |     1|
+|3     |top_DUC_module_0        |     1|
+|4     |top_clk_wiz_0           |     1|
+|5     |top_ila_0               |     1|
+|6     |top_util_vector_logic_0 |     2|
+|8     |OBUF                    |    16|
++------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1486.973 ; gain = 551.496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1486.973 ; gain = 551.992
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1488.707 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1499.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9bff3272
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1499.488 ; gain = 977.754
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1499.488 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM.runs/synth_1/top_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  6 10:40:59 2025...

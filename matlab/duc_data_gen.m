@@ -12,7 +12,7 @@ N_cic1_itp=25;
 N_cic2_itp=25;
 
 % HalfBand Filter
-hb1_order=48; hb1_tr_width=0.4;
+hb1_order=48; hb1_tr_width=0.4; 
 hb2_order=48; hb2_tr_width=0.3;
 hb_stopband_attenuation=80;
 hb1=designHalfbandFIR(FilterOrder=hb1_order,TransitionWidth=hb1_tr_width, ...
