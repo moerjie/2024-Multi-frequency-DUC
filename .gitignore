@@ -19,7 +19,17 @@
 2024-Multi-frequency-DUC/vivado/DUC_AM.ip_user_files/
 2024-Multi-frequency-DUC/vivado/DUC_AM.sim/
 2024-Multi-frequency-DUC/vivado/DUC_AM.runs/
+
+2024-Multi-frequency-DUC/vivado1/DUC_AM.cache/
+2024-Multi-frequency-DUC/vivado1/DUC_AM.hw/
+2024-Multi-frequency-DUC/vivado1/DUC_AM.ip_user_files/
+2024-Multi-frequency-DUC/vivado1/DUC_AM.sim/
+2024-Multi-frequency-DUC/vivado1/DUC_AM.runs/
+
 *.html
 *.svg
 *.json
 *.js
+*.asv
+*.slxc
+*.pkf
