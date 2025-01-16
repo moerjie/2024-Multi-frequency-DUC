@@ -14,18 +14,15 @@
 2024-Multi-frequency-DUC/q_lite/output_files/
 2024-Multi-frequency-DUC/q_lite/greybox_tmp/
 
-2024-Multi-frequency-DUC/vivado/DUC_AM.cache/
-2024-Multi-frequency-DUC/vivado/DUC_AM.hw/
-2024-Multi-frequency-DUC/vivado/DUC_AM.ip_user_files/
-2024-Multi-frequency-DUC/vivado/DUC_AM.sim/
-2024-Multi-frequency-DUC/vivado/DUC_AM.runs/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.cache/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.hw/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.ip_user_files/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.sim/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.gen/
+2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ/vitis/
 
-2024-Multi-frequency-DUC/vivado1/DUC_AM.cache/
-2024-Multi-frequency-DUC/vivado1/DUC_AM.hw/
-2024-Multi-frequency-DUC/vivado1/DUC_AM.ip_user_files/
-2024-Multi-frequency-DUC/vivado1/DUC_AM.sim/
-2024-Multi-frequency-DUC/vivado1/DUC_AM.runs/
-
+*.log
 *.html
 *.svg
 *.json
@@ -33,3 +30,4 @@
 *.asv
 *.slxc
 *.pkf
+*.xml

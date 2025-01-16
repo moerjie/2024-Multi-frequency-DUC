@@ -1,0 +1,21 @@
+DUC/Signal_Source/Painter/NCO/DitherGen --> DitherGen
+DUC/Signal_Source/Painter/NCO/WaveformGen/LookUpTableGen/Lookup Table1 --> Lookup_Table1
+DUC/Signal_Source/Painter/NCO/WaveformGen/LookUpTableGen/Lookup Table2 --> Lookup_Table2
+DUC/Signal_Source/Painter/NCO/WaveformGen/LookUpTableGen --> LookUpTableGen
+DUC/Signal_Source/Painter/NCO/WaveformGen --> WaveformGen
+DUC/Signal_Source/Painter/NCO --> NCO
+DUC/Signal_Source/Painter/SinglePortRAM_generic --> SinglePortRAM_generic
+DUC/Signal_Source/Painter/SinglePortRAM_generic_AsyncRead --> SinglePortRAM_generic_AsyncRead
+DUC/Signal_Source/Painter --> Painter
+DUC/Signal_Source/single_tone_500_1k/NCO1/DitherGen --> DitherGen_block
+DUC/Signal_Source/single_tone_500_1k/NCO1/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
+DUC/Signal_Source/single_tone_500_1k/NCO1/WaveformGen/LookUpTableGen --> LookUpTableGen_block
+DUC/Signal_Source/single_tone_500_1k/NCO1/WaveformGen --> WaveformGen_block
+DUC/Signal_Source/single_tone_500_1k/NCO1 --> NCO1
+DUC/Signal_Source/single_tone_500_1k/NCO2/DitherGen --> DitherGen_block1
+DUC/Signal_Source/single_tone_500_1k/NCO2/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block
+DUC/Signal_Source/single_tone_500_1k/NCO2/WaveformGen/LookUpTableGen --> LookUpTableGen_block1
+DUC/Signal_Source/single_tone_500_1k/NCO2/WaveformGen --> WaveformGen_block1
+DUC/Signal_Source/single_tone_500_1k/NCO2 --> NCO2
+DUC/Signal_Source/single_tone_500_1k --> single_tone_500_1k
+DUC/Signal_Source --> Signal_Source

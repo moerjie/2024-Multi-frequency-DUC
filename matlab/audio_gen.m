@@ -9,7 +9,7 @@ vec_freq_music_phinc=repmat(vec_freq_music_phinc,1,16);
 % vec_score_3=[0 2 0 5];
 % vec_score_music=[vec_score_1 vec_score_2 vec_score_3];
 % vec_score_music=repmat(vec_score_music,1,8);
-
+% 粉刷匠
 vec_score_1=[0 5 0 3 0 5 0 3 0 5 0 3 0 1 1 1];
 vec_score_2=[0 2 0 4 0 3 0 2 0 5 5 5 5 0 0 0];
 vec_score_3=[0 5 0 3 0 5 0 3 0 5 0 3 0 1 1 1];

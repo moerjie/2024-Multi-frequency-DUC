@@ -24,14 +24,4 @@ DUC/DUC_module/Halfband Filter 2/Addressable Delay Line --> Addressable_Delay_Li
 DUC/DUC_module/Halfband Filter 2/Addressable_Delay_Line --> Addressable_Delay_Line_block8
 DUC/DUC_module/Halfband Filter 2/FilterTapSystolicPreAdd --> FilterTapSystolicPreAdd_block2
 DUC/DUC_module/Halfband Filter 2 --> Halfband_Filter_2
-DUC/DUC_module/NCO/DitherGen --> DitherGen
-DUC/DUC_module/NCO/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
-DUC/DUC_module/NCO/WaveformGen/LookUpTableGen --> LookUpTableGen
-DUC/DUC_module/NCO/WaveformGen --> WaveformGen
-DUC/DUC_module/NCO --> NCO
-DUC/DUC_module/NCO1/DitherGen --> DitherGen_block
-DUC/DUC_module/NCO1/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block
-DUC/DUC_module/NCO1/WaveformGen/LookUpTableGen --> LookUpTableGen_block
-DUC/DUC_module/NCO1/WaveformGen --> WaveformGen_block
-DUC/DUC_module/NCO1 --> NCO1
 DUC/DUC_module --> DUC_module

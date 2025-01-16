@@ -1,0 +1,265 @@
+/******************************************************************************
+ * Copyright (C) 2002 - 2021 Xilinx, Inc.  All rights reserved.
+ * SPDX-License-Identifier: MIT
+ ******************************************************************************/
+
+/*****************************************************************************/
+/**
+ * @file xgpio_example.c
+ *
+ * This file contains a design example using the AXI GPIO driver (XGpio) and
+ * hardware device.  It only uses channel 1 of a GPIO device and assumes that
+ * the bit 0 of the GPIO is connected to the LED on the HW board.
+ *
+ *
+ * <pre>
+ * MODIFICATION HISTORY:
+ *
+ * Ver   Who  Date     Changes
+ * ----- ---- -------- -----------------------------------------------
+ * 1.00a rmm  03/13/02 First release
+ * 1.00a rpm  08/04/03 Removed second example and invalid macro calls
+ * 2.00a jhl  12/15/03 Added support for dual channels
+ * 2.00a sv   04/20/05 Minor changes to comply to Doxygen and coding guidelines
+ * 3.00a ktn  11/20/09 Minor changes as per coding guidelines.
+ * 4.1   lks  11/18/15 Updated to use canonical xparameters and
+ *		      clean up of the comments and code for CR 900381
+ * 4.3   sk   09/29/16 Modified the example to make it work when LED_bits are
+ *                     configured as an output. CR# 958644
+ *       ms   01/23/17 Added xil_printf statement in main function to
+ *                     ensure that "Successfully ran" and "Failed" strings
+ *                     are available in all examples. This is a fix for
+ *                     CR-965028.
+ * 4.5  sne   06/12/19 Fixed IAR compiler warning.
+ *
+ * </pre>
+ ******************************************************************************/
+
+/***************************** Include Files *********************************/
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include <xgpiops.h>
+/************************** Constant Definitions *****************************/
+#define MODE_SINGLE_TONE 0x00
+#define MODE_PRINTER 0x01
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define GPIO_EXAMPLE_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
+
+/*
+ * The following constant is used to wait after an LED is turned on to make
+ * sure that it is visible to the human eye.  This constant might need to be
+ * tuned for faster or slower processor speeds.
+ */
+#define LED_DELAY 10000000
+
+/*
+ * The following constant is used to determine which channel of the GPIO is
+ * used for the LED if there are 2 channels supported.
+ */
+#define MODE_CHANGE_CHANNEL 1
+
+/*GPIO define	*/
+#define MIO_ID XPAR_GPIO_0_DEVICE_ID
+#define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define KEY_INTR_ID XPAR_XGPIOPS_0_INTR
+#define PS_KEY_MIO 50
+#define PS_LED_MIO 0
+
+#define GPIO_INPUT 0
+#define GPIO_OUTPUT 1
+/**************************** Type Definitions *******************************/
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+#ifdef PRE_2_00A_APPLICATION
+
+/*
+ * The following macros are provided to allow an application to compile that
+ * uses an older version of the driver (pre 2.00a) which did not have a channel
+ * parameter. Note that the channel parameter is fixed as channel 1.
+ */
+#define XGpio_SetDataDirection(InstancePtr, DirectionMask) \
+	XGpio_SetDataDirection(InstancePtr, MODE_CHANGE_CHANNEL, DirectionMask)
+
+#define XGpio_DiscreteRead(InstancePtr) \
+	XGpio_DiscreteRead(InstancePtr, MODE_CHANGE_CHANNEL)
+
+#define XGpio_DiscreteWrite(InstancePtr, Mask) \
+	XGpio_DiscreteWrite(InstancePtr, MODE_CHANGE_CHANNEL, Mask)
+
+#define XGpio_DiscreteSet(InstancePtr, Mask) \
+	XGpio_DiscreteSet(InstancePtr, MODE_CHANGE_CHANNEL, Mask)
+
+#endif
+
+/************************** Function Prototypes ******************************/
+int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePtr);
+void GpioHandler(void *CallBackRef);
+/************************** Variable Definitions *****************************/
+
+/*
+ * The following are declared globally so they are zeroed and so they are
+ * easily accessible from a debugger
+ */
+
+XGpioPs Gpio; /* The Instance of the GPIO Driver */
+
+XScuGic INTCInst;
+
+int key_flag; // ps key 0 flag
+/*****************************************************************************/
+/**
+ *
+ * The purpose of this function is to illustrate how to use the GPIO
+ * driver to turn on and off an LED.
+ *
+ *
+ * @return	XST_FAILURE to indicate that the GPIO Initialization had
+ *		failed.
+ *
+ * @note		This function will not return if the test is running.
+ *
+ ******************************************************************************/
+int main(void)
+{
+	int Status;
+	volatile int Delay;
+	int mode_flag = 0;
+
+	/* Initialize the GPIO driver */
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	/* Initialize the ScuGic */
+	Status = IntrInitFunction(&INTCInst, MIO_ID, &Gpio);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("IntrInitFunction Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	/* Set the direction for all signals as inputs except the LED output */
+	XGpio_SetDataDirection(&Gpio, MODE_CHANGE_CHANNEL, GPIO_OUTPUT);
+
+	/* Loop forever blinking the LED */
+
+	while (1)
+	{
+		if (key_flag)
+		{
+			mode_flag++;
+			if (mode_flag == 0)
+			{
+				XGpio_DiscreteWrite(&Gpio, MODE_CHANGE_CHANNEL, MODE_SINGLE_TONE);
+				xil_printf("MODE_SINGLE_TONE, mode flag:%d\r\n", mode_flag);
+			}
+			else if (mode_flag == 1)
+			{
+				XGpio_DiscreteWrite(&Gpio, MODE_CHANGE_CHANNEL, MODE_PRINTER);
+				xil_printf("粉刷匠, mode flag:%d\r\n", mode_flag);
+			}
+			else
+			{
+				mode_flag = 0;
+			}
+			key_flag = 0;
+		}
+		return 0;
+	}
+}
+
+int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePtr)
+{
+	XScuGic_Config *IntcConfig;
+	int Status;
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use.
+	 */
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+
+	Status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS)
+		return XST_FAILURE;
+
+	/*
+	 * set priority and trigger type
+	 */
+	XScuGic_SetPriorityTriggerType(&INTCInst, KEY_INTR_ID,
+								   0xA0, 0x3);
+	/*
+	 * Connect the device driver handler that will be called when an
+	 * interrupt for the device occurs, the handler defined above performs
+	 * the specific interrupt processing for the device.
+	 */
+	Status = XScuGic_Connect(&INTCInst, KEY_INTR_ID,
+							 (Xil_ExceptionHandler)GpioHandler,
+							 (void *)&Gpio);
+	if (Status != XST_SUCCESS)
+		return XST_FAILURE;
+
+	/*
+	 * Enable the interrupt for the GPIO device.
+	 */
+	XScuGic_Enable(&INTCInst, KEY_INTR_ID);
+
+	/*
+	 * Enable the GPIO channel interrupts so that push button can be
+	 * detected and enable interrupts.
+	 */
+	XGpioPs_IntrEnablePin(&Gpio, PS_KEY_MIO);
+	XGpioPs_SetIntrTypePin(&Gpio, PS_KEY_MIO, XGPIOPS_IRQ_TYPE_EDGE_RISING);
+	XGpioPs_SetDirectionPin(&Gpio, PS_KEY_MIO, GPIO_INPUT);
+
+	/*
+	 * Enable the interrupt for the GPIO device.
+	 */
+	XScuGic_Enable(&INTCInst, KEY_INTR_ID);
+
+	/*
+	 * Initialize the exception table and register the interrupt
+	 * controller handler with the exception table
+	 */
+	Xil_ExceptionInit();
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+								 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+								 &INTCInst);
+
+	/* Enable non-critical exceptions */
+	Xil_ExceptionEnable();
+
+	/*
+	 * Start the interrupt controller such that interrupts are recognized by the
+	 * processor.
+	 */
+	XScuGic_Enable(&INTCInst, KEY_INTR_ID);
+
+	return XST_SUCCESS;
+}
+
+void GpioHandler(void *CallBackRef)
+{
+	XGpioPs *GpioInstancePtr = (XGpioPs *)CallBackRef;
+	int intr_val;
+
+	intr_val = XGpioPs_IntrGetStatusPin(GpioInstancePtr, PS_KEY_MIO);
+	/* Clear the interrupt */
+	XGpioPs_IntrClearPin(GpioInstancePtr, PS_KEY_MIO);
+	if (intr_val)
+	{
+		xil_printf("Button Pressed\r\n");
+	}
+}

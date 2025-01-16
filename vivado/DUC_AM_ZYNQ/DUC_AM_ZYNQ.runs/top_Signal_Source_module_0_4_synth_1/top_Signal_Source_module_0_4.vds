@@ -1,0 +1,443 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Jan 15 19:15:20 2025
+# Process ID: 31524
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_Signal_Source_module_0_4_synth_1
+# Command line: vivado.exe -log top_Signal_Source_module_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_Signal_Source_module_0_4.tcl
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_Signal_Source_module_0_4_synth_1/top_Signal_Source_module_0_4.vds
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_Signal_Source_module_0_4_synth_1\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+source top_Signal_Source_module_0_4.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 451.504 ; gain = 164.371
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/FPGA/vivado2023_1/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_Signal_Source_module_0_4
+Command: synth_design -top top_Signal_Source_module_0_4 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 33356
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1303.980 ; gain = 410.191
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_Signal_Source_module_0_4' [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.gen/sources_1/bd/top/ip/top_Signal_Source_module_0_4/synth/top_Signal_Source_module_0_4.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Signal_Source_module' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Signal_Source_Module.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Painter' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Painter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'SinglePortRAM_generic' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'SinglePortRAM_generic' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic.v:22]
+INFO: [Synth 8-6157] synthesizing module 'SinglePortRAM_generic_AsyncRead' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic_AsyncRead.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'SinglePortRAM_generic_AsyncRead' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic_AsyncRead.v:22]
+INFO: [Synth 8-6157] synthesizing module 'NCO' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO.v:24]
+INFO: [Synth 8-6157] synthesizing module 'DitherGen' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'DitherGen' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen.v:24]
+INFO: [Synth 8-6157] synthesizing module 'WaveformGen' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen.v:24]
+INFO: [Synth 8-6157] synthesizing module 'LookUpTableGen' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Lookup_Table' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Lookup_Table' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'LookUpTableGen' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'WaveformGen' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'NCO' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Painter' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Painter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'single_tone_500_1k' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/single_tone_500_1k.v:22]
+INFO: [Synth 8-6157] synthesizing module 'NCO1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'DitherGen_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'DitherGen_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block.v:24]
+INFO: [Synth 8-6157] synthesizing module 'WaveformGen_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block.v:24]
+INFO: [Synth 8-6157] synthesizing module 'LookUpTableGen_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Lookup_Table_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Lookup_Table_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'LookUpTableGen_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'WaveformGen_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'NCO1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'NCO2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'DitherGen_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'DitherGen_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'WaveformGen_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'LookUpTableGen_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Lookup_Table_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Lookup_Table_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'LookUpTableGen_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'WaveformGen_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'NCO2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO2.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'single_tone_500_1k' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/single_tone_500_1k.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Signal_Source_module' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Signal_Source_Module.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'top_Signal_Source_module_0_4' (0#1) [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.gen/sources_1/bd/top/ip/top_Signal_Source_module_0_4/synth/top_Signal_Source_module_0_4.v:53]
+WARNING: [Synth 8-7129] Port inc[31] in module NCO2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module NCO2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module NCO2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module NCO2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[31] in module NCO1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module NCO1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module NCO1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module NCO1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[31] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module NCO is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1425.773 ; gain = 531.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1425.773 ; gain = 531.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1425.773 ; gain = 531.984
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1425.773 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1537.375 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1537.574 ; gain = 0.199
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6841] Block RAM (ram_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(byte width (1) is not a multiple of 8(data_only) or 9(data + parity))
+INFO: [Synth 8-7082] The signal ram_reg_0 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_1 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_2 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_3 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_4 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_5 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_6 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ram_reg_7 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   28 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 4     
+	   2 Input   11 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 45    
++---Registers : 
+	               28 Bit    Registers := 6     
+	               19 Bit    Registers := 3     
+	               16 Bit    Registers := 17    
+	               13 Bit    Registers := 3     
+	               11 Bit    Registers := 3     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 1     
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 62    
+	   2 Input   28 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 10    
+	   3 Input   16 Bit        Muxes := 2     
+	   3 Input   11 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 22    
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP Gain2_out1_1_reg, operation Mode is: (A*B2)'.
+DSP Report: register NCO_out1_1_reg is absorbed into DSP Gain2_out1_1_reg.
+DSP Report: register Gain2_out1_1_reg is absorbed into DSP Gain2_out1_1_reg.
+DSP Report: operator Gain2_mul_temp is absorbed into DSP Gain2_out1_1_reg.
+DSP Report: Generating DSP inst/u_single_tone_500_1k/Gain1_mul_temp, operation Mode is: A*B2.
+DSP Report: register inst/u_single_tone_500_1k/NCO2_out1_1_reg is absorbed into DSP inst/u_single_tone_500_1k/Gain1_mul_temp.
+DSP Report: operator inst/u_single_tone_500_1k/Gain1_mul_temp is absorbed into DSP inst/u_single_tone_500_1k/Gain1_mul_temp.
+DSP Report: Generating DSP inst/u_single_tone_500_1k/Gain_mul_temp, operation Mode is: A*B2.
+DSP Report: register inst/u_single_tone_500_1k/NCO1_out1_1_reg is absorbed into DSP inst/u_single_tone_500_1k/Gain_mul_temp.
+DSP Report: operator inst/u_single_tone_500_1k/Gain_mul_temp is absorbed into DSP inst/u_single_tone_500_1k/Gain_mul_temp.
+WARNING: [Synth 8-7129] Port inc[31] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[30] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[29] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inc[28] in module NCO is either unconnected or has no load
+WARNING: [Synth 8-6841] Block RAM (inst/u_Painter/u_Single_Port_RAM_System/ram_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(byte width (1) is not a multiple of 8(data_only) or 9(data + parity))
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_0 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_1 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_2 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_3 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_4 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_5 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_6 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal inst/u_Painter/u_Single_Port_RAM_System/ram_reg_7 is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-6851] RAM (inst/u_Painter/u_Single_Port_RAM_System1/ram_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-----------------------------+-----------------------------------------------------------------------------+---------------+----------------+
+|Module Name                  | RTL Object                                                                  | Depth x Width | Implemented As | 
++-----------------------------+-----------------------------------------------------------------------------+---------------+----------------+
+|Lookup_Table                 | Lookup_Table_2                                                              | 2048x16       | LUT            | 
+|Lookup_Table_block           | Lookup_Table_1                                                              | 2048x16       | LUT            | 
+|Lookup_Table_block1          | Lookup_Table_1                                                              | 2048x16       | LUT            | 
+|NCO                          | u_Wave_inst/u_SineWave_inst/lutout_reg_reg                                  | 2048x16       | Block RAM      | 
+|top_Signal_Source_module_0_4 | inst/u_single_tone_500_1k/u_NCO2/u_Wave_inst/u_SineWave_inst/lutout_reg_reg | 2048x16       | Block RAM      | 
+|top_Signal_Source_module_0_4 | inst/u_single_tone_500_1k/u_NCO1/u_Wave_inst/u_SineWave_inst/lutout_reg_reg | 2048x16       | Block RAM      | 
++-----------------------------+-----------------------------------------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                  | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_Signal_Source_module_0_4 | inst/u_Painter/u_Single_Port_RAM_System/ram_reg | 256 x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 8      | 0      | 
++-----------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------+--------------------------------------------------+-----------+----------------------+-----------------+
+|Module Name                  | RTL Object                                       | Inference | Size (Depth x Width) | Primitives      | 
++-----------------------------+--------------------------------------------------+-----------+----------------------+-----------------+
+|top_Signal_Source_module_0_4 | inst/u_Painter/u_Single_Port_RAM_System1/ram_reg | Implied   | 256 x 32             | RAM256X1S x 32  | 
++-----------------------------+--------------------------------------------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Painter            | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|single_tone_500_1k | A*B2        | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|single_tone_500_1k | A*B2        | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                  | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_Signal_Source_module_0_4 | inst/u_Painter/u_Single_Port_RAM_System/ram_reg | 256 x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 8      | 0      | 
++-----------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-----------------------------+--------------------------------------------------+-----------+----------------------+-----------------+
+|Module Name                  | RTL Object                                       | Inference | Size (Depth x Width) | Primitives      | 
++-----------------------------+--------------------------------------------------+-----------+----------------------+-----------------+
+|top_Signal_Source_module_0_4 | inst/u_Painter/u_Single_Port_RAM_System1/ram_reg | Implied   | 256 x 32             | RAM256X1S x 32  | 
++-----------------------------+--------------------------------------------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/u_Painter/u_Single_Port_RAM_System/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_Painter/u_Single_Port_RAM_System/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_Painter/u_Single_Port_RAM_System/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------------+-------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                  | RTL Name                                                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------------+-------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_Signal_Source_module_0_4 | inst/u_Painter/u_NCO/outsel_reg_reg_reg[4]                              | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_Signal_Source_module_0_4 | inst/u_Painter/u_NCO/u_Wave_inst/SelsignRegister_reg_reg[2]             | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_Signal_Source_module_0_4 | inst/u_single_tone_500_1k/u_NCO2/u_Wave_inst/SelsignRegister_reg_reg[2] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_Signal_Source_module_0_4 | inst/u_single_tone_500_1k/u_NCO1/u_Wave_inst/SelsignRegister_reg_reg[2] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_Signal_Source_module_0_4 | inst/u_single_tone_500_1k/u_NCO2/outsel_reg_reg_reg[4]                  | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-----------------------------+-------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Painter            | (A'*B')'    | 15     | 18     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|single_tone_500_1k | (A'*B')'    | 15     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|single_tone_500_1k | (A'*B')'    | 15     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    68|
+|2     |DSP48E1   |     3|
+|4     |LUT1      |     5|
+|5     |LUT2      |   173|
+|6     |LUT3      |     7|
+|7     |LUT4      |    67|
+|8     |LUT5      |    61|
+|9     |LUT6      |    75|
+|10    |RAM256X1S |    23|
+|11    |RAMB18E1  |     3|
+|14    |RAMB36E1  |     2|
+|16    |SRL16E    |     5|
+|17    |FDRE      |   490|
+|18    |FDSE      |     3|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1537.574 ; gain = 531.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.574 ; gain = 643.785
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1537.574 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1537.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 23 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 23 instances
+
+Synth Design complete | Checksum: f3cf626f
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1537.574 ; gain = 1051.070
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_Signal_Source_module_0_4_synth_1/top_Signal_Source_module_0_4.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_Signal_Source_module_0_4, cache-ID = 7a7a46f211ba4c8a
+INFO: [Coretcl 2-1174] Renamed 17 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_Signal_Source_module_0_4_synth_1/top_Signal_Source_module_0_4.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_Signal_Source_module_0_4_utilization_synth.rpt -pb top_Signal_Source_module_0_4_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 15 19:16:14 2025...

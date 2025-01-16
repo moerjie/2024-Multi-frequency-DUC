@@ -1,0 +1,786 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Jan 12 15:09:08 2025
+# Process ID: 14120
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_DUC_module_0_3_synth_1
+# Command line: vivado.exe -log top_DUC_module_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_DUC_module_0_3.tcl
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_DUC_module_0_3_synth_1/top_DUC_module_0_3.vds
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_DUC_module_0_3_synth_1\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+source top_DUC_module_0_3.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 450.691 ; gain = 160.027
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/FPGA/vivado2023_1/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_DUC_module_0_3
+Command: synth_design -top top_DUC_module_0_3 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28768
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1303.754 ; gain = 410.188
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_DUC_module_0_3' [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.gen/sources_1/bd/top/ip/top_DUC_module_0_3/synth/top_DUC_module_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'DUC_module' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module.v:41]
+INFO: [Synth 8-6157] synthesizing module 'DUC_module_tc' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_tc.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'DUC_module_tc' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_tc.v:31]
+INFO: [Synth 8-6157] synthesizing module 'Halfband_Filter_1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'FirRdyLogic_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FirRdyLogic_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block1.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block3' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block3.v:24]
+INFO: [Synth 8-6157] synthesizing module 'SimpleDualPortRAM_generic' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SimpleDualPortRAM_generic.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleDualPortRAM_generic' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SimpleDualPortRAM_generic.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block3' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block3.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block4' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block4.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block4' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block4.v:24]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:601]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block5' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block5.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block5' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block5.v:24]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:733]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:805]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:877]
+INFO: [Synth 8-6157] synthesizing module 'FilterTapSystolicPreAdd_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FilterTapSystolicPreAdd_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Halfband_Filter_1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Halfband_Filter_2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'FirRdyLogic_block2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FirRdyLogic_block2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block2.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block6' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block6.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block6' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block6.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block7' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block7.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block7' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block7.v:24]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:601]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block8' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block8.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block8' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block8.v:24]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:733]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:805]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:877]
+INFO: [Synth 8-6157] synthesizing module 'FilterTapSystolicPreAdd_block2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FilterTapSystolicPreAdd_block2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Halfband_Filter_2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'CIC_Comp_Filter_1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'FirRdyLogic' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FirRdyLogic' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block.v:24]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v:608]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v:680]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v:752]
+INFO: [Synth 8-6157] synthesizing module 'FilterTapSystolicPreAdd' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FilterTapSystolicPreAdd' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'CIC_Comp_Filter_1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'CIC_Comp_Filter_2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'FirRdyLogic_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FirRdyLogic_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Addressable_Delay_Line_block2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block2.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Addressable_Delay_Line_block2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block2.v:24]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v:608]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v:680]
+INFO: [Synth 8-226] default block is never used [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v:752]
+INFO: [Synth 8-6157] synthesizing module 'FilterTapSystolicPreAdd_block' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FilterTapSystolicPreAdd_block' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'CIC_Comp_Filter_2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'CIC_1' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'CIC_1' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_1.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CIC_2' [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'CIC_2' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'DUC_module' (0#1) [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'top_DUC_module_0_3' (0#1) [d:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.gen/sources_1/bd/top/ip/top_DUC_module_0_3/synth/top_DUC_module_0_3.v:53]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_xcoeffin_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block1.v:74]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_readyReg_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block1.v:75]
+WARNING: [Synth 8-3848] Net syncResetRst in module/entity Halfband_Filter_1 does not have driver. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v:59]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_xcoeffin_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block2.v:74]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_readyReg_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block2.v:75]
+WARNING: [Synth 8-3848] Net syncResetRst in module/entity Halfband_Filter_2 does not have driver. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v:59]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_xcoeffin_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic.v:74]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_readyReg_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic.v:75]
+WARNING: [Synth 8-3848] Net syncResetRst in module/entity CIC_Comp_Filter_1 does not have driver. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v:59]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_xcoeffin_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block.v:74]
+WARNING: [Synth 8-6014] Unused sequential element firRdy_readyReg_reg was removed.  [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block.v:75]
+WARNING: [Synth 8-3848] Net syncResetRst in module/entity CIC_Comp_Filter_2 does not have driver. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v:59]
+WARNING: [Synth 8-7129] Port coeff[15] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[14] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[13] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[12] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[11] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[10] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[9] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[8] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[7] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[6] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[5] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[4] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[3] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[2] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[1] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[0] in module FirRdyLogic_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[15] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[14] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[13] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[12] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[11] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[10] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[9] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[8] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[7] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[6] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[5] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[4] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[3] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[2] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[1] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[0] in module FirRdyLogic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[15] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[14] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[13] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[12] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[11] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[10] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[9] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[8] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[7] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[6] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[5] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[4] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[3] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[2] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[1] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[0] in module FirRdyLogic_block2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[15] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[14] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[13] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[12] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[11] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[10] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[9] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[8] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[7] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[6] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[5] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[4] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[3] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[2] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[1] in module FirRdyLogic_block1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port coeff[0] in module FirRdyLogic_block1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1430.516 ; gain = 536.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1430.516 ; gain = 536.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1430.516 ; gain = 536.949
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.177 . Memory (MB): peak = 1430.516 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1536.047 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1543.480 ; gain = 7.434
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'firRdy_state_reg' in module 'FirRdyLogic_block1'
+INFO: [Synth 8-802] inferred FSM for state register 'firRdy_state_reg' in module 'FirRdyLogic_block2'
+INFO: [Synth 8-802] inferred FSM for state register 'firRdy_state_reg' in module 'FirRdyLogic'
+INFO: [Synth 8-802] inferred FSM for state register 'firRdy_state_reg' in module 'FirRdyLogic_block'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              100
+                 iSTATE1 |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'firRdy_state_reg' using encoding 'sequential' in module 'FirRdyLogic_block1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              100
+                 iSTATE1 |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'firRdy_state_reg' using encoding 'sequential' in module 'FirRdyLogic_block2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              100
+                 iSTATE1 |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'firRdy_state_reg' using encoding 'sequential' in module 'FirRdyLogic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              100
+                 iSTATE1 |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'firRdy_state_reg' using encoding 'sequential' in module 'FirRdyLogic_block'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   20 Bit       Adders := 2     
+	   4 Input   20 Bit       Adders := 2     
+	   3 Input   19 Bit       Adders := 2     
+	   3 Input   18 Bit       Adders := 2     
+	   3 Input   17 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 20    
++---Registers : 
+	             1250 Bit    Registers := 5     
+	               50 Bit    Registers := 5     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	               20 Bit    Registers := 4     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 2     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 131   
+	               15 Bit    Registers := 4     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 7     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 6     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 90    
+	                1 Bit    Registers := 57    
++---RAMs : 
+	              128 Bit	(8 X 16 bit)          RAMs := 24    
++---Muxes : 
+	   2 Input   20 Bit        Muxes := 2     
+	   5 Input   16 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 11    
+	   8 Input   16 Bit        Muxes := 4     
+	   3 Input   16 Bit        Muxes := 1     
+	   8 Input   15 Bit        Muxes := 2     
+	   8 Input   12 Bit        Muxes := 2     
+	   8 Input   11 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   8 Input   10 Bit        Muxes := 3     
+	   8 Input    6 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 40    
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 34    
+	   5 Input    1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap0/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap1/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap2/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap3/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v:72]
+DSP Report: Generating DSP u_filterTap0/fTap_addout_reg_reg, operation Mode is: ((D'+A'')*B'')'.
+DSP Report: register u_filterTap0/fTap_din2_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg2_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_mult_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_addout_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_mult_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_preAdd_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap1/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap1/fTap_din2_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg2_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_mult_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_addout_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_mult_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_preAdd_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap2/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap2/fTap_din2_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg2_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_mult_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_addout_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_mult_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_preAdd_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap3/fTap_addout_reg_reg, operation Mode is: (PCIN+(((D:0x0)'+A'')*B'')')'.
+DSP Report: register u_filterTap3/fTap_din2_reg1_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_coef_reg1_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_coef_reg2_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_din1_reg1_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_din1_reg2_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_addout_reg_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_mult_reg_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap3/fTap_addout_reg_next is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap3/fTap_mult_reg_next is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap3/fTap_preAdd_reg_next is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap0/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap1/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap2/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_filterTap3/fTap_mult_reg_reg' and it is trimmed from '33' to '32' bits. [D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v:72]
+DSP Report: Generating DSP u_filterTap0/fTap_addout_reg_reg, operation Mode is: ((D'+A'')*B'')'.
+DSP Report: register u_filterTap0/fTap_din2_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg2_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_mult_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_addout_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_mult_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_preAdd_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap1/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap1/fTap_din2_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg2_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_mult_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_addout_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_mult_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_preAdd_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap2/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap2/fTap_din2_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg2_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_mult_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_addout_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_mult_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_preAdd_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap3/fTap_addout_reg_reg, operation Mode is: (PCIN+(((D:0x0)'+A'')*B'')')'.
+DSP Report: register u_filterTap3/fTap_din2_reg1_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_coef_reg1_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_coef_reg2_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_din1_reg1_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_din1_reg2_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_addout_reg_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_mult_reg_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: register u_filterTap3/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap3/fTap_addout_reg_next is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap3/fTap_mult_reg_next is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap3/fTap_preAdd_reg_next is absorbed into DSP u_filterTap3/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap0/fTap_addout_reg_reg, operation Mode is: ((D'+A'')*B'')'.
+DSP Report: register u_filterTap0/fTap_din2_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg2_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_mult_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_addout_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_mult_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_preAdd_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap1/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap1/fTap_din2_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg2_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_mult_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_addout_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_mult_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_preAdd_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap2/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap2/fTap_din2_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_coef_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_coef_reg2_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg2_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_mult_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_addout_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_mult_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_preAdd_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap0/fTap_addout_reg_reg, operation Mode is: ((D'+A'')*B'')'.
+DSP Report: register u_filterTap0/fTap_din2_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg1_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_din1_reg2_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_addout_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_mult_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: register u_filterTap0/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_addout_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_mult_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap0/fTap_preAdd_reg_next is absorbed into DSP u_filterTap0/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap1/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap1/fTap_din2_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg1_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_din1_reg2_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_addout_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_mult_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: register u_filterTap1/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_addout_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_mult_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap1/fTap_preAdd_reg_next is absorbed into DSP u_filterTap1/fTap_addout_reg_reg.
+DSP Report: Generating DSP u_filterTap2/fTap_addout_reg_reg, operation Mode is: (PCIN+((D'+A'')*B'')')'.
+DSP Report: register u_filterTap2/fTap_din2_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_coef_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_coef_reg2_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg1_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_din1_reg2_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_addout_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_mult_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: register u_filterTap2/fTap_preAdd_reg_reg is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_addout_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_mult_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: operator u_filterTap2/fTap_preAdd_reg_next is absorbed into DSP u_filterTap2/fTap_addout_reg_reg.
+DSP Report: Generating DSP Gain3_out1_1_reg, operation Mode is: (A*B)'.
+DSP Report: register Gain3_out1_1_reg is absorbed into DSP Gain3_out1_1_reg.
+DSP Report: operator Gain3_mul_temp is absorbed into DSP Gain3_out1_1_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------+---------------------------------------------------------------------------+-----------+----------------------+-------------+
+|Module Name        | RTL Object                                                                | Inference | Size (Depth x Width) | Primitives  | 
++-------------------+---------------------------------------------------------------------------+-----------+----------------------+-------------+
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine0/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine1/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine2/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine6/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine0/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine1/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine2/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine6/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine0/u_simpleDualPortRam_generic/ram_reg | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine1/u_simpleDualPortRam_generic/ram_reg | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine2/u_simpleDualPortRam_generic/ram_reg | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine3/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine0/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine1/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine2/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine3/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
++-------------------+---------------------------------------------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                    | DSP Mapping                   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FilterTapSystolicPreAdd_block1 | ((D'+A'')*B'')'               | 16     | 7      | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (PCIN+((D'+A'')*B'')')'       | 16     | 12     | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (PCIN+((D'+A'')*B'')')'       | 16     | 16     | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (PCIN+(((D:0x0)'+A'')*B'')')' | 16     | 16     | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | ((D'+A'')*B'')'               | 16     | 8      | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (PCIN+((D'+A'')*B'')')'       | 16     | 13     | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (PCIN+((D'+A'')*B'')')'       | 16     | 16     | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (PCIN+(((D:0x0)'+A'')*B'')')' | 16     | 16     | -      | 16     | 32     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd        | ((D'+A'')*B'')'               | 16     | 12     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd        | (PCIN+((D'+A'')*B'')')'       | 16     | 14     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd        | (PCIN+((D'+A'')*B'')')'       | 16     | 16     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block  | ((D'+A'')*B'')'               | 16     | 12     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block  | (PCIN+((D'+A'')*B'')')'       | 16     | 14     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block  | (PCIN+((D'+A'')*B'')')'       | 16     | 16     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|DUC_module                     | (A*B)'                        | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
++-------------------------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------+---------------------------------------------------------------------------+-----------+----------------------+-------------+
+|Module Name        | RTL Object                                                                | Inference | Size (Depth x Width) | Primitives  | 
++-------------------+---------------------------------------------------------------------------+-----------+----------------------+-------------+
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine0/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine1/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine2/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/u_delayLine6/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine0/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine1/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine2/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/u_delayLine6/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine0/u_simpleDualPortRam_generic/ram_reg | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine1/u_simpleDualPortRam_generic/ram_reg | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine2/u_simpleDualPortRam_generic/ram_reg | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine3/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine0/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine1/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine2/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine3/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine4/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/u_delayLine5/u_simpleDualPortRam/ram_reg         | Implied   | 8 x 16               | RAM32M x 3  | 
++-------------------+---------------------------------------------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name        | RTL Name                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_DUC_module_0_3 | inst/u_CIC_2/delayMatch9_reg_reg[1249]                | 1250   | 1     | YES          | NO                 | YES               | 0      | 39      | 
+|top_DUC_module_0_3 | inst/u_CIC_2/delayMatch8_reg_reg[1249]                | 1250   | 1     | YES          | NO                 | YES               | 0      | 39      | 
+|top_DUC_module_0_3 | inst/u_CIC_2/delayMatch7_reg_reg[1249]                | 1250   | 1     | YES          | NO                 | YES               | 0      | 39      | 
+|top_DUC_module_0_3 | inst/u_CIC_2/delayMatch6_reg_reg[1249]                | 1250   | 1     | YES          | NO                 | YES               | 0      | 39      | 
+|top_DUC_module_0_3 | inst/u_CIC_2/delayMatch5_reg_reg[1249]                | 1250   | 1     | YES          | NO                 | YES               | 0      | 39      | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/validOutLookahead_reg_reg[6] | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_1/finalSumValidPipe_reg_reg[5] | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/validOutLookahead_reg_reg[6] | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_Halfband_Filter_2/finalSumValidPipe_reg_reg[5] | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/validOutLookahead_reg_reg[6] | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_1/finalSumValidPipe_reg_reg[5] | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/validOutLookahead_reg_reg[6] | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_CIC_Comp_Filter_2/finalSumValidPipe_reg_reg[5] | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_DUC_module_0_3 | inst/u_CIC_2/delayMatch9_reg_reg_r_1247               | 1249   | 1     | YES          | NO                 | YES               | 0      | 39      | 
++-------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                    | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|DUC_module                     | ((A'*B'')')'             | 15     | 18     | -      | -      | 29     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|FilterTapSystolicPreAdd        | (((D'+A'')'*B'')')'      | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd        | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd        | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 33     | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block  | (((D'+A'')'*B'')')'      | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block  | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block  | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 33     | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (((D'+A'')'*B'')')'      | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block1 | (PCIN+((D'+A'')'*B'')')' | 30     | 15     | -      | 0      | 32     | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (((D'+A'')'*B'')')'      | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (PCIN+((D'+A'')'*B'')')' | 30     | 18     | -      | 25     | 0      | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
+|FilterTapSystolicPreAdd_block2 | (PCIN+((D'+A'')'*B'')')' | 30     | 15     | -      | 0      | 32     | 2    | 2    | -    | 2    | 1     | 1    | 1    | 
++-------------------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   160|
+|2     |DSP48E1 |    15|
+|4     |LUT1    |    17|
+|5     |LUT2    |   516|
+|6     |LUT3    |   353|
+|7     |LUT4    |    44|
+|8     |LUT5    |   105|
+|9     |LUT6    |   181|
+|10    |RAM32M  |    72|
+|11    |SRL16E  |     8|
+|12    |SRLC32E |   234|
+|13    |FDRE    |  4199|
+|14    |FDSE    |     2|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1543.480 ; gain = 649.914
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 1543.480 ; gain = 536.949
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1543.480 ; gain = 649.914
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1543.480 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 247 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1543.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 72 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 72 instances
+
+Synth Design complete | Checksum: c03d819a
+INFO: [Common 17-83] Releasing license: Synthesis
+97 Infos, 86 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1543.480 ; gain = 1056.777
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_DUC_module_0_3_synth_1/top_DUC_module_0_3.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_DUC_module_0_3, cache-ID = d4b59ed92bf766ea
+INFO: [Coretcl 2-1174] Renamed 76 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ/DUC_AM_ZYNQ.runs/top_DUC_module_0_3_synth_1/top_DUC_module_0_3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_DUC_module_0_3_utilization_synth.rpt -pb top_DUC_module_0_3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 12 15:10:24 2025...

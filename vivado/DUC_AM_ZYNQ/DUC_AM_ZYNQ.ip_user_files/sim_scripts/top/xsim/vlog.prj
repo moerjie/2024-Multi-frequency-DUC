@@ -1,0 +1,20 @@
+verilog xil_defaultlib --include "F:/FPGA/vivado2023_1/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/ec67/hdl" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/aed8/hdl" \
+"../../../bd/top/ip/top_processing_system7_0_0/sim/top_processing_system7_0_0.v" \
+"../../../bd/top/ip/top_util_vector_logic_0_2/sim/top_util_vector_logic_0_2.v" \
+"../../../bd/top/ip/top_util_vector_logic_0_3/sim/top_util_vector_logic_0_3.v" \
+"../../../bd/top/ip/top_Signal_Source_module_0_4/sim/top_Signal_Source_module_0_4.v" \
+"../../../bd/top/ip/top_DUC_module_0_3/sim/top_DUC_module_0_3.v" \
+"../../../bd/top/ip/top_DAC_module_0_0/sim/top_DAC_module_0_0.v" \
+"../../../bd/top/ip/top_xlconstant_0_2/sim/top_xlconstant_0_2.v" \
+"../../../bd/top/ip/top_DAC_module_0_1/sim/top_DAC_module_0_1.v" \
+"../../../bd/top/ip/top_util_vector_logic_1_0/sim/top_util_vector_logic_1_0.v" \
+"../../../bd/top/ip/top_util_vector_logic_1_1/sim/top_util_vector_logic_1_1.v" \
+"../../../bd/top/ip/top_AM_module_0_4/sim/top_AM_module_0_4.v" \
+"../../../bd/top/sim/top.v" \
+"../../../bd/top/ip/top_auto_pc_0/sim/top_auto_pc_0.v" \
+"../../../bd/top/ip/top_util_vector_logic_3_0/sim/top_util_vector_logic_3_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

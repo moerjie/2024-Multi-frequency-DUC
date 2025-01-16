@@ -25,14 +25,4 @@ vlog  Addressable_Delay_Line_block7.v
 vlog  Addressable_Delay_Line_block8.v
 vlog  FilterTapSystolicPreAdd_block2.v
 vlog  Halfband_Filter_2.v
-vlog  DitherGen.v
-vlog  Lookup_Table.v
-vlog  LookUpTableGen.v
-vlog  WaveformGen.v
-vlog  NCO.v
-vlog  DitherGen_block.v
-vlog  Lookup_Table_block.v
-vlog  LookUpTableGen_block.v
-vlog  WaveformGen_block.v
-vlog  NCO1.v
 vlog  DUC_module.v
