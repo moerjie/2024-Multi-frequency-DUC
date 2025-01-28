@@ -22,3 +22,6 @@ platform generate -domains
 platform active {zynq_dac}
 bsp reload
 platform generate -domains 
+catch {bsp regenerate}
+platform clean
+platform generate

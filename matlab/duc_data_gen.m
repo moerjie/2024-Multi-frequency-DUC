@@ -11,7 +11,6 @@ N2_cycle=fix(N1_cycle/2); %4倍插值
 N_cic1_itp=25;
 N_cic2_itp=25;
 
-run('audio_gen.m');
 % HalfBand Filter
 hb1_order=48; hb1_tr_width=0.4; 
 hb2_order=48; hb2_tr_width=0.3;
@@ -59,3 +58,4 @@ f_base_1=1000;f_base_2=500;
 phInc_base_1=ceil((f_base_1*2^Nnco*up_L)/fs);
 phInc_base_2=ceil((f_base_2*2^Nnco*up_L)/fs);
 
+run('audio_gen.m');

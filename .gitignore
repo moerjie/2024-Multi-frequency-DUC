@@ -31,3 +31,6 @@
 *.slxc
 *.pkf
 *.xml
+*.bsf
+*.ddb
+*.qsf

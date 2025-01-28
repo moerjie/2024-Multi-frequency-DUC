@@ -3,7 +3,6 @@
 	<name>xgpio_example_1_system</name>
 	<comment></comment>
 	<projects>
-		<project>xgpio_example_1</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

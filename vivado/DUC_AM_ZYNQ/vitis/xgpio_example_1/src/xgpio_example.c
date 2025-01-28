@@ -52,6 +52,7 @@
  * xparameters.h file. They are defined here such that a user can easily
  * change all the needed parameters in one place.
  */
+//PS端GPIO器件ID
 #define GPIO_EXAMPLE_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
 
 /*
@@ -68,10 +69,14 @@
 #define MODE_CHANGE_CHANNEL 1
 
 /*GPIO define	*/
+//PS端GPIO器件ID
 #define MIO_ID XPAR_PS7_GPIO_0_DEVICE_ID
+//通用中断控制器ID
 #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+//PS端GPIO中断ID
 #define KEY_INTR_ID XPAR_XGPIOPS_0_INTR
-#define PS_KEY_MIO 50
+
+#define PS_KEY_MIO 50 //key连接到MIO50
 #define PS_LED_MIO_1 0
 #define PS_LED_MIO_2 13
 
@@ -80,6 +85,8 @@
 /**************************** Type Definitions *******************************/
 
 /***************** Macros (Inline Functions) Definitions *********************/
+
+typedef struct XGpio XGpio;
 
 /************************** Function Prototypes ******************************/
 int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePtr);
@@ -91,11 +98,11 @@ void GpioHandler(void *CallBackRef);
  * easily accessible from a debugger
  */
 
-XGpio Gpio; /* The Instance of the GPIO Driver */
+XGpio Gpio; /* PL端AXI GPIO外设驱动实例 */
 
-XGpioPs GpioPs;
+XGpioPs GpioPs; /* PS端GPIO外设驱动实例 */
 
-XScuGic INTCInst;
+XScuGic INTCInst; /* 通用中断控制器驱动实例 */
 
 int key_flag; // ps key 0 flag
 /*****************************************************************************/
@@ -113,12 +120,14 @@ int key_flag; // ps key 0 flag
  ******************************************************************************/
 int main(void)
 {
-	XGpioPs_Config *GpioConfig;
+	XGpioPs_Config *GpioConfig;	/*PS端GPIO配置信息*/
 	int Status;
 	int mode_flag = 0;
 	key_flag = 0;
 	/* Initialize the GPIOps driver*/
+	/*根据器件ID查找配置信息*/
 	GpioConfig = XGpioPs_LookupConfig(MIO_ID);
+	/*初始化GPIO Driver*/
 	Status = XGpioPs_CfgInitialize(&GpioPs, GpioConfig, GpioConfig->BaseAddr);
 	if (Status != XST_SUCCESS)
 	{
@@ -130,6 +139,7 @@ int main(void)
 		xil_printf("GpioPs Initialization Success\r\n");
 	}
 	/* Initialize the GPIO driver */
+	/*初始化PL端AXI GPIO驱动*/
 	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
 	if (Status != XST_SUCCESS)
 	{
@@ -140,10 +150,11 @@ int main(void)
 	{
 		xil_printf("Gpio Initialization Success\r\n");
 	}
-	XGpioPs_SetDirectionPin(&GpioPs, PS_KEY_MIO, GPIO_INPUT);
 
 	/*GPIO_PS Intr init*/
+	/*设置KEY连接的MIO引脚的方向为输入*/
 	XGpioPs_SetDirectionPin(&GpioPs, PS_KEY_MIO, GPIO_INPUT);
+	/*使能按键中断*/
 	XGpioPs_SetIntrTypePin(&GpioPs, PS_KEY_MIO, XGPIOPS_IRQ_TYPE_EDGE_RISING);
 	XGpioPs_IntrEnablePin(&GpioPs, PS_KEY_MIO);
 	Status = IntrInitFunction(&INTCInst, MIO_ID, &GpioPs);
@@ -198,12 +209,13 @@ int main(void)
 
 int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePtr)
 {
-	XScuGic_Config *IntcConfig;
+	XScuGic_Config *IntcConfig; /*中断控制器配置信息*/
 	int Status;
 	/*
 	 * Initialize the interrupt controller driver so that it is ready to
 	 * use.
 	 */
+	/*查找中断控制器配置信息并初始化中断控制器驱动*/
 	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
 
 	Status = XScuGic_CfgInitialize(InstancePtr, IntcConfig, IntcConfig->CpuBaseAddress);
@@ -212,6 +224,7 @@ int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePt
 
 	/*
 	 * set priority and trigger type
+	 * 设置中断类型为上升沿中断
 	 */
 	XScuGic_SetPriorityTriggerType(InstancePtr, KEY_INTR_ID,
 								   0xA0, 0x3);
@@ -220,6 +233,7 @@ int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePt
 	 * interrupt for the device occurs, the handler defined above performs
 	 * the specific interrupt processing for the device.
 	 */
+	/*为中断设置中断处理函数*/
 	Status = XScuGic_Connect(InstancePtr, KEY_INTR_ID,
 							 (Xil_ExceptionHandler)GpioHandler,
 							 (void *)GpioInstancePtr);
@@ -228,9 +242,11 @@ int IntrInitFunction(XScuGic *InstancePtr, u16 DeviceId, XGpioPs *GpioInstancePt
 
 	/*
 	 * Enable the interrupt for the device.
+	 * 使能来自GPIO的中断
 	 */
 	XScuGic_Enable(InstancePtr, KEY_INTR_ID);
 
+	/*设置并使能中断异常*/
 	Xil_ExceptionInit();
 
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
