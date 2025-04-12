@@ -1,0 +1,587 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 13 21:29:13 2025
+# Process ID: 28528
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25760 D:\Desktop\Mul_Freq_DUC\2024-Multi-frequency-DUC\vivado\DUC_AM_ZYNQ_GP_fifo\DUC_AM_ZYNQ.xpr
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/vivado.log
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+delete_bd_objs [get_bd_nets axi_gpio_0_gpio_io_o] [get_bd_nets xlconstant_0_dout] [get_bd_nets duc_ready_0] [get_bd_nets fifo_generator_0_dout] [get_bd_nets fifo_generator_0_data_count] [get_bd_cells fifo_generator_0]
+delete_bd_objs [get_bd_cells xlconstant_0]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells axi_gpio_0]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_cells ps7_0_axi_periph]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0
+endgroup
+set_property location {3 848 460} [get_bd_cells axis_data_fifo_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.3 axi_fifo_mm_s_0
+endgroup
+set_property -dict [list \
+  CONFIG.C_TX_FIFO_DEPTH {2048} \
+  CONFIG.C_TX_FIFO_PE_THRESHOLD {5} \
+  CONFIG.C_TX_FIFO_PF_THRESHOLD {507} \
+  CONFIG.C_USE_RX_DATA {0} \
+  CONFIG.C_USE_TX_CTRL {0} \
+] [get_bd_cells axi_fifo_mm_s_0]
+update_module_reference top_DUC_module_with_ready_0_0
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (120 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_fifo_mm_s_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_fifo_mm_s_0/S_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_fifo_mm_s_0/AXI_STR_TXD] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+create_bd_cell -type module -reference DUC_module_with_ready duc/DUC_module_with_ready_1
+delete_bd_objs [get_bd_cells duc/DUC_module_with_ready_1]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins rst_ps7_0_120M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+set_property -dict [list \
+  CONFIG.C_USE_RX_DATA {0} \
+  CONFIG.C_USE_TX_CUT_THROUGH {0} \
+] [get_bd_cells axi_fifo_mm_s_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_data_fifo_0]
+set_property -dict [list \
+  CONFIG.FIFO_DEPTH {2048} \
+  CONFIG.TDATA_NUM_BYTES {2} \
+] [get_bd_cells axis_data_fifo_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_dwidth_converter:1.1 axis_dwidth_converter_0
+endgroup
+set_property -dict [list CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_dwidth_converter_0]
+set_property CONFIG.S_TDATA_NUM_BYTES {4} [get_bd_cells axis_dwidth_converter_0]
+delete_bd_objs [get_bd_intf_nets axi_fifo_mm_s_0_AXI_STR_TXD]
+connect_bd_intf_net [get_bd_intf_pins axis_dwidth_converter_0/S_AXIS] [get_bd_intf_pins axi_fifo_mm_s_0/AXI_STR_TXD]
+connect_bd_intf_net [get_bd_intf_pins axis_dwidth_converter_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (120 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_dwidth_converter_0/aclk]
+regenerate_bd_layout
+close [ open D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/new/axis_to_signal.v w ]
+add_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/new/axis_to_signal.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference axis_to_signal duc/axis_to_signal_0
+set_property location {1 134 400} [get_bd_cells duc/axis_to_signal_0]
+delete_bd_objs [get_bd_nets duc/SIGNAL_IN_0_1] [get_bd_pins duc/SIGNAL_IN_0]
+connect_bd_net [get_bd_pins duc/axis_to_signal_0/signalin] [get_bd_pins duc/DUC_module_with_ready_0/SIGNAL_IN]
+connect_bd_net [get_bd_pins duc/axis_to_signal_0/ready] [get_bd_pins duc/DUC_module_with_ready_0/ready]
+connect_bd_net [get_bd_pins duc/rst_n_0] [get_bd_pins duc/axis_to_signal_0/aresetn]
+connect_bd_net [get_bd_pins duc/clk_0] [get_bd_pins duc/axis_to_signal_0/aclk]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins duc/axis_to_signal_0/s_axis]
+endgroup
+delete_bd_objs [get_bd_intf_nets s_axis_0_1] [get_bd_intf_ports s_axis_0]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins duc/s_axis_0] [get_bd_intf_pins axis_data_fifo_0/M_AXIS]
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_AM_module_0_4] }
+catch { config_ip_cache -export [get_ips -all top_DUC_module_with_ready_0_0] }
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_2] }
+catch { config_ip_cache -export [get_ips -all top_axis_data_fifo_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axi_fifo_mm_s_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axis_to_signal_0_0] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all top_axis_dwidth_converter_0_0] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_AM_module_0_4_synth_1 top_DUC_module_with_ready_0_0_synth_1 top_axi_fifo_mm_s_0_0_synth_1 top_axis_data_fifo_0_0_synth_1 top_axis_dwidth_converter_0_0_synth_1 top_axis_to_signal_0_0_synth_1 -jobs 10
+wait_on_run top_AM_module_0_4_synth_1
+wait_on_run top_DUC_module_with_ready_0_0_synth_1
+wait_on_run top_axi_fifo_mm_s_0_0_synth_1
+wait_on_run top_axis_data_fifo_0_0_synth_1
+wait_on_run top_axis_dwidth_converter_0_0_synth_1
+wait_on_run top_axis_to_signal_0_0_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property target_constrs_file D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/7020.xdc [current_fileset -constrset]
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list \
+  CONFIG.CLKIN1_JITTER_PS {80.000} \
+  CONFIG.CLKIN1_UI_JITTER {80.000} \
+  CONFIG.CLKIN2_JITTER_PS {100.000} \
+  CONFIG.CLKIN2_UI_JITTER {100.000} \
+  CONFIG.JITTER_OPTIONS {PS} \
+  CONFIG.MMCM_REF_JITTER2 {0.010} \
+  CONFIG.PRIM_SOURCE {No_buffer} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_AM_module_0_4] }
+catch { config_ip_cache -export [get_ips -all top_DUC_module_with_ready_0_0] }
+catch { config_ip_cache -export [get_ips -all top_clk_wiz_0_0] }
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_2] }
+catch { config_ip_cache -export [get_ips -all top_axis_data_fifo_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axi_fifo_mm_s_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axis_to_signal_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axis_dwidth_converter_0_0] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_AM_module_0_4_synth_1 top_DUC_module_with_ready_0_0_synth_1 top_axi_fifo_mm_s_0_0_synth_1 top_axis_data_fifo_0_0_synth_1 top_axis_dwidth_converter_0_0_synth_1 top_axis_to_signal_0_0_synth_1 top_clk_wiz_0_0_synth_1 top_system_ila_0_2_synth_1 -jobs 10
+wait_on_run top_AM_module_0_4_synth_1
+wait_on_run top_DUC_module_with_ready_0_0_synth_1
+wait_on_run top_axi_fifo_mm_s_0_0_synth_1
+wait_on_run top_axis_data_fifo_0_0_synth_1
+wait_on_run top_axis_dwidth_converter_0_0_synth_1
+wait_on_run top_axis_to_signal_0_0_synth_1
+wait_on_run top_clk_wiz_0_0_synth_1
+wait_on_run top_system_ila_0_2_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run top_AM_module_0_4_synth_1
+add_files -norecurse {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicWvldInC0.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SimpleDualPortRAM_generic.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Filter_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Wave_Source.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/subFilter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/HB_filter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block5.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/subFilter_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block7.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block9.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/single_tone_500_1k.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_with_ready.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAddWvlIn.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapWvldIn.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carrier_3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carrier_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Signal_Source.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_tc.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/my_NCO.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block10.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/phInc.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_with_ready_tc.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic_AsyncRead.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAddWvlIn_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block4.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Filter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block6.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block8.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_module_mul_freq.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterCoef_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Discrete_FIR_Filter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Signal_Source_Module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carrier_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterCoef.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Painter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/MATLAB_Function.v}
+update_compile_order -fileset sources_1
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_AM_module_0_4] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_AM_module_0_4_synth_1 -jobs 10
+wait_on_run top_AM_module_0_4_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run impl_1
+write_hw_platform -fixed -include_bit -force -file D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/top_wrapper.xsa
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {s_axis_0_1}]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_fifo_mm_s_0_AXI_STR_TXD}]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { duc_DUC_SIGNAL_OUT } ]
+disconnect_bd_net [get_bd_net duc_DUC_SIGNAL_OUT] [get_bd_pins system_ila_0/probe0]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axis_dwidth_converter_0_M_AXIS}]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets axi_fifo_mm_s_0_AXI_STR_TXD] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axis_dwidth_converter_0_M_AXIS] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets s_axis_0_1] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+endgroup
+startgroup
+set_property CONFIG.C_DATA_DEPTH {8192} [get_bd_cells system_ila_0]
+endgroup
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_3] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_system_ila_0_3_synth_1 -jobs 10
+wait_on_run top_system_ila_0_3_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.HAS_RD_DATA_COUNT {1} \
+  CONFIG.HAS_WR_DATA_COUNT {1} \
+] [get_bd_cells axis_data_fifo_0]
+endgroup
+startgroup
+connect_bd_net -net axis_wr_data_count [get_bd_pins axis_data_fifo_0/axis_wr_data_count]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {axis_wr_data_count }]
+endgroup
+startgroup
+connect_bd_net -net axis_rd_data_count [get_bd_pins axis_data_fifo_0/axis_rd_data_count]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {axis_rd_data_count }]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets axis_rd_data_count] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets axis_wr_data_count] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_axis_data_fifo_0_0] }
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_3] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_axis_data_fifo_0_0_synth_1 top_system_ila_0_3_synth_1 -jobs 10
+wait_on_run top_axis_data_fifo_0_0_synth_1
+wait_on_run top_system_ila_0_3_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {top_i/system_ila_0/inst/probe0_1} }
+set_property NAME.CUSTOM axis_rd_data_count [get_hw_probes top_i/system_ila_0/inst/probe0_1] 
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {top_i/system_ila_0/inst/probe1_1} }
+set_property NAME.CUSTOM axis_wr_data_count [get_hw_probes top_i/system_ila_0/inst/probe1_1] 
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {ps7_0_axi_periph_M00_AXI}]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_3] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_system_ila_0_3_synth_1 -jobs 10
+wait_on_run top_system_ila_0_3_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+write_hw_platform -fixed -include_bit -force -file D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/top_wrapper.xsa
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+startgroup
+set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells axis_data_fifo_0]
+set_property CONFIG.HAS_TLAST {0} [get_bd_cells axis_data_fifo_0]
+endgroup
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+startgroup
+set_property CONFIG.ACLKEN_CONV_MODE {0} [get_bd_cells axis_data_fifo_0]
+endgroup
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+startgroup
+set_property CONFIG.C_TX_FIFO_PF_THRESHOLD {2040} [get_bd_cells axi_fifo_mm_s_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells axis_dwidth_converter_0]
+set_property CONFIG.HAS_TLAST {0} [get_bd_cells axis_dwidth_converter_0]
+endgroup
+startgroup
+endgroup
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_axis_data_fifo_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axi_fifo_mm_s_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axis_dwidth_converter_0_0] }
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_3] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_axi_fifo_mm_s_0_0_synth_1 top_axis_data_fifo_0_0_synth_1 top_axis_dwidth_converter_0_0_synth_1 top_system_ila_0_3_synth_1 -jobs 10
+wait_on_run top_axi_fifo_mm_s_0_0_synth_1
+wait_on_run top_axis_data_fifo_0_0_synth_1
+wait_on_run top_axis_dwidth_converter_0_0_synth_1
+wait_on_run top_system_ila_0_3_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+disconnect_bd_net /duc/DUC_module_with_ready_0_ready [get_bd_pins duc/axis_to_signal_0/ready]
+connect_bd_net [get_bd_pins duc/axis_to_signal_0/ready] [get_bd_pins duc/xlconstant_0/dout]
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_system_ila_0_3] }
+catch { [ delete_ip_run [get_ips -all top_system_ila_0_3] ] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]

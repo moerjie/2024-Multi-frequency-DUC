@@ -1,0 +1,86 @@
+timestamp=[2025-01-15 14:30:38], mode=WORKBENCH_START, duration=0:00:10.690, duration_ms=10690, data={}
+timestamp=[2025-01-15 14:30:38], mode=WORKBENCH_UI_INIT, duration=0:00:00.166, duration_ms=166, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-01-15 14:30:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.542, duration_ms=542, data={}
+timestamp=[2025-01-15 14:34:55], mode=PLATFORM_CREATION, duration=0:00:18.457, duration_ms=18457, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2025-01-15 14:35:35], mode=APP_CREATION, duration=0:00:10.895, duration_ms=10895, data={name=xgpio_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=zynq_dac, application_type=application}
+timestamp=[2025-01-15 14:35:44], mode=APP_CREATION, duration=0:00:08.675, duration_ms=8675, data={name=xgpio_intr_tapp_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=zynq_dac, application_type=application}
+timestamp=[2025-01-15 16:58:14], mode=PLATFORM_GENERATION, duration=0:00:30.188, duration_ms=30188, data={name=zynq_dac}
+timestamp=[2025-01-15 16:58:16], mode=BUILD, duration=0:00:02.081, duration_ms=2081, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 16:58:26], mode=BUILD, duration=0:00:08.576, duration_ms=8576, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 17:03:40], mode=MISC, duration=0:00:06.515, duration_ms=6515, data={name=xgpio_example_1_system, type=bif_creation}
+timestamp=[2025-01-15 17:07:39], mode=BUILD, duration=0:00:01.902, duration_ms=1902, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:34:04], mode=PLATFORM_GENERATION, duration=0:00:15.022, duration_ms=15022, data={name=zynq_dac}
+timestamp=[2025-01-15 19:34:08], mode=BUILD, duration=0:00:01.664, duration_ms=1664, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:35:11], mode=BUILD, duration=0:00:01.526, duration_ms=1526, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:35:49], mode=BUILD, duration=0:00:01.457, duration_ms=1457, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:36:00], mode=BUILD, duration=0:00:01.474, duration_ms=1474, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:38:15], mode=BUILD, duration=0:00:01.497, duration_ms=1497, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:40:09], mode=BUILD, duration=0:00:01.491, duration_ms=1491, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:41:23], mode=BUILD, duration=0:00:01.244, duration_ms=1244, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:41:43], mode=BUILD, duration=0:00:01.481, duration_ms=1481, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:42:50], mode=BUILD, duration=0:00:01.477, duration_ms=1477, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:43:45], mode=BUILD, duration=0:00:01.476, duration_ms=1476, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:44:09], mode=BUILD, duration=0:00:00.542, duration_ms=542, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 19:52:32], mode=BUILD, duration=0:00:01.664, duration_ms=1664, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:09:40], mode=BUILD, duration=0:00:00.538, duration_ms=538, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:09:48], mode=BUILD, duration=0:00:07.800, duration_ms=7800, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:26:17], mode=BUILD, duration=0:00:01.731, duration_ms=1731, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:30:07], mode=BUILD, duration=0:00:01.857, duration_ms=1857, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:30:24], mode=BUILD, duration=0:00:00.635, duration_ms=635, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:33:52], mode=BUILD, duration=0:00:01.688, duration_ms=1688, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:34:01], mode=BUILD, duration=0:00:08.442, duration_ms=8442, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-15 20:41:35], mode=BUILD, duration=0:00:01.659, duration_ms=1659, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 13:38:36], mode=WORKBENCH_START, duration=0:00:11.253, duration_ms=11253, data={}
+timestamp=[2025-01-16 13:38:37], mode=WORKBENCH_UI_INIT, duration=0:00:01.267, duration_ms=1267, data={editors_count=20, platform_editors_count=14, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,xgpio_example_1,xgpio_example_1_system,xgpio_intr_tapp_example_1,xgpio_intr_tapp_example_1_system,zynq_dac}
+timestamp=[2025-01-16 13:38:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.124, duration_ms=1124, data={}
+timestamp=[2025-01-16 13:45:23], mode=BUILD, duration=0:00:02.413, duration_ms=2413, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 13:45:59], mode=BUILD, duration=0:00:01.655, duration_ms=1655, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 13:46:07], mode=BUILD, duration=0:00:07.811, duration_ms=7811, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 13:52:13], mode=BUILD, duration=0:00:01.417, duration_ms=1417, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 13:56:51], mode=BUILD, duration=0:00:01.419, duration_ms=1419, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 15:31:06], mode=PLATFORM_GENERATION, duration=0:00:03.299, duration_ms=3299, data={name=zynq_dac}
+timestamp=[2025-01-16 15:31:07], mode=BUILD, duration=0:00:01.471, duration_ms=1471, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 17:58:13], mode=BUILD, duration=0:00:01.636, duration_ms=1636, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 17:58:21], mode=BUILD, duration=0:00:08.246, duration_ms=8246, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 19:00:41], mode=BUILD, duration=0:00:01.590, duration_ms=1590, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 19:00:49], mode=BUILD, duration=0:00:07.569, duration_ms=7569, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 19:02:03], mode=BUILD, duration=0:00:00.533, duration_ms=533, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 19:16:36], mode=BUILD, duration=0:00:01.511, duration_ms=1511, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 19:23:19], mode=BUILD, duration=0:00:00.523, duration_ms=523, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 19:23:27], mode=BUILD, duration=0:00:07.351, duration_ms=7351, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 20:01:47], mode=BUILD, duration=0:00:01.480, duration_ms=1480, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-16 20:03:36], mode=PLATFORM_GENERATION, duration=0:00:09.509, duration_ms=9509, data={name=zynq_dac}
+timestamp=[2025-01-16 20:03:36], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=xgpio_example_1, configuration=Debug, clean_build=true}
+timestamp=[2025-01-16 20:04:53], mode=PLATFORM_GENERATION, duration=0:00:36.920, duration_ms=36920, data={name=zynq_dac}
+timestamp=[2025-01-16 20:04:55], mode=BUILD, duration=0:00:01.857, duration_ms=1857, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-23 14:35:31], mode=WORKBENCH_START, duration=0:00:10.134, duration_ms=10134, data={}
+timestamp=[2025-01-23 14:35:32], mode=WORKBENCH_UI_INIT, duration=0:00:01.021, duration_ms=1021, data={editors_count=20, platform_editors_count=14, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,xgpio_example_1,xgpio_example_1_system,xgpio_intr_tapp_example_1,xgpio_intr_tapp_example_1_system,zynq_dac}
+timestamp=[2025-01-23 14:35:33], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.012, duration_ms=1012, data={}
+timestamp=[2025-01-26 20:42:40], mode=WORKBENCH_START, duration=0:00:08.118, duration_ms=8118, data={}
+timestamp=[2025-01-26 20:42:41], mode=WORKBENCH_UI_INIT, duration=0:00:01.031, duration_ms=1031, data={editors_count=20, platform_editors_count=14, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,xgpio_example_1,xgpio_example_1_system,xgpio_intr_tapp_example_1,xgpio_intr_tapp_example_1_system,zynq_dac}
+timestamp=[2025-01-26 20:42:42], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.746, duration_ms=746, data={}
+timestamp=[2025-01-27 11:03:48], mode=WORKBENCH_START, duration=0:00:09.498, duration_ms=9498, data={}
+timestamp=[2025-01-27 11:03:49], mode=WORKBENCH_UI_INIT, duration=0:00:00.868, duration_ms=868, data={editors_count=17, platform_editors_count=14, projects_count=5, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,xgpio_example_1_system,xgpio_intr_tapp_example_1,xgpio_intr_tapp_example_1_system,zynq_dac}
+timestamp=[2025-01-27 11:03:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.760, duration_ms=760, data={}
+timestamp=[2025-01-27 15:30:51], mode=WORKBENCH_START, duration=0:00:09.663, duration_ms=9663, data={}
+timestamp=[2025-01-27 15:30:52], mode=WORKBENCH_UI_INIT, duration=0:00:01.381, duration_ms=1381, data={editors_count=17, platform_editors_count=14, projects_count=5, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,xgpio_example_1_system,xgpio_intr_tapp_example_1,xgpio_intr_tapp_example_1_system,zynq_dac}
+timestamp=[2025-01-27 15:30:52], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.926, duration_ms=926, data={}
+timestamp=[2025-02-22 17:07:25], mode=WORKBENCH_START, duration=0:00:07.903, duration_ms=7903, data={}
+timestamp=[2025-02-22 17:07:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.995, duration_ms=995, data={editors_count=17, platform_editors_count=14, projects_count=5, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,xgpio_example_1_system,xgpio_intr_tapp_example_1,xgpio_intr_tapp_example_1_system,zynq_dac}
+timestamp=[2025-02-22 17:07:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.898, duration_ms=898, data={}
+timestamp=[2025-02-22 21:18:01], mode=PLATFORM_GENERATION, duration=0:00:15.914, duration_ms=15914, data={name=zynq_dac}
+timestamp=[2025-02-22 21:20:53], mode=PLATFORM_GENERATION, duration=0:00:40.114, duration_ms=40114, data={name=zynq_dac}
+timestamp=[2025-02-22 21:24:47], mode=PLATFORM_GENERATION, duration=0:00:13.006, duration_ms=13006, data={name=zynq_dac}
+timestamp=[2025-02-22 21:28:04], mode=PLATFORM_GENERATION, duration=0:00:31.124, duration_ms=31124, data={name=zynq_dac}
+timestamp=[2025-02-22 21:28:05], mode=BUILD, duration=0:00:01.012, duration_ms=1012, data={name=xgpio_intr_tapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-22 21:30:21], mode=PLATFORM_GENERATION, duration=0:00:12.570, duration_ms=12570, data={name=zynq_dac}
+timestamp=[2025-02-22 21:30:21], mode=BUILD, duration=0:00:00.365, duration_ms=365, data={name=xgpio_intr_tapp_example_1, configuration=Debug, clean_build=true}
+timestamp=[2025-02-22 21:30:22], mode=BUILD, duration=0:00:00.544, duration_ms=544, data={name=xgpio_intr_tapp_example_1_system, configuration=Debug, clean_build=true}
+timestamp=[2025-02-22 21:31:13], mode=PLATFORM_GENERATION, duration=0:00:39.123, duration_ms=39123, data={name=zynq_dac}
+timestamp=[2025-02-22 21:31:15], mode=BUILD, duration=0:00:01.201, duration_ms=1201, data={name=xgpio_intr_tapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-22 21:36:13], mode=APP_CREATION, duration=0:00:07.662, duration_ms=7662, data={name=main, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=zynq_dac, application_type=application}
+timestamp=[2025-02-22 21:36:34], mode=BUILD, duration=0:00:00.864, duration_ms=864, data={name=main, configuration=Debug, clean_build=false}
+timestamp=[2025-02-22 21:37:31], mode=APP_CREATION, duration=0:00:07.934, duration_ms=7934, data={name=xgpio_intr_tapp_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=zynq_dac, application_type=application}
+timestamp=[2025-02-22 21:37:43], mode=BUILD, duration=0:00:00.812, duration_ms=812, data={name=xgpio_intr_tapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-22 21:38:30], mode=BUILD, duration=0:00:01.909, duration_ms=1909, data={name=xgpio_intr_tapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-22 21:41:20], mode=MISC, duration=0:00:08.261, duration_ms=8261, data={name=xgpio_intr_tapp_example_1_system, type=bif_creation}

@@ -1,0 +1,94 @@
+timestamp=[2025-03-08 15:13:05], mode=WORKBENCH_START, duration=0:00:05.037, duration_ms=5037, data={}
+timestamp=[2025-03-08 15:13:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.280, duration_ms=280, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-03-08 15:13:06], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.474, duration_ms=474, data={}
+timestamp=[2025-03-08 15:14:54], mode=PLATFORM_CREATION, duration=0:00:19.448, duration_ms=19448, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2025-03-08 15:17:39], mode=PLATFORM_GENERATION, duration=0:00:23.703, duration_ms=23703, data={name=duc}
+timestamp=[2025-03-08 15:19:28], mode=APP_CREATION, duration=0:00:06.370, duration_ms=6370, data={name=duc_data_transfer, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=duc, application_type=application}
+timestamp=[2025-03-08 15:19:40], mode=BUILD, duration=0:00:01.770, duration_ms=1770, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 15:19:46], mode=BUILD, duration=0:00:06.350, duration_ms=6350, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 15:41:53], mode=PLATFORM_GENERATION, duration=0:00:11.852, duration_ms=11852, data={name=duc}
+timestamp=[2025-03-08 15:43:34], mode=BUILD, duration=0:00:00.705, duration_ms=705, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 15:44:42], mode=BUILD, duration=0:00:01.452, duration_ms=1452, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 15:44:49], mode=BUILD, duration=0:00:06.481, duration_ms=6481, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 15:46:31], mode=PLATFORM_GENERATION, duration=0:00:08.522, duration_ms=8522, data={name=duc}
+timestamp=[2025-03-08 15:46:57], mode=PLATFORM_GENERATION, duration=0:00:22.319, duration_ms=22319, data={name=duc}
+timestamp=[2025-03-08 15:51:01], mode=PLATFORM_GENERATION, duration=0:00:08.607, duration_ms=8607, data={name=duc}
+timestamp=[2025-03-08 15:51:01], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=duc_data_transfer, configuration=Debug, clean_build=true}
+timestamp=[2025-03-08 15:51:01], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=duc_data_transfer_system, configuration=Debug, clean_build=true}
+timestamp=[2025-03-08 15:51:28], mode=PLATFORM_GENERATION, duration=0:00:22.325, duration_ms=22325, data={name=duc}
+timestamp=[2025-03-08 15:51:30], mode=BUILD, duration=0:00:01.922, duration_ms=1922, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 15:51:37], mode=BUILD, duration=0:00:06.441, duration_ms=6441, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 16:00:59], mode=APP_CREATION, duration=0:00:07.176, duration_ms=7176, data={name=xtmrctr_intr_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=duc, application_type=application}
+timestamp=[2025-03-08 16:09:43], mode=PLATFORM_GENERATION, duration=0:00:14.845, duration_ms=14845, data={name=duc}
+timestamp=[2025-03-08 16:09:51], mode=BUILD, duration=0:00:00.714, duration_ms=714, data={name=xtmrctr_intr_example_1, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 16:11:13], mode=BUILD, duration=0:00:01.584, duration_ms=1584, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:08:47], mode=BUILD, duration=0:00:00.789, duration_ms=789, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:09:43], mode=BUILD, duration=0:00:00.671, duration_ms=671, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:13:26], mode=BUILD, duration=0:00:01.291, duration_ms=1291, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:14:33], mode=BUILD, duration=0:00:00.551, duration_ms=551, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:15:44], mode=BUILD, duration=0:00:01.170, duration_ms=1170, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:15:51], mode=BUILD, duration=0:00:06.520, duration_ms=6520, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:22:31], mode=BUILD, duration=0:00:01.407, duration_ms=1407, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:22:38], mode=BUILD, duration=0:00:06.453, duration_ms=6453, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:37:50], mode=PLATFORM_GENERATION, duration=0:00:12.646, duration_ms=12646, data={name=duc}
+timestamp=[2025-03-08 17:41:35], mode=PLATFORM_GENERATION, duration=0:00:22.316, duration_ms=22316, data={name=duc}
+timestamp=[2025-03-08 17:43:21], mode=WORKBENCH_START, duration=0:00:07.150, duration_ms=7150, data={}
+timestamp=[2025-03-08 17:43:22], mode=WORKBENCH_UI_INIT, duration=0:00:00.981, duration_ms=981, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,duc,duc_data_transfer,duc_data_transfer_system}
+timestamp=[2025-03-08 17:43:22], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.611, duration_ms=611, data={}
+timestamp=[2025-03-08 17:44:57], mode=PLATFORM_GENERATION, duration=0:00:13.313, duration_ms=13313, data={name=duc}
+timestamp=[2025-03-08 17:46:06], mode=BUILD, duration=0:00:01.803, duration_ms=1803, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:46:13], mode=BUILD, duration=0:00:06.448, duration_ms=6448, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:48:32], mode=BUILD, duration=0:00:01.345, duration_ms=1345, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:48:38], mode=BUILD, duration=0:00:06.386, duration_ms=6386, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:54:14], mode=BUILD, duration=0:00:01.329, duration_ms=1329, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 17:56:12], mode=BUILD, duration=0:00:01.475, duration_ms=1475, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 18:04:02], mode=BUILD, duration=0:00:01.334, duration_ms=1334, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 18:34:48], mode=BUILD, duration=0:00:01.522, duration_ms=1522, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 22:09:46], mode=PLATFORM_GENERATION, duration=0:00:16.957, duration_ms=16957, data={name=duc}
+timestamp=[2025-03-08 22:11:23], mode=BUILD, duration=0:00:02.524, duration_ms=2524, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 22:11:30], mode=BUILD, duration=0:00:07.116, duration_ms=7116, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 22:13:55], mode=BUILD, duration=0:00:01.538, duration_ms=1538, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:05:33], mode=PLATFORM_GENERATION, duration=0:00:19.413, duration_ms=19413, data={name=duc}
+timestamp=[2025-03-08 23:06:44], mode=PLATFORM_GENERATION, duration=0:00:51.802, duration_ms=51802, data={name=duc}
+timestamp=[2025-03-08 23:06:54], mode=BUILD, duration=0:00:01.009, duration_ms=1009, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:07:18], mode=BUILD, duration=0:00:01.585, duration_ms=1585, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:07:45], mode=BUILD, duration=0:00:00.785, duration_ms=785, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:07:58], mode=PLATFORM_GENERATION, duration=0:00:09.299, duration_ms=9299, data={name=duc}
+timestamp=[2025-03-08 23:07:59], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=duc_data_transfer, configuration=Debug, clean_build=true}
+timestamp=[2025-03-08 23:07:59], mode=BUILD, duration=0:00:00.242, duration_ms=242, data={name=duc_data_transfer_system, configuration=Debug, clean_build=true}
+timestamp=[2025-03-08 23:08:25], mode=PLATFORM_GENERATION, duration=0:00:23.794, duration_ms=23794, data={name=duc}
+timestamp=[2025-03-08 23:08:30], mode=BUILD, duration=0:00:01.835, duration_ms=1835, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:08:38], mode=BUILD, duration=0:00:07.299, duration_ms=7299, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:09:50], mode=BUILD, duration=0:00:00.516, duration_ms=516, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:13:26], mode=BUILD, duration=0:00:01.552, duration_ms=1552, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-08 23:14:31], mode=BUILD, duration=0:00:01.546, duration_ms=1546, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-09 10:23:10], mode=BUILD, duration=0:00:00.961, duration_ms=961, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-09 10:23:23], mode=BUILD, duration=0:00:12.136, duration_ms=12136, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-10 20:03:56], mode=WORKBENCH_START, duration=0:00:11.994, duration_ms=11994, data={}
+timestamp=[2025-03-10 20:03:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.840, duration_ms=840, data={}
+timestamp=[2025-03-10 20:03:57], mode=WORKBENCH_UI_INIT, duration=0:00:01.770, duration_ms=1770, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,duc,duc_data_transfer,duc_data_transfer_system}
+timestamp=[2025-03-10 20:12:25], mode=PLATFORM_GENERATION, duration=0:00:34.436, duration_ms=34436, data={name=duc}
+timestamp=[2025-03-10 20:13:03], mode=PLATFORM_GENERATION, duration=0:00:03.724, duration_ms=3724, data={name=duc}
+timestamp=[2025-03-10 20:13:14], mode=BUILD, duration=0:00:02.833, duration_ms=2833, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-10 20:13:30], mode=BUILD, duration=0:00:08.144, duration_ms=8144, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-10 20:19:32], mode=BUILD, duration=0:00:01.741, duration_ms=1741, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-10 20:20:30], mode=BUILD, duration=0:00:01.595, duration_ms=1595, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-10 22:22:26], mode=WORKBENCH_START, duration=0:00:07.813, duration_ms=7813, data={}
+timestamp=[2025-03-10 22:22:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.947, duration_ms=947, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,duc,duc_data_transfer,duc_data_transfer_system}
+timestamp=[2025-03-10 22:22:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.477, duration_ms=477, data={}
+timestamp=[2025-03-11 15:51:35], mode=WORKBENCH_START, duration=0:00:08.410, duration_ms=8410, data={}
+timestamp=[2025-03-11 15:51:35], mode=WORKBENCH_UI_INIT, duration=0:00:00.823, duration_ms=823, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,duc,duc_data_transfer,duc_data_transfer_system}
+timestamp=[2025-03-11 15:51:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.786, duration_ms=786, data={}
+timestamp=[2025-03-11 15:53:00], mode=PLATFORM_GENERATION, duration=0:00:48.670, duration_ms=48670, data={name=duc}
+timestamp=[2025-03-11 15:53:09], mode=BUILD, duration=0:00:00.541, duration_ms=541, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-11 20:22:54], mode=PLATFORM_GENERATION, duration=0:00:24.026, duration_ms=24026, data={name=duc}
+timestamp=[2025-03-11 20:23:19], mode=PLATFORM_GENERATION, duration=0:00:03.230, duration_ms=3230, data={name=duc}
+timestamp=[2025-03-11 20:23:28], mode=BUILD, duration=0:00:02.388, duration_ms=2388, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-11 20:23:41], mode=BUILD, duration=0:00:07.084, duration_ms=7084, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-12 15:42:05], mode=WORKBENCH_START, duration=0:00:08.222, duration_ms=8222, data={}
+timestamp=[2025-03-12 15:42:06], mode=WORKBENCH_UI_INIT, duration=0:00:00.950, duration_ms=950, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,duc,duc_data_transfer,duc_data_transfer_system}
+timestamp=[2025-03-12 15:42:07], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.726, duration_ms=726, data={}
+timestamp=[2025-03-12 15:45:40], mode=PLATFORM_GENERATION, duration=0:00:39.920, duration_ms=39920, data={name=duc}
+timestamp=[2025-03-12 15:45:56], mode=PLATFORM_GENERATION, duration=0:00:07.282, duration_ms=7282, data={name=duc}
+timestamp=[2025-03-12 15:46:04], mode=BUILD, duration=0:00:01.768, duration_ms=1768, data={name=duc_data_transfer, configuration=Debug, clean_build=false}
+timestamp=[2025-03-12 15:46:15], mode=BUILD, duration=0:00:06.251, duration_ms=6251, data={name=duc_data_transfer_system, configuration=Debug, clean_build=false}

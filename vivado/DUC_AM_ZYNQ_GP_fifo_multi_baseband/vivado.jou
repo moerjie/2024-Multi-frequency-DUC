@@ -1,0 +1,149 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Apr  3 15:54:56 2025
+# Process ID: 33832
+# Current directory: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent41164 D:\Desktop\Mul_Freq_DUC\2024-Multi-frequency-DUC\vivado\DUC_AM_ZYNQ_GP_fifo_multi_baseband\DUC_AM_ZYNQ.xpr
+# Log file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/vivado.log
+# Journal file: D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband\vivado.jou
+# Running On: MOERJIE_PC, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 34132 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd}
+add_files -norecurse {D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicWvldInC0.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/HB1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SimpleDualPortRAM_generic.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Filter_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Wave_Source.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/subFilter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/HB_filter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block5.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/LookUpTableGen_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/subFilter_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block7.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block9.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/single_tone_500_1k.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_with_ready.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carry3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carry1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAddWvlIn.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapWvldIn.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carrier_3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carrier_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Signal_Source.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_tc.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_MultiBaseband_module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_Comp_Filter_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/my_NCO.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_COMP.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/HB2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block10.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/phInc.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DUC_module_with_ready_tc.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Halfband_Filter_1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/INV_SINC.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/SinglePortRAM_generic_AsyncRead.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAddWvlIn_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block4.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Filter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/NCO_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/carrier.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block6.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterTapSystolicPreAdd_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line_block8.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/DitherGen.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carry2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/CIC_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/AM_module_mul_freq.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterCoef_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Addressable_Delay_Line.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Discrete_FIR_Filter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block3.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/GAIN_CORRECTION.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FirRdyLogic_block1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Signal_Source_Module.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Lookup_Table1.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Carrier_2.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/FilterCoef.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/data_lock.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/Painter.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/WaveformGen_block.v D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/matlab/hdlsrc/DUC/MATLAB_Function.v}
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+create_bd_cell -type module -reference AM_MultiBaseband_module duc/AM_MultiBaseband_mod_0
+delete_bd_objs [get_bd_nets duc/DUC_module_with_ready_0_ce_out] [get_bd_nets duc/DUC_module_with_ready_0_DUC_SIGNAL_OUT] [get_bd_nets duc/AM_module_0_VLD] [get_bd_nets duc/AM_module_0_AM_OUT] [get_bd_cells duc/AM_module_0]
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins duc/AM_MultiBaseband_mod_0/AM_OUT] [get_bd_pins duc/DAC_module_0/SIGNAL_IN]
+connect_bd_net [get_bd_pins duc/AM_MultiBaseband_mod_0/ce_out] [get_bd_pins duc/util_vector_logic_4/Op1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.3 axi_fifo_mm_s_1
+endgroup
+set_property -dict [list \
+  CONFIG.C_TX_FIFO_DEPTH {8192} \
+  CONFIG.C_TX_FIFO_PE_THRESHOLD {5} \
+  CONFIG.C_TX_FIFO_PF_THRESHOLD {8000} \
+  CONFIG.C_USE_RX_DATA {0} \
+  CONFIG.C_USE_TX_CTRL {0} \
+  CONFIG.C_USE_TX_CUT_THROUGH {1} \
+] [get_bd_cells axi_fifo_mm_s_1]
+copy_bd_objs /  [get_bd_cells {axi_fifo_mm_s_1}]
+set_property location {5 1532 353} [get_bd_cells axi_fifo_mm_s_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (120 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (120 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_fifo_mm_s_1/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_fifo_mm_s_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (120 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (120 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_fifo_mm_s_2/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_fifo_mm_s_2/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins duc/AM_MultiBaseband_mod_0/clk]
+endgroup
+delete_bd_objs [get_bd_nets duc/clk_1] [get_bd_pins duc/clk]
+connect_bd_net [get_bd_pins duc/clk_0] [get_bd_pins duc/AM_MultiBaseband_mod_0/clk]
+copy_bd_objs /  [get_bd_cells {axis_subset_converter_0}]
+copy_bd_objs /  [get_bd_cells {axis_subset_converter_0}]
+connect_bd_intf_net [get_bd_intf_pins axi_fifo_mm_s_1/AXI_STR_TXD] [get_bd_intf_pins axis_subset_converter_1/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axi_fifo_mm_s_2/AXI_STR_TXD] [get_bd_intf_pins axis_subset_converter_2/S_AXIS]
+connect_bd_net [get_bd_pins axis_subset_converter_2/aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins axis_subset_converter_1/aresetn] [get_bd_pins rst_ps7_0_120M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_subset_converter_2/aresetn] [get_bd_pins rst_ps7_0_120M/peripheral_aresetn]
+copy_bd_objs /  [get_bd_cells {axis_data_fifo_0}]
+copy_bd_objs /  [get_bd_cells {axis_data_fifo_0}]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_1/M_AXIS] [get_bd_intf_pins axis_data_fifo_1/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_2/M_AXIS] [get_bd_intf_pins axis_data_fifo_2/S_AXIS]
+regenerate_bd_layout
+connect_bd_net [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins rst_ps7_0_120M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_2/s_axis_aresetn] [get_bd_pins rst_ps7_0_120M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_2/s_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
+regenerate_bd_layout -hierarchy [get_bd_cells duc]
+copy_bd_objs duc  [get_bd_cells {duc/axis_to_signal_0}]
+copy_bd_objs duc  [get_bd_cells {duc/axis_to_signal_1}]
+copy_bd_objs duc  [get_bd_cells {duc/DUC_module_with_ready_0}]
+copy_bd_objs duc  [get_bd_cells {duc/DUC_module_with_ready_0}]
+connect_bd_net [get_bd_pins duc/rst_n_0] [get_bd_pins duc/AM_MultiBaseband_mod_0/rst_n]
+connect_bd_net [get_bd_pins duc/AM_MultiBaseband_mod_0/clk_enable] [get_bd_pins duc/DUC_module_with_ready_0/ce_out]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_0/DUC_SIGNAL_OUT] [get_bd_pins duc/AM_MultiBaseband_mod_0/DUC_SIGNAL_IN]
+regenerate_bd_layout -hierarchy [get_bd_cells duc]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins duc/axis_to_signal_1/s_axis]
+endgroup
+set_property location {1 257 607} [get_bd_cells duc/axis_to_signal_2]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins duc/axis_to_signal_2/s_axis]
+endgroup
+connect_bd_net [get_bd_pins duc/axis_to_signal_1/signalin] [get_bd_pins duc/DUC_module_with_ready_1/SIGNAL_IN]
+connect_bd_net [get_bd_pins duc/clk_0] [get_bd_pins duc/DUC_module_with_ready_1/clk]
+connect_bd_net [get_bd_pins duc/rst_n_0] [get_bd_pins duc/DUC_module_with_ready_1/rst_n]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_1/clk_enable] [get_bd_pins duc/xlconstant_0/dout]
+set_property location {2 532 623} [get_bd_cells duc/DUC_module_with_ready_2]
+connect_bd_net [get_bd_pins duc/clk_0] [get_bd_pins duc/DUC_module_with_ready_2/clk]
+connect_bd_net [get_bd_pins duc/rst_n_0] [get_bd_pins duc/DUC_module_with_ready_2/rst_n]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_2/clk_enable] [get_bd_pins duc/xlconstant_0/dout]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_2/SIGNAL_IN] [get_bd_pins duc/axis_to_signal_2/signalin]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_1/ready] [get_bd_pins duc/axis_to_signal_1/ready]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_2/ready] [get_bd_pins duc/axis_to_signal_2/ready]
+connect_bd_net [get_bd_pins duc/rst_n_0] [get_bd_pins duc/axis_to_signal_2/aresetn]
+connect_bd_net [get_bd_pins duc/rst_n_0] [get_bd_pins duc/axis_to_signal_1/aresetn]
+connect_bd_net [get_bd_pins duc/clk_0] [get_bd_pins duc/axis_to_signal_1/aclk]
+connect_bd_net [get_bd_pins duc/clk_0] [get_bd_pins duc/axis_to_signal_2/aclk]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_1/DUC_SIGNAL_OUT] [get_bd_pins duc/AM_MultiBaseband_mod_0/DUC_SIGNAL_IN1]
+connect_bd_net [get_bd_pins duc/DUC_module_with_ready_2/DUC_SIGNAL_OUT] [get_bd_pins duc/AM_MultiBaseband_mod_0/DUC_SIGNAL_IN2]
+regenerate_bd_layout -hierarchy [get_bd_cells duc]
+delete_bd_objs [get_bd_intf_nets s_axis_1_1] [get_bd_intf_ports s_axis_1]
+delete_bd_objs [get_bd_intf_nets s_axis_0_2] [get_bd_intf_ports s_axis_0]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins duc/s_axis_1] [get_bd_intf_pins axis_data_fifo_1/M_AXIS]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins duc/s_axis_2] [get_bd_intf_pins axis_data_fifo_2/M_AXIS]
+regenerate_bd_layout
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { duc_da1_data } ]
+disconnect_bd_net [get_bd_net duc_da1_data] [get_bd_pins system_ila_0/probe0]
+disconnect_bd_net [get_bd_net duc/DAC_module_0_SIGNAL_OUT] [get_bd_pins duc/SIGNAL_OUT_0]
+delete_bd_objs [get_bd_pins duc/SIGNAL_OUT_0]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+delete_bd_objs [get_bd_nets duc/DAC_module_0_SIGNAL_OUT]
+startgroup
+make_bd_pins_external  [get_bd_pins duc/DAC_module_0/SIGNAL_OUT]
+endgroup
+set_property name da1_data [get_bd_pins duc/SIGNAL_OUT_0]
+delete_bd_objs [get_bd_nets duc_SIGNAL_OUT_0] [get_bd_ports SIGNAL_OUT_0]
+connect_bd_net [get_bd_ports da1_data] [get_bd_pins duc/da1_data]
+regenerate_bd_layout
+set_property location {2 431 749} [get_bd_cells rst_ps7_0_120M]
+generate_target all [get_files  D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+catch { config_ip_cache -export [get_ips -all top_AM_MultiBaseband_mod_0_0] }
+catch { config_ip_cache -export [get_ips -all top_axis_to_signal_0_1] }
+catch { config_ip_cache -export [get_ips -all top_axis_to_signal_1_0] }
+catch { config_ip_cache -export [get_ips -all top_DUC_module_with_ready_0_1] }
+catch { config_ip_cache -export [get_ips -all top_DUC_module_with_ready_0_2] }
+catch { config_ip_cache -export [get_ips -all top_xbar_0] }
+catch { config_ip_cache -export [get_ips -all top_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all top_axi_fifo_mm_s_1_0] }
+catch { config_ip_cache -export [get_ips -all top_axi_fifo_mm_s_1_1] }
+catch { config_ip_cache -export [get_ips -all top_axis_subset_converter_0_1] }
+catch { config_ip_cache -export [get_ips -all top_axis_subset_converter_0_2] }
+catch { config_ip_cache -export [get_ips -all top_axis_data_fifo_0_1] }
+catch { config_ip_cache -export [get_ips -all top_axis_data_fifo_0_2] }
+export_ip_user_files -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd]
+launch_runs top_AM_MultiBaseband_mod_0_0_synth_1 top_axi_fifo_mm_s_1_0_synth_1 top_axi_fifo_mm_s_1_1_synth_1 top_axis_subset_converter_0_1_synth_1 top_axis_subset_converter_0_2_synth_1 top_xbar_0_synth_1 -jobs 8
+wait_on_run top_AM_MultiBaseband_mod_0_0_synth_1
+wait_on_run top_axi_fifo_mm_s_1_0_synth_1
+wait_on_run top_axi_fifo_mm_s_1_1_synth_1
+wait_on_run top_axis_subset_converter_0_1_synth_1
+wait_on_run top_axis_subset_converter_0_2_synth_1
+wait_on_run top_xbar_0_synth_1
+export_simulation -of_objects [get_files D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.srcs/sources_1/bd/top/top.bd] -directory D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.ip_user_files -ipstatic_source_dir D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.cache/compile_simlib/modelsim} {questa=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.cache/compile_simlib/questa} {riviera=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.cache/compile_simlib/riviera} {activehdl=D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+close_design
+open_run impl_1
+write_hw_platform -fixed -include_bit -force -file D:/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/top_wrapper.xsa

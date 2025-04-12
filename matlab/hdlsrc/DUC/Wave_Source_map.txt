@@ -1,0 +1,7 @@
+DUC/Wave_Source/NCO/DitherGen --> DitherGen
+DUC/Wave_Source/NCO/WaveformGen/LookUpTableGen/Lookup Table1 --> Lookup_Table1
+DUC/Wave_Source/NCO/WaveformGen/LookUpTableGen/Lookup Table2 --> Lookup_Table2
+DUC/Wave_Source/NCO/WaveformGen/LookUpTableGen --> LookUpTableGen
+DUC/Wave_Source/NCO/WaveformGen --> WaveformGen
+DUC/Wave_Source/NCO --> NCO
+DUC/Wave_Source --> Wave_Source

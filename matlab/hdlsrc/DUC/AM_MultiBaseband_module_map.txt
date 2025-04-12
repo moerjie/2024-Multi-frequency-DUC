@@ -1,0 +1,25 @@
+DUC/AM_MultiBaseband_module/Carry1/Carrier_1/DitherGen --> DitherGen
+DUC/AM_MultiBaseband_module/Carry1/Carrier_1/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
+DUC/AM_MultiBaseband_module/Carry1/Carrier_1/WaveformGen/LookUpTableGen --> LookUpTableGen
+DUC/AM_MultiBaseband_module/Carry1/Carrier_1/WaveformGen --> WaveformGen
+DUC/AM_MultiBaseband_module/Carry1/Carrier_1 --> Carrier_1
+DUC/AM_MultiBaseband_module/Carry1 --> Carry1
+DUC/AM_MultiBaseband_module/Carry2/Carrier_2/DitherGen --> DitherGen_block
+DUC/AM_MultiBaseband_module/Carry2/Carrier_2/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block
+DUC/AM_MultiBaseband_module/Carry2/Carrier_2/WaveformGen/LookUpTableGen --> LookUpTableGen_block
+DUC/AM_MultiBaseband_module/Carry2/Carrier_2/WaveformGen --> WaveformGen_block
+DUC/AM_MultiBaseband_module/Carry2/Carrier_2 --> Carrier_2
+DUC/AM_MultiBaseband_module/Carry2 --> Carry2
+DUC/AM_MultiBaseband_module/Carry3/Carrier_3/DitherGen --> DitherGen_block1
+DUC/AM_MultiBaseband_module/Carry3/Carrier_3/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block1
+DUC/AM_MultiBaseband_module/Carry3/Carrier_3/WaveformGen/LookUpTableGen --> LookUpTableGen_block1
+DUC/AM_MultiBaseband_module/Carry3/Carrier_3/WaveformGen --> WaveformGen_block1
+DUC/AM_MultiBaseband_module/Carry3/Carrier_3 --> Carrier_3
+DUC/AM_MultiBaseband_module/Carry3 --> Carry3
+DUC/AM_MultiBaseband_module/INV_SINC/Discrete FIR Filter/Filter/FilterCoef --> FilterCoef
+DUC/AM_MultiBaseband_module/INV_SINC/Discrete FIR Filter/Filter/subFilter/FilterTapWvldIn --> FilterTapWvldIn
+DUC/AM_MultiBaseband_module/INV_SINC/Discrete FIR Filter/Filter/subFilter --> subFilter
+DUC/AM_MultiBaseband_module/INV_SINC/Discrete FIR Filter/Filter --> Filter
+DUC/AM_MultiBaseband_module/INV_SINC/Discrete FIR Filter --> Discrete_FIR_Filter
+DUC/AM_MultiBaseband_module/INV_SINC --> INV_SINC
+DUC/AM_MultiBaseband_module --> AM_MultiBaseband_module

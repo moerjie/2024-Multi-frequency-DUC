@@ -1,0 +1,19 @@
+DUC_module_with_ready_tc --> DUC_module_with_ready_tc
+DUC/DUC_module_with_ready/CIC_1 --> CIC_1
+DUC/DUC_module_with_ready/CIC_Comp Filter 1/FirRdyLogic --> FirRdyLogic
+DUC/DUC_module_with_ready/CIC_Comp Filter 1/Addressable_Delay_Line/SimpleDualPortRAM_generic --> SimpleDualPortRAM_generic
+DUC/DUC_module_with_ready/CIC_Comp Filter 1/Addressable_Delay_Line --> Addressable_Delay_Line
+DUC/DUC_module_with_ready/CIC_Comp Filter 1/Addressable_Delay_Line --> Addressable_Delay_Line_block
+DUC/DUC_module_with_ready/CIC_Comp Filter 1/FilterTapSystolicPreAdd --> FilterTapSystolicPreAdd
+DUC/DUC_module_with_ready/CIC_Comp Filter 1 --> CIC_Comp_Filter_1
+DUC/DUC_module_with_ready/Halfband Filter 1/FirRdyLogic --> FirRdyLogic_block
+DUC/DUC_module_with_ready/Halfband Filter 1/Addressable_Delay_Line --> Addressable_Delay_Line_block1
+DUC/DUC_module_with_ready/Halfband Filter 1/Addressable_Delay_Line --> Addressable_Delay_Line_block2
+DUC/DUC_module_with_ready/Halfband Filter 1/FilterTapSystolicPreAdd --> FilterTapSystolicPreAdd_block
+DUC/DUC_module_with_ready/Halfband Filter 1 --> Halfband_Filter_1
+DUC/DUC_module_with_ready/Halfband Filter 2/FirRdyLogic --> FirRdyLogic_block1
+DUC/DUC_module_with_ready/Halfband Filter 2/Addressable_Delay_Line --> Addressable_Delay_Line_block3
+DUC/DUC_module_with_ready/Halfband Filter 2/Addressable_Delay_Line --> Addressable_Delay_Line_block4
+DUC/DUC_module_with_ready/Halfband Filter 2/FilterTapSystolicPreAdd --> FilterTapSystolicPreAdd_block1
+DUC/DUC_module_with_ready/Halfband Filter 2 --> Halfband_Filter_2
+DUC/DUC_module_with_ready --> DUC_module_with_ready

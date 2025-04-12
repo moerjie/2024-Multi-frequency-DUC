@@ -1,0 +1,210 @@
+{
+   "ActiveEmotionalView":"Default View",
+<<<<<<< HEAD
+   "Color Coded_ScaleFactor":"1.04046",
+   "Color Coded_TopLeft":"-306,0",
+   "Default View_ScaleFactor":"1.20131",
+   "Default View_TopLeft":"-95,-15",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/duc/clk_0_1:false|/duc/rst_n_0_1:false|",
+   "Interfaces View_ScaleFactor":"0.8",
+   "Interfaces View_TopLeft":"-534,-105",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layers":"/duc/clk_0_1:true|/duc/rst_n_0_1:true|",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_rst_n_0 -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_ready_0 -pg 1 -lvl 3 -x 790 -y 560 -defaultsOSRD
+preplace portBus da1_data -pg 1 -lvl 3 -x 790 -y 200 -defaultsOSRD
+preplace portBus da1_wrt -pg 1 -lvl 3 -x 790 -y 860 -defaultsOSRD
+preplace portBus da1_clk -pg 1 -lvl 3 -x 790 -y 760 -defaultsOSRD
+preplace portBus da2_data -pg 1 -lvl 3 -x 790 -y 60 -defaultsOSRD
+preplace portBus da2_clk -pg 1 -lvl 3 -x 790 -y 960 -defaultsOSRD
+preplace portBus da2_wrt -pg 1 -lvl 3 -x 790 -y 1060 -defaultsOSRD
+preplace portBus led1 -pg 1 -lvl 3 -x 790 -y 360 -defaultsOSRD
+preplace portBus SIGNAL_IN_0 -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
+preplace portBus DUC_SIGNAL_OUT -pg 1 -lvl 3 -x 790 -y 380 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 580 -y 740 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Res right -pinBusY Res 20R
+preplace inst util_vector_logic_1 -pg 1 -lvl 2 -x 580 -y 840 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Res right -pinBusY Res 20R
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 210 -y 580 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst util_vector_logic_2 -pg 1 -lvl 2 -x 580 -y 940 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Res right -pinBusY Res 20R
+preplace inst util_vector_logic_3 -pg 1 -lvl 2 -x 580 -y 1040 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Res right -pinBusY Res 20R
+preplace inst util_vector_logic_4 -pg 1 -lvl 2 -x 580 -y 340 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Res right -pinBusY Res 20R
+preplace inst AM_module_0 -pg 1 -lvl 1 -x 210 -y 220 -swap {0 1 6 4 5 2 3} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir rst_n left -pinY rst_n 40L -pinDir clk_enable right -pinY clk_enable 280R -pinBusDir DUC_SIGNAL_IN right -pinBusY DUC_SIGNAL_IN 60R -pinDir ce_out right -pinY ce_out 140R -pinBusDir AM_OUT right -pinBusY AM_OUT 20R -pinBusDir ONE_CARRY_OUT right -pinBusY ONE_CARRY_OUT 40R
+preplace inst DAC_module_0 -pg 1 -lvl 2 -x 580 -y 180 -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir rst_n left -pinY rst_n 40L -pinBusDir SIGNAL_IN left -pinBusY SIGNAL_IN 60L -pinBusDir SIGNAL_OUT right -pinBusY SIGNAL_OUT 20R
+preplace inst DAC_module_1 -pg 1 -lvl 2 -x 580 -y 40 -swap {1 2 0 3} -defaultsOSRD -pinDir clk left -pinY clk 40L -pinDir rst_n left -pinY rst_n 60L -pinBusDir SIGNAL_IN left -pinBusY SIGNAL_IN 20L -pinBusDir SIGNAL_OUT right -pinBusY SIGNAL_OUT 20R
+preplace inst DUC_module_with_ready_0 -pg 1 -lvl 2 -x 580 -y 440 -swap {0 1 3 4 2 5 6} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir rst_n left -pinY rst_n 40L -pinDir clk_enable left -pinY clk_enable 160L -pinBusDir SIGNAL_IN left -pinBusY SIGNAL_IN 220L -pinDir ce_out left -pinY ce_out 60L -pinBusDir DUC_SIGNAL_OUT right -pinBusY DUC_SIGNAL_OUT 20R -pinDir ready right -pinY ready 120R
+preplace inst xlslice_0 -pg 1 -lvl 1 -x 210 -y 40 -swap {1 0} -defaultsOSRD -pinBusDir Din right -pinBusY Din 60R -pinBusDir Dout right -pinBusY Dout 20R
+preplace netloc AM_module_0_AM_OUT 1 1 1 N 240
+preplace netloc AM_module_0_VLD 1 1 1 NJ 360
+preplace netloc DAC_module_0_SIGNAL_OUT 1 2 1 NJ 200
+preplace netloc DAC_module_1_SIGNAL_OUT 1 2 1 NJ 60
+preplace netloc DUC_module_with_ready_0_DUC_SIGNAL_OUT 1 1 2 380 300 770
+preplace netloc DUC_module_with_ready_0_ce_out 1 1 1 N 500
+preplace netloc DUC_module_with_ready_0_ready 1 2 1 NJ 560
+preplace netloc clk_0_1 1 0 2 60 160 360
+preplace netloc rst_n_0_1 1 0 2 40 180 400
+preplace netloc util_vector_logic_0_Res 1 2 1 NJ 760
+preplace netloc util_vector_logic_1_Res 1 2 1 NJ 860
+preplace netloc util_vector_logic_2_Res 1 2 1 NJ 960
+preplace netloc util_vector_logic_3_Res 1 2 1 NJ 1060
+preplace netloc util_vector_logic_4_Res 1 2 1 NJ 360
+preplace netloc xlconstant_0_dout 1 1 1 NJ 600
+preplace netloc xlslice_0_Dout 1 1 1 N 60
+preplace netloc SIGNAL_IN_0_1 1 0 2 NJ 660 NJ
+levelinfo -pg 1 0 210 580 790
+pagesize -pg 1 -db -bbox -sgen -180 0 1010 1120
+",
+   "No Loops_ScaleFactor":"0.739615",
+   "No Loops_TopLeft":"-354,4",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_rst_n_0 -pg 1 -lvl 0 -x -100 -y 560 -defaultsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x -100 -y 540 -defaultsOSRD
+preplace port port-id_ready_0 -pg 1 -lvl 5 -x 1920 -y 0 -defaultsOSRD
+preplace portBus da1_data -pg 1 -lvl 5 -x 1920 -y 480 -defaultsOSRD
+preplace portBus da1_wrt -pg 1 -lvl 5 -x 1920 -y 160 -defaultsOSRD
+preplace portBus da1_clk -pg 1 -lvl 5 -x 1920 -y 60 -defaultsOSRD
+preplace portBus da2_data -pg 1 -lvl 5 -x 1920 -y 640 -defaultsOSRD
+preplace portBus da2_clk -pg 1 -lvl 5 -x 1920 -y 260 -defaultsOSRD
+preplace portBus da2_wrt -pg 1 -lvl 5 -x 1920 -y 360 -defaultsOSRD
+preplace portBus led1 -pg 1 -lvl 5 -x 1920 -y 740 -defaultsOSRD
+preplace portBus SIGNAL_IN_0 -pg 1 -lvl 0 -x -100 -y 680 -defaultsOSRD
+preplace portBus DUC_SIGNAL_OUT -pg 1 -lvl 5 -x 1920 -y 800 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 1720 -y 60 -defaultsOSRD -pinBusY Op1 20L -pinBusY Res 20R
+preplace inst util_vector_logic_1 -pg 1 -lvl 4 -x 1720 -y 160 -defaultsOSRD -pinBusY Op1 20L -pinBusY Res 20R
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 460 -y 620 -defaultsOSRD -pinBusY dout 20R
+preplace inst util_vector_logic_2 -pg 1 -lvl 4 -x 1720 -y 260 -defaultsOSRD -pinBusY Op1 20L -pinBusY Res 20R
+preplace inst util_vector_logic_3 -pg 1 -lvl 4 -x 1720 -y 360 -defaultsOSRD -pinBusY Op1 20L -pinBusY Res 20R
+preplace inst util_vector_logic_4 -pg 1 -lvl 4 -x 1720 -y 740 -defaultsOSRD -pinBusY Op1 20L -pinBusY Res 20R
+preplace inst AM_module_0 -pg 1 -lvl 3 -x 1290 -y 580 -swap {3 2 1 0 6 4 5} -defaultsOSRD -pinY clk 80L -pinY rst_n 60L -pinY clk_enable 40L -pinBusY DUC_SIGNAL_IN 20L -pinY ce_out 80R -pinBusY AM_OUT -20R -pinBusY ONE_CARRY_OUT 0R
+preplace inst DAC_module_0 -pg 1 -lvl 4 -x 1720 -y 460 -swap {2 0 1 3} -defaultsOSRD -pinY clk 60L -pinY rst_n 20L -pinBusY SIGNAL_IN 40L -pinBusY SIGNAL_OUT 20R
+preplace inst DAC_module_1 -pg 1 -lvl 4 -x 1720 -y 600 -swap {2 0 1 3} -defaultsOSRD -pinY clk 60L -pinY rst_n 20L -pinBusY SIGNAL_IN 40L -pinBusY SIGNAL_OUT 40R
+preplace inst DUC_module_with_ready_0 -pg 1 -lvl 2 -x 820 -y 540 -swap {1 3 2 0 6 5 4} -defaultsOSRD -pinY clk 40L -pinY rst_n 200L -pinY clk_enable 100L -pinBusY SIGNAL_IN 20L -pinY ce_out 200R -pinBusY DUC_SIGNAL_OUT 40R -pinY ready 20R
+preplace inst xlslice_0 -pg 1 -lvl 3 -x 1290 -y 740 -defaultsOSRD -pinBusY Din 20L -pinBusY Dout 60R
+preplace netloc AM_module_0_AM_OUT 1 3 1 1560 500n
+preplace netloc AM_module_0_VLD 1 3 1 1470J 660n
+preplace netloc DAC_module_0_SIGNAL_OUT 1 4 1 NJ 480
+preplace netloc DAC_module_1_SIGNAL_OUT 1 4 1 NJ 640
+preplace netloc DUC_module_with_ready_0_DUC_SIGNAL_OUT 1 2 3 1050 860 N 860 1890
+preplace netloc DUC_module_with_ready_0_ce_out 1 2 1 1090 620n
+preplace netloc DUC_module_with_ready_0_ready 1 2 3 1000J 0 NJ 0 NJ
+preplace netloc clk_0_1 1 0 4 NJ 540 630 820 1110 880 1520
+preplace netloc rst_n_0_1 1 0 4 NJ 560 610 800 1070 500 1540
+preplace netloc util_vector_logic_0_Res 1 4 1 1890J 60n
+preplace netloc util_vector_logic_1_Res 1 4 1 1890J 160n
+preplace netloc util_vector_logic_2_Res 1 4 1 1890J 260n
+preplace netloc util_vector_logic_3_Res 1 4 1 1890J 360n
+preplace netloc util_vector_logic_4_Res 1 4 1 1890J 740n
+preplace netloc xlconstant_0_dout 1 1 1 N 640
+preplace netloc xlslice_0_Dout 1 3 1 1560 640n
+preplace netloc SIGNAL_IN_0_1 1 0 2 -60J 520 650
+levelinfo -pg 1 -100 460 820 1290 1720 1920
+pagesize -pg 1 -db -bbox -sgen -280 -40 2140 1070
+",
+   "Reduced Jogs_ScaleFactor":"1.07919",
+   "Reduced Jogs_TopLeft":"-277,-17",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_rst_n_0 -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x 0 -y 30 -defaultsOSRD
+preplace port port-id_ready_0 -pg 1 -lvl 5 -x 1390 -y 20 -defaultsOSRD
+preplace portBus da1_wrt -pg 1 -lvl 5 -x 1390 -y 610 -defaultsOSRD
+preplace portBus da1_clk -pg 1 -lvl 5 -x 1390 -y 510 -defaultsOSRD
+preplace portBus da2_data -pg 1 -lvl 5 -x 1390 -y 230 -defaultsOSRD
+preplace portBus da2_clk -pg 1 -lvl 5 -x 1390 -y 710 -defaultsOSRD
+preplace portBus da2_wrt -pg 1 -lvl 5 -x 1390 -y 810 -defaultsOSRD
+preplace portBus led1 -pg 1 -lvl 5 -x 1390 -y 90 -defaultsOSRD
+preplace portBus SIGNAL_IN_0 -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace portBus AM_OUT -pg 1 -lvl 5 -x 1390 -y 310 -defaultsOSRD
+preplace portBus ONE_CARRY_OUT -pg 1 -lvl 5 -x 1390 -y 150 -defaultsOSRD
+preplace portBus da1_data -pg 1 -lvl 5 -x 1390 -y 390 -defaultsOSRD
+preplace portBus DUC_SIGNAL_OUT -pg 1 -lvl 5 -x 1390 -y 130 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 1200 -y 510 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 4 -x 1200 -y 610 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 220 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 4 -x 1200 -y 710 -defaultsOSRD
+preplace inst util_vector_logic_3 -pg 1 -lvl 4 -x 1200 -y 810 -defaultsOSRD
+preplace inst util_vector_logic_4 -pg 1 -lvl 4 -x 1200 -y 80 -defaultsOSRD
+preplace inst AM_module_0 -pg 1 -lvl 3 -x 780 -y 110 -defaultsOSRD
+preplace inst DAC_module_0 -pg 1 -lvl 4 -x 1200 -y 390 -swap {1 2 0 3} -defaultsOSRD
+preplace inst DAC_module_1 -pg 1 -lvl 4 -x 1200 -y 230 -swap {1 2 0 3} -defaultsOSRD
+preplace inst DUC_module_with_ready_0 -pg 1 -lvl 2 -x 380 -y 140 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 3 -x 780 -y 270 -defaultsOSRD
+preplace netloc AM_module_0_AM_OUT 1 3 2 1020 310 NJ
+preplace netloc AM_module_0_ONE_CARRY_OUT 1 3 2 1010 150 NJ
+preplace netloc AM_module_0_VLD 1 3 1 960J 80n
+preplace netloc DAC_module_0_SIGNAL_OUT 1 4 1 NJ 390
+preplace netloc DAC_module_1_SIGNAL_OUT 1 4 1 NJ 230
+preplace netloc DUC_module_with_ready_0_DUC_SIGNAL_OUT 1 2 3 600 200 1040 140 1360
+preplace netloc DUC_module_with_ready_0_ce_out 1 2 1 N 120
+preplace netloc DUC_module_with_ready_0_ready 1 2 3 560J 210 1000J 20 NJ
+preplace netloc SIGNAL_IN_0_1 1 0 2 20J 160 180J
+preplace netloc clk_0_1 1 0 4 NJ 30 210 30 590 10 1030
+preplace netloc rst_n_0_1 1 0 4 NJ 50 200 50 600 20 990
+preplace netloc util_vector_logic_0_Res 1 4 1 NJ 510
+preplace netloc util_vector_logic_1_Res 1 4 1 NJ 610
+preplace netloc util_vector_logic_2_Res 1 4 1 NJ 710
+preplace netloc util_vector_logic_3_Res 1 4 1 NJ 810
+preplace netloc util_vector_logic_4_Res 1 4 1 1360J 80n
+preplace netloc xlconstant_0_dout 1 1 1 190J 150n
+preplace netloc xlslice_0_Dout 1 3 1 1040 210n
+levelinfo -pg 1 0 100 380 780 1200 1390
+pagesize -pg 1 -db -bbox -sgen -180 0 1610 870
+=======
+   "Default View_ScaleFactor":"0.806468",
+   "Default View_TopLeft":"-143,2",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_rst_n_0 -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x 0 -y 540 -defaultsOSRD
+preplace portBus SEL_IN_0 -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace portBus da1_data -pg 1 -lvl 6 -x 1660 -y 480 -defaultsOSRD
+preplace portBus da1_wrt -pg 1 -lvl 6 -x 1660 -y 160 -defaultsOSRD
+preplace portBus da1_clk -pg 1 -lvl 6 -x 1660 -y 60 -defaultsOSRD
+preplace portBus da2_data -pg 1 -lvl 6 -x 1660 -y 620 -defaultsOSRD
+preplace portBus da2_clk -pg 1 -lvl 6 -x 1660 -y 260 -defaultsOSRD
+preplace portBus da2_wrt -pg 1 -lvl 6 -x 1660 -y 360 -defaultsOSRD
+preplace portBus led1 -pg 1 -lvl 6 -x 1660 -y 740 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 5 -x 1470 -y 60 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1470 -y 160 -defaultsOSRD
+preplace inst DUC_module_0 -pg 1 -lvl 3 -x 690 -y 630 -defaultsOSRD
+preplace inst DAC_module_0 -pg 1 -lvl 5 -x 1470 -y 480 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 620 -defaultsOSRD
+preplace inst DAC_module_1 -pg 1 -lvl 5 -x 1470 -y 620 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 5 -x 1470 -y 260 -defaultsOSRD
+preplace inst util_vector_logic_3 -pg 1 -lvl 5 -x 1470 -y 360 -defaultsOSRD
+preplace inst Signal_Source_module_0 -pg 1 -lvl 2 -x 350 -y 650 -defaultsOSRD
+preplace inst util_vector_logic_4 -pg 1 -lvl 5 -x 1470 -y 740 -defaultsOSRD
+preplace inst AM_module_0 -pg 1 -lvl 4 -x 1070 -y 610 -defaultsOSRD
+preplace netloc AM_module_0_AM_OUT 1 4 1 1290 500n
+preplace netloc AM_module_0_ONE_CARRY_OUT 1 4 1 N 640
+preplace netloc AM_module_0_VLD 1 4 1 1270J 620n
+preplace netloc DAC_module_0_SIGNAL_OUT 1 5 1 NJ 480
+preplace netloc DAC_module_1_SIGNAL_OUT 1 5 1 NJ 620
+preplace netloc DUC_module_0_DUC_SIGNAL_OUT 1 3 1 N 640
+preplace netloc DUC_module_0_ce_out 1 3 1 N 620
+preplace netloc SEL_IN_0_1 1 0 2 NJ 680 NJ
+preplace netloc Signal_Source_module_0_SIGNAL_OUT 1 2 1 N 650
+preplace netloc Signal_Source_module_0_VLD_OUT 1 2 1 N 670
+preplace netloc Signal_Source_module_0_ce_out 1 2 1 N 630
+preplace netloc clk_0_1 1 0 5 NJ 540 200 540 510 530 870 520 1300
+preplace netloc rst_n_0_1 1 0 5 NJ 560 190 560 500 730 870 700 1280
+preplace netloc util_vector_logic_0_Res 1 5 1 NJ 60
+preplace netloc util_vector_logic_1_Res 1 5 1 NJ 160
+preplace netloc util_vector_logic_2_Res 1 5 1 NJ 260
+preplace netloc util_vector_logic_3_Res 1 5 1 NJ 360
+preplace netloc util_vector_logic_4_Res 1 5 1 NJ 740
+preplace netloc xlconstant_0_dout 1 1 1 180J 620n
+levelinfo -pg 1 0 100 350 690 1070 1470 1660
+pagesize -pg 1 -db -bbox -sgen -150 0 1810 800
+>>>>>>> 84aa8d5304abf094f2610196d347f33e644af78a
+"
+}
+0

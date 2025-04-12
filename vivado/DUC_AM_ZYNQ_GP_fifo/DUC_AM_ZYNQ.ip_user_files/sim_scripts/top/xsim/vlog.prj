@@ -1,0 +1,32 @@
+verilog xil_defaultlib --include "E:/FPGA_EDA/Xilinx/2023_2/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/ec67/hdl" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/6b2b/hdl" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/c2c6" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/434f/hdl" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/e2ba/hdl/verilog" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/a29c/hdl/verilog" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/ae90/hdl/verilog" --include "../../../../DUC_AM_ZYNQ.gen/sources_1/bd/top/ipshared/0e59/hdl/verilog" \
+"../../../bd/top/ip/top_processing_system7_0_0/sim/top_processing_system7_0_0.v" \
+"../../../bd/top/ip/top_util_vector_logic_0_2/sim/top_util_vector_logic_0_2.v" \
+"../../../bd/top/ip/top_util_vector_logic_0_3/sim/top_util_vector_logic_0_3.v" \
+"../../../bd/top/ip/top_xlconstant_0_2/sim/top_xlconstant_0_2.v" \
+"../../../bd/top/ip/top_util_vector_logic_3_0/sim/top_util_vector_logic_3_0.v" \
+"../../../bd/top/ip/top_AM_module_0_4/sim/top_AM_module_0_4.v" \
+"../../../bd/top/ip/top_DAC_module_0_0/sim/top_DAC_module_0_0.v" \
+"../../../bd/top/ip/top_DUC_module_with_ready_0_0/sim/top_DUC_module_with_ready_0_0.v" \
+"../../../bd/top/ip/top_axis_to_signal_0_0/sim/top_axis_to_signal_0_0.v" \
+"../../../bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.v" \
+"../../../bd/top/ip/top_axis_data_fifo_0_0/sim/top_axis_data_fifo_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tdata_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tuser_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tstrb_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tkeep_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tid_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tdest_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/tlast_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/hdl/top_top_axis_subset_converter_0_0.v" \
+"../../../bd/top/ip/top_axis_subset_converter_0_0/sim/top_axis_subset_converter_0_0.v" \
+"../../../bd/top/sim/top.v" \
+"../../../bd/top/ip/top_auto_pc_0/sim/top_auto_pc_0.v" \
+"../../../bd/top/ip/top_system_ila_0_0/bd_0/ip/ip_0/sim/bd_0696_ila_lib_0.v" \
+"../../../bd/top/ip/top_system_ila_0_0/bd_0/sim/bd_0696.v" \
+"../../../bd/top/ip/top_system_ila_0_0/sim/top_system_ila_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

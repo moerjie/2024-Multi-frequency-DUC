@@ -1,0 +1,16 @@
+Fitter Status : Failed - Sat Dec 28 20:26:22 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : DUC_AM
+Top-level Entity Name : DUC_AM
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 31,852 / 10,320 ( 309 % )
+    Total combinational functions : 25,178 / 10,320 ( 244 % )
+    Dedicated logic registers : 15,548 / 10,320 ( 151 % )
+Total registers : 15548
+Total pins : 17 / 180 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 93,792 / 423,936 ( 22 % )
+Embedded Multiplier 9-bit elements : 46 / 46 ( 100 % )
+Total PLLs : 1 / 2 ( 50 % )

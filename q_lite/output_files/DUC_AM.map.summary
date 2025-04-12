@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Dec 28 20:25:50 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : DUC_AM
+Top-level Entity Name : DUC_AM
+Family : Cyclone IV E
+Total logic elements : 31,871
+    Total combinational functions : 25,178
+    Dedicated logic registers : 15,630
+Total registers : 15630
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 93,792
+Embedded Multiplier 9-bit elements : 46
+Total PLLs : 1

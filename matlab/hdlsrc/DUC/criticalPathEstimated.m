@@ -1,0 +1,13 @@
+open_system('gm_DUC');
+cs.HiliteType = 'user2';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'lightblue';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_DUC/AM_MultiBaseband_module/Carry1', 'user2');
+annotate_port('gm_DUC/AM_MultiBaseband_module/Carry1', 0, 1, 'cp : 7.743 ns');
+cs.HiliteType = 'user2';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'lightblue';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_DUC/AM_MultiBaseband_module/Carry1/Carrier_1', 'user2');
+annotate_port('gm_DUC/AM_MultiBaseband_module/Carry1/Carrier_1', 0, 1, 'cp : 7.743 ns');

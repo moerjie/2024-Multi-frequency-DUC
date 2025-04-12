@@ -1,0 +1,17 @@
+DUC/AM_module_mul_freq/phInc --> phInc
+DUC/AM_module_mul_freq/Carrier_1/DitherGen --> DitherGen
+DUC/AM_module_mul_freq/Carrier_1/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table
+DUC/AM_module_mul_freq/Carrier_1/WaveformGen/LookUpTableGen --> LookUpTableGen
+DUC/AM_module_mul_freq/Carrier_1/WaveformGen --> WaveformGen
+DUC/AM_module_mul_freq/Carrier_1 --> Carrier_1
+DUC/AM_module_mul_freq/Carrier_2/DitherGen --> DitherGen_block
+DUC/AM_module_mul_freq/Carrier_2/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block
+DUC/AM_module_mul_freq/Carrier_2/WaveformGen/LookUpTableGen --> LookUpTableGen_block
+DUC/AM_module_mul_freq/Carrier_2/WaveformGen --> WaveformGen_block
+DUC/AM_module_mul_freq/Carrier_2 --> Carrier_2
+DUC/AM_module_mul_freq/Carrier_3/DitherGen --> DitherGen_block1
+DUC/AM_module_mul_freq/Carrier_3/WaveformGen/LookUpTableGen/Lookup Table --> Lookup_Table_block1
+DUC/AM_module_mul_freq/Carrier_3/WaveformGen/LookUpTableGen --> LookUpTableGen_block1
+DUC/AM_module_mul_freq/Carrier_3/WaveformGen --> WaveformGen_block1
+DUC/AM_module_mul_freq/Carrier_3 --> Carrier_3
+DUC/AM_module_mul_freq --> AM_module_mul_freq

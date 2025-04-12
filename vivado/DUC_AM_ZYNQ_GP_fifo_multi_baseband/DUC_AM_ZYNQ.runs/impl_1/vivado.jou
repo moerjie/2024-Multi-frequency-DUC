@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr  9 17:18:20 2025
+# Process ID: 77064
+# Current directory: /mnt/d/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.runs/impl_1
+# Command line: vivado -log top_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_wrapper.tcl -notrace
+# Log file: /mnt/d/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.runs/impl_1/top_wrapper.vdi
+# Journal file: /mnt/d/Desktop/Mul_Freq_DUC/2024-Multi-frequency-DUC/vivado/DUC_AM_ZYNQ_GP_fifo_multi_baseband/DUC_AM_ZYNQ.runs/impl_1/vivado.jou
+# Running On: MOERJIEPC, OS: Linux, CPU Frequency: 2687.997 MHz, CPU Physical cores: 5, Host memory: 16659 MB
+#-----------------------------------------------------------
+source top_wrapper.tcl -notrace
